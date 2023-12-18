@@ -42,7 +42,7 @@
                 private static ClassSingleton INSTANCE;
                 private String info = "Initial info class";
 
-                //private consturctor asdf
+                //private constructor
                 private ClassSingleton() {
 
                 }
