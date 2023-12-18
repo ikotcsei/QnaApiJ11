@@ -1,0 +1,131 @@
+<!--atgondol-->
+<!--muveletigen, memoriahasznalat, peldak : mire hol hasznaljak, javaban mi hogy van megvalositva
+    bestcase,worst case, average case-->
+<questionlist>
+    <tetel>
+        <question>
+            quicksort
+        </question>
+        <answer>
+            this is some sort of answer
+        </answer>
+        <links>https://www.geeksforgeeks.org/quick-sort/</links>
+    </tetel>
+    <tetel>
+        <question>
+            mergesort
+        </question>
+        <answer>
+
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            binarysearch
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            bin tree - create, insert, search, traversal : pre, in, post
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            bintree - szelessegi kereses , melysegi kereses
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            heap
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            tries
+        </question>
+        <links>https://en.wikipedia.org/wiki/Trie</links>
+        <answer>
+            valami valasz
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            binary search tree
+        </question>
+        <links>https://www.geeksforgeeks.org/binary-search-tree-data-structure/</links>
+        <answer>
+
+
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            AVL tree
+        </question>
+        <links>https://en.wikipedia.org/wiki/AVL_tree</links>
+        <answer>
+
+
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            N-ary tree
+        </question>
+        <links>https://www.geeksforgeeks.org/generic-treesn-array-trees/</links>
+        <answer>
+
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            stacks
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            queues
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            priority queue
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+           vector / arraylist
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+           hashing, hashtable
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+
+
+
+
+
+</questionlist>

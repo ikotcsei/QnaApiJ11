@@ -1,0 +1,300 @@
+<questionlist>
+    <tetel>
+        <question>
+            observer(B), client code also
+        </question>
+        <answer>
+            pelda : timer ->* kijelzok
+            pl java  : event processing model, (subscription)
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            iterator(B), client code also
+        </question>
+        <answer>
+            iterating over an aggregate, same muvelet over the objects. diff muvelet : latogato
+            pl : java iterator
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            allapot (state, B), client code also
+        </question>
+        <answer>
+            Context -has a- State:Handle()
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            egyke  (constructional), client code also
+        </question>
+        <answer>
+            pl : java.lang.Runtime class ami a futasiideju adatokat tartalmazza
+
+            - kb immutable class :
+                - once instance created cant be changed (by 3rd party code), cant inherit (final class)
+                - no setters
+                - pass data in constructor, copy all data , no reference in the class to non member Objects
+
+            public final class ClassSingleton {
+
+                private static ClassSingleton INSTANCE;
+                private String info = "Initial info class";
+
+                //private consturcotr
+                private ClassSingleton() {
+
+                }
+
+                //static factory method
+                public static ClassSingleton getInstance() {
+                    if(INSTANCE == null) {
+                        INSTANCE = new ClassSingleton();
+                    }
+
+                    return INSTANCE;
+                }
+
+                // getters
+            }
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            kozvetito(mediator, B), client code also
+        </question>
+        <answer>
+            egyenrangu felek kommunikacioja, mindenki a kozvetiton keresztul kommunikal
+            (mediator:)PARTY ---* MEMBERS | Notify(), Handle()
+
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            feljegyzes (token, memento), client code also
+        </question>
+        <answer>
+            objekturm allapotmentes  : client ---has a --- memento | getState(),setState()
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            kezelesi lanc(B, chain of responsibility), client code also
+        </question>
+        <answer>
+            client ---create, do ----objN, objN-1, ... obj1 (feldolgozando obj. lancolata) ---fogad --- fogado1,...fogadok
+            amelyik fogado szabad az feldolgoz
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            parancs (B, command, action,transaction), client code also
+        </question>
+        <answer>
+            nem tudjuk ki dolgozza fel a parancsot.
+            client --create, activate---- cmdN,...cmd1 (parancsok sorozata ,FIFO),
+            undo, doItLater, with chain of responsiblity
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            strategy(B), client code also
+        </question>
+        <answer>
+            JAVA : java.util.zip.CheckedInputStream : enable checksum calc. in different ways
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            sablon muvelet(B template method), client code also
+        </question>
+        <answer>
+            absztr. algoritmus, egyes reszek felulirva a szarbaztatott osztalyban : getNextElement() felulirva getNextNode()
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            osszetetel(composite, S = structural), client code also
+        </question>
+        <answer>
+            reszek egessze alakitasa - bejarhatosag
+            JAVA : java.io.SequenceInputStream : enables creating input stream by concetanaiting
+                   multiple input streams
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            latogato(B), client code also
+        </question>
+        <answer>
+            kb iterator, de eltero feluleten esvagy elteru muveletekkel
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            hid(bridge, S), client code also
+        </question>
+        <answer>
+            absztrakicio levalasztasa az implementaciorol, kliens absztrakciot hivja, implementacio
+            valtoztathato de a kliens kod nem valtozik
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            absztrakt gyarto(C, kit), client code also
+        </question>
+        <answer>
+            abs factory : ShapeFactory
+            ConcreteFactory f = Factoryprovider.getFactory("rectanglefactory"); // get the concrete  factory
+            ConcreteProduct a = f.createProduct("square");  //get an instance
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            epito (C, builder), client code also
+        </question>
+        <answer>
+            pl java.lang.StringBuilder
+            pl. static method that builds an object based on parameters (pl. instead of constructors)
+            egy objektum konstrukciojanak es reprezentaciojanak szetvalasztasa
+            myNewObj = TheClass(2,3,4,5,6,7,"argk","argn")
+            myNewObj = TheClass.createComplicatedPorduct()
+            myNewObj = TheClass.name("kis").id("11").age("101");
+
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+            factory method (C), client code also
+        </question>
+        <answer>
+            pl : java Integer.valueOf()
+            Shape sh = new Shape(); helyett :
+            ShapeFactory sf = new ShapeFactory();
+            Shape sh = sf.getShape("Circle");
+            Shape mh = sf.getShape("Rectangle");
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            prototype (C), client code also
+        </question>
+        <answer>
+            pl : java bean object visualizations
+            statikus : obj = Prototype.Clone(), vagy obj = prototype.clone();
+
+            JAVA : streamtokenizer : can be customized respect to end on line char. etc.
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            atalakito (adapter, wrapper)  - objektum, osztaly, client code also
+        </question>
+        <answer>
+            pl: java Integer wrapper class
+            egy obj/osztaly feluletenek atalakitasa a kliens által kívántra
+            myAdapter.createGroup(){ this.adapteeObjec.addGroup(0,1);   }   -- objektum atalakito
+
+            //this adapter helps to convert mph to kmh
+            public class MovableAdapterImpl implements MovableAdapter {
+                private Movable luxuryCars;
+
+                // standard constructors
+
+                @Override
+                public double getSpeed() {
+                    return convertMPHtoKMPH(luxuryCars.getSpeed());
+                }
+
+                private double convertMPHtoKMPH(double mph) {
+                    return mph * 1.60934;
+                }
+            }
+
+            JAVA : InputStreamReader( byte stream-> char stream)
+
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            decorator, wrapper (S), client code also
+        </question>
+        <answer>
+            a wrapper that can add functionality dynamically
+            pl. valtozo, muvelet hozzaadasa objektumhoz dinamikusan
+            Fancy obj = new Fancy(new ConcreteComonent());
+            Fancy obj = new Fancy(new Middle(new Basic()));
+
+            pl : JAVA : DataInputStream input = new DataInputStream( new ZipInputStream( new FileInputStream("input.txt") ) );
+                    FilterinputStream and concrete subclasses works like this
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            facade - arculat (S), client code also
+        </question>
+        <answer>
+            egyseges felulet letrehozasa egy alrendszer feluleteihez. nagy wrapper.
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            konnyusulyu - flyweight, client code also
+        </question>
+        <answer>
+            megosztas hasznalata nagy szamu finomszemcses objektum hatekonky kezelesehez.
+            sok informaciot kell nyilvantartani, sok redundans. nem objektumonkent tartjuk
+            nyilvan, hanem kiemeljuk
+
+            JAVA : String intern()
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            helyettes - proxy, surrogate (S), client code also
+        </question>
+        <answer>
+            helyettes letrehozasa egy objektumhoz, hogy szabalyozzuk a hozzafereset.
+            TAVOLI helyettes, VIRTUALIS helyettes, VEDELMI helyettes, INTELLIGENS hivatkozas.
+
+            public class ProxyImage implements Image{
+
+                private RealImage realImage;
+                private String fileName;
+
+                public ProxyImage(String fileName){
+                    this.fileName = fileName;
+                }
+
+                @Override
+                public void display() {
+                    if(realImage == null){
+                        realImage = new RealImage(fileName);
+                    }
+                    realImage.display();
+                }
+            }
+
+            JAVA : RMI - remote method invocation for high val. computing
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            ertelmezo - interpreter (B), client code also
+        </question>
+        <answer>
+            megadni egy adott nyelvtannak megfefelo reprezentaciot es ertelmezot
+        </answer>
+    </tetel>
+
+</questionlist>
