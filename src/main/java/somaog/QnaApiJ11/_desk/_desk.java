@@ -8,7 +8,7 @@ public class _desk {
     }
 
     public static int recfakt(int n){
-        if( n > 2)  return n * recfakt( n-1 );
+        if( n > 3)  return n * recfakt( n-1 );
         else return 1;
     }
 }
