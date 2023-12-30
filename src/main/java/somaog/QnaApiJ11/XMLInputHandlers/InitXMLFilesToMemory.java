@@ -105,6 +105,7 @@ public class InitXMLFilesToMemory {
 
         try{
             for(String s : allFiles){
+                //itt a classpath pontosan hova mutat resources v resources/static
                 saxParser.parse("classpath:"+s, tetelHandler);
                 result = tetelHandler.getTetelek();
                 allTetel.addAll(result.getTetelList());

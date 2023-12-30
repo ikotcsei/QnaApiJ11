@@ -7,8 +7,16 @@ public class TetelLista {
     //get last item, amit utljara szurtunk be biztos h az az utolso ?
     private List<Tetel> tetelList;
 
+
+
+
     TetelLista(){
         tetelList = null;
+    }
+
+    TetelLista(List<Tetel> tetelList){
+
+        this.tetelList = tetelList;
     }
 
     public static TetelLista createNewEmpty(){
@@ -21,9 +29,8 @@ public class TetelLista {
         return new TetelLista(tetelList);
     }
 
-    TetelLista(List<Tetel> tetelList){
-
-        this.tetelList = tetelList;
+    public boolean isEmpty(){
+        return tetelList.isEmpty();
     }
 
     public List<Tetel> getTetelList() {

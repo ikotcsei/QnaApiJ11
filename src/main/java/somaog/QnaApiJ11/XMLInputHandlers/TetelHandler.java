@@ -37,7 +37,6 @@ public class TetelHandler extends DefaultHandler {
 
         tetelek = new TetelLista();
         answerRowBuilder = new StringBuilder();
-//        linkBuilder = new StringBuilder();
 
     }
 

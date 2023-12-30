@@ -8,9 +8,10 @@ import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.FileNotFoundException;
 
+
 @Configuration
 public class BasicAlgosRepository extends TetelRepository{
-    public BasicAlgosRepository() throws ParserConfigurationException, SAXException, FileNotFoundException {
+    public BasicAlgosRepository() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("basicalgos.xml"));
         nextRandom();

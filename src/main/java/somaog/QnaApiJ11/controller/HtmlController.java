@@ -31,21 +31,25 @@ public class HtmlController {
     @ResponseBody // will return a String
     public String getFirstDesignPattern() throws Exception {
 
-        //ezt nem itt kene meghivni , errre vmit
+        //ne repot kelljen meghivni hanem service-t
         designPatternRepository.nextRandom();
 
         //ez meg majd thymeleaf + javascript
         return "<html>\n" + "<header><title>Welcome</title></header>\n" +
                 "<style>" +
-                ".button2 {width: 50%;}" +
+                ".button2 {width: 25%; height: 15%;}" +
                 "</style>" +
                 "<body>\n" +
-//                "<font size=2>" +
+
+                "<div id=\"noId\" >"+
                 designPatternRepository.getRandom().questionToHtmlString() +
-                "<button class=\"button2\" onclick=\"displayText()\">Click Me!</button> <div id=\"textField\" style=\"display: none;\">"+
+                "</div>" +
+
+
+                "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
+                " <div id=\"textField\" style=\"display: none;\">"+
                              designPatternRepository.getRandom().answerToHtmlString() +
                 "</div>" +
-//                "</font>" +
 
                 "<script>" +
                 "function displayText() {"+
@@ -62,23 +66,26 @@ public class HtmlController {
     @ResponseBody // will return a String
     public String getFirstBasicAlgos() throws Exception {
 
-        //ezt nem itt kene meghivni , errre vmit
+        //ne repot kelljen meghivni hanem service-t
         basicAlgosRepository.nextRandom();
-//        System.out.println(basicAlgosRepository.getRandom().answerToHtmlString());
-//        System.out.println(basicAlgosRepository.getRandom().getAnswer());
-//        System.out.println(basicAlgosRepository.getRandom().getHtmlAnswer());
-//        System.out.println(basicAlgosRepository.getRandom().answerToHtmlString());
 
 
         //ez meg majd thymeleaf + javascript
         return "<html>\n" + "<header><title>Welcome</title></header>\n" +
                 "<style>" +
-                ".button2 {width: 50%;}" +
+                ".button2 {width: 25%; height: 15%;}" +
                 "</style>" +
                 "<body>\n" +
 
+                "<div id=\"noId\" >"+
                 basicAlgosRepository.getRandom().questionToHtmlString() +
-                "<button class=\"button2\" onclick=\"displayText()\">Click Me!</button> <div id=\"textField\" style=\"display: none;\">"+
+                "</div>" +
+
+
+
+
+                "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
+                " <div id=\"textField\" style=\"display: none;\">"+
                 basicAlgosRepository.getRandom().answerToHtmlString() +
                 //ezt akkor kene megjeleniteni ha nem nu
                 "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+
