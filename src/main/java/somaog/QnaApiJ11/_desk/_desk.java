@@ -17,7 +17,7 @@ import java.util.List;
 
 
     1. functionalites
-        add
+        add : resource handling ? most melyik filet nyitja . war-ban hova kerul a path ? meg ilyenek
 
         later :
            js , generate html outside controller .
