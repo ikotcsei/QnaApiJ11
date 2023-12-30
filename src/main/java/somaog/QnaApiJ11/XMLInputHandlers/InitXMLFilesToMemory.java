@@ -24,7 +24,6 @@ public class InitXMLFilesToMemory {
         Scanner sc = new Scanner(System.in);
 
 
-
         TetelLista result = tetelHandler.getTetelek();
 
 
@@ -33,33 +32,6 @@ public class InitXMLFilesToMemory {
         //shuffle questions
         Collections.shuffle(articles);
 
-        Iterator<Tetel> it = articles.iterator();
-        Tetel articleOne;
-        String command = "";
-
-        System.out.println("s - skip question, q - quit ");
-
-        //s - skip, q quit,
-//        while(it.hasNext() && !quit){
-//            articleOne = it.next();
-//            System.out.print(articleOne.getQuestion());
-//            if(sc.next().equals("s")) continue;
-//            System.out.print(articleOne.getAnswer());
-//            command = sc.next();
-//
-//            if(command.equals("q")) quit = true;
-//        }
-
-        while(it.hasNext()){
-            articleOne = it.next();
-            System.out.print(articleOne.getQuestion());
-            System.out.print(articleOne.getAnswer());
-
-        }
-
-
-
-
 
 
     }
@@ -67,6 +39,7 @@ public class InitXMLFilesToMemory {
     /*
     *    static fujnction to parse  xml to memory, returns list of Tetel
     *  */
+
 
     public static List<Tetel> getAll(String file) throws ParserConfigurationException, SAXException, FileNotFoundException {
 
@@ -79,6 +52,7 @@ public class InitXMLFilesToMemory {
 
         List<Tetel> allTetel = new ArrayList<>();
         List<String> allFiles = new ArrayList<>();
+
 
         if(!file.equals("")){
             allFiles.add(file);
@@ -101,11 +75,11 @@ public class InitXMLFilesToMemory {
         Scanner sc = new Scanner(System.in);
         TetelLista result;
 
-//        File file2 = ResourceUtils.getFile("classpath:designpatterns.xml");
+
 
         try{
             for(String s : allFiles){
-                //itt a classpath pontosan hova mutat resources v resources/static
+                //itt a classpath a target/classes ben talalja meg a fileokat
                 saxParser.parse("classpath:"+s, tetelHandler);
                 result = tetelHandler.getTetelek();
                 allTetel.addAll(result.getTetelList());

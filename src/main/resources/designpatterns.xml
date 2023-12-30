@@ -42,7 +42,7 @@
                 private static ClassSingleton INSTANCE;
                 private String info = "Initial info class";
 
-                //private constructor
+                //private consturcotr
                 private ClassSingleton() {
 
                 }
@@ -150,7 +150,7 @@
     </tetel>
     <tetel>
         <question>
-            absztrakt factory(C, kit), client code also
+            absztrakt gyarto(C, kit), client code also
         </question>
         <answer>
             abs factory : ShapeFactory
@@ -160,7 +160,7 @@
     </tetel>
     <tetel>
         <question>
-            epito,builder (C), client code also
+            epito (C, builder), client code also
         </question>
         <answer>
             pl java.lang.StringBuilder
@@ -169,23 +169,17 @@
             myNewObj = TheClass(2,3,4,5,6,7,"argk","argn")
             myNewObj = TheClass.createComplicatedPorduct()
             myNewObj = TheClass.name("kis").id("11").age("101");
-            StringBuilder sb = new StringBuilder();
-            sb.append("").append() ....
-            sb.toString();    -- build
 
         </answer>
     </tetel>
 
     <tetel>
         <question>
-            factory method(C), client code also
+            factory method (C), client code also
         </question>
         <answer>
-            in java libraries creational methods returning an instance of an abstract or interface type
-            pl : java Integer.valueOf(), java.util.Calendar Calendar getInstance(....)
-            ide valami hasznalhatobb pelda kene
-            Shape sh = new Shape();
-            helyett :
+            pl : java Integer.valueOf()
+            Shape sh = new Shape(); helyett :
             ShapeFactory sf = new ShapeFactory();
             Shape sh = sf.getShape("Circle");
             Shape mh = sf.getShape("Rectangle");
@@ -209,7 +203,25 @@
         <answer>
             pl: java Integer wrapper class
             egy obj/osztaly feluletenek atalakitasa a kliens által kívántra
+            myAdapter.createGroup(){ this.adapteeObjec.addGroup(0,1);   }   -- objektum atalakito
 
+            //this adapter helps to convert mph to kmh
+            public class MovableAdapterImpl implements MovableAdapter {
+                private Movable luxuryCars;
+
+                // standard constructors
+
+                @Override
+                public double getSpeed() {
+                    return convertMPHtoKMPH(luxuryCars.getSpeed());
+                }
+
+                private double convertMPHtoKMPH(double mph) {
+                    return mph * 1.60934;
+                }
+            }
+
+            JAVA : InputStreamReader( byte stream-> char stream)
 
         </answer>
     </tetel>

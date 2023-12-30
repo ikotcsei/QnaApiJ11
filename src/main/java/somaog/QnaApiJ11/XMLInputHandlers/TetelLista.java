@@ -8,28 +8,26 @@ public class TetelLista {
     private List<Tetel> tetelList;
 
 
-
-
-    TetelLista(){
+    TetelLista() {
         tetelList = null;
     }
 
-    TetelLista(List<Tetel> tetelList){
+    TetelLista(List<Tetel> tetelList) {
 
         this.tetelList = tetelList;
     }
 
-    public static TetelLista createNewEmpty(){
+    public static TetelLista createNewEmpty() {
 
         return new TetelLista();
     }
 
-    public static TetelLista createNew(List<Tetel> tetelList){
+    public static TetelLista createNew(List<Tetel> tetelList) {
 
         return new TetelLista(tetelList);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return tetelList.isEmpty();
     }
 
@@ -41,13 +39,13 @@ public class TetelLista {
         this.tetelList = tetelList;
     }
 
-    public void addTetel(Tetel b){
+    public void addTetel(Tetel b) {
         tetelList.add(b);
     }
 
-    public Tetel getLastInserted(){
-        if(tetelList.isEmpty()) return null;
-        return tetelList.get(tetelList.size()-1);
+    public Tetel getLastInserted() {
+        if (tetelList.isEmpty()) return null;
+        return tetelList.get(tetelList.size() - 1);
     }
 
 }
