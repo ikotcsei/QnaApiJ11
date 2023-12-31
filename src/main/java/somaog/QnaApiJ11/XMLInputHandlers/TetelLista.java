@@ -52,4 +52,14 @@ public class TetelLista {
         return tetelList.get(tetelList.size() - 1);
     }
 
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        for (Tetel i: tetelList
+             ) {
+            sb.append(i.toString());
+        }
+        return sb.toString();
+    }
+
 }

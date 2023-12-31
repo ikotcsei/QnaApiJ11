@@ -28,6 +28,10 @@ public class Tetel {
     // store the links appeared in tetel
     private List<String> links = new ArrayList<>();
 
+    private List<String> images = new ArrayList<>();
+
+
+
     public String getAnswer() {
         return answer;
     }
@@ -59,7 +63,7 @@ public class Tetel {
 
     @Override
     public String toString() {
-        return this.question + this.answer;
+        return this.question + "\n" + this.answer + "\n" + links.toString() + "\n" + images.toString();
     }
 
     public String toHtmlString() {
@@ -78,9 +82,19 @@ public class Tetel {
         this.links.add(link);
     }
 
+
     public String getLastLink() {
         if (links.isEmpty()) return null;
         return links.get(links.size() - 1);
+    }
+
+    public void addImage(String image){
+        this.images.add(image);
+    }
+
+    public String getLastImage(){
+        if(images.isEmpty()) return null;
+        return images.get(images.size() - 1);
     }
 
 

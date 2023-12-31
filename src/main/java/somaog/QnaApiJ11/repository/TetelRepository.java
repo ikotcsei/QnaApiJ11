@@ -6,7 +6,13 @@ import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
 import javax.management.RuntimeErrorException;
 import java.util.Random;
 
-/*make this class noninitable ?*/
+/**
+ *
+ * make this class noninitable ?
+ *
+ *  class that holds the data imported from xml files*
+ *
+ * */
 public class TetelRepository {
 
     TetelLista tetelLista = TetelLista.createNewEmpty();

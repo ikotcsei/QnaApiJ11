@@ -68,7 +68,6 @@
         <answer>
             egyenrangu felek kommunikacioja, mindenki a kozvetiton keresztul kommunikal
             (mediator:)PARTY ---* MEMBERS | Notify(), Handle()
-
         </answer>
     </tetel>
 

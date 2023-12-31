@@ -1,0 +1,17 @@
+<questionlist>
+    <tetel>
+        <question>
+            quicksort - muveletigeny(best,worst,avg), mem. hasznalat
+            mikor hol, javaban hogy implementalva
+        </question>
+        <answer>
+            time complex : n * logn
+            space complex ( total amount of memory ): logn
+
+        </answer>
+        <links>https://www.geeksforgeeks.org/quick-sort/</links>
+        <image>most.jpg</image>
+        <links>https://www.geeksforgeeks.org/quick-sort/</links>
+        <image>localhost:8080/most.jpg</image>
+    </tetel>
+</questionlist>

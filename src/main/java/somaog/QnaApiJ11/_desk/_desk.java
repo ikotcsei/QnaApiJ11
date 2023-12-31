@@ -17,7 +17,12 @@ package somaog.QnaApiJ11._desk;
 
     1. functionalites
         add :
+             - tudast feltolteni - napi X
+             - controllert kijavitani
+             - kell <image> de kesobb kene megcsinalni
              - resource handling vmi normalis
+             - only one image or link displayed per Tetel, the last one.
+                ha null akkor ne
              - dyn add xml file
                 serve resource : in war, filesystem,....
                 https://www.baeldung.com/spring-mvc-static-resources

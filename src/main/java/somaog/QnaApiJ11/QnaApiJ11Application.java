@@ -12,7 +12,7 @@ import java.io.File;
 public class QnaApiJ11Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		printCP();
+//		printCP();
 		SpringApplication.run(QnaApiJ11Application.class, args);
 	}
 
@@ -21,13 +21,13 @@ public class QnaApiJ11Application extends SpringBootServletInitializer {
 		return builder.sources(QnaApiJ11Application.class);
 	}
 
-	public static void printCP(){
-		String classpath = System.getProperty("java.class.path");
-		String[] classPathValues = classpath.split(File.pathSeparator);
-		for (String s : classPathValues
-		) {
-			System.out.println(s);
-
-		}
-	}
+//	public static void printCP(){
+//		String classpath = System.getProperty("java.class.path");
+//		String[] classPathValues = classpath.split(File.pathSeparator);
+//		for (String s : classPathValues
+//		) {
+//			System.out.println(s);
+//
+//		}
+//	}
 }

@@ -23,6 +23,10 @@ public class DesignPatternRepository extends TetelRepository{
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
         nextRandom();
 
+        //pring for testing
+//        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("teszt.xml"));
+//        System.out.println(tetelLista.toString());
+
 
     }
 

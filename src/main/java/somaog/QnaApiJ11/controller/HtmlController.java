@@ -34,6 +34,11 @@ public class HtmlController {
         //ne repot kelljen meghivni hanem service-t
         designPatternRepository.nextRandom();
 
+        //    <img src="localhost:8080/most.jpg" alt="Italian Trulli">
+        // <image>localhost:8080/most.jpg</image>
+
+
+
         //ez meg majd thymeleaf + javascript
         return "<html>\n" + "<header><title>Welcome</title></header>\n" +
                 "<style>" +
@@ -50,6 +55,10 @@ public class HtmlController {
                 " <div id=\"textField\" style=\"display: none;\">"+
                              designPatternRepository.getRandom().answerInHtmlString() +
                 "</div>" +
+
+                //ezt is kell blokkolni, tovabba csak akkor kirajzolni ha nem null
+//                "<img src=\"" + designPatternRepository.getRandom().getLastImage() + "\" width=\"500\" height=\"600\">"+
+
 
                 "<script>" +
                 "function displayText() {"+
@@ -86,8 +95,10 @@ public class HtmlController {
 
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
+
                 basicAlgosRepository.getRandom().answerInHtmlString() +
-                //ezt akkor kene megjeleniteni ha nem nu
+
+                //ezt akkor kene megjeleniteni ha nem null a linkeke szama
                 "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+
                 "</div>" +
 
