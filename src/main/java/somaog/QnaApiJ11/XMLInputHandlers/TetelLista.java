@@ -2,6 +2,10 @@ package somaog.QnaApiJ11.XMLInputHandlers;
 
 import java.util.List;
 
+
+/** List of Tetel entries, used by repositories to retrive Tetel Items
+ *
+ */
 public class TetelLista {
 
     //get last item, amit utljara szurtunk be biztos h az az utolso ?

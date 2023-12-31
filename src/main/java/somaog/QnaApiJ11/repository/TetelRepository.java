@@ -36,10 +36,10 @@ public class TetelRepository {
         return lastRandomTetel;
     }
 
-    /*
+    /**
     *    retrieves a random number from the tetellist, sets lastRandomTetel field
     *    so random number can be read from there
-    * */
+    */
     public void nextRandom() throws Exception {
 
         rand = new Random();

@@ -14,5 +14,19 @@
         <answer>
         </answer>
     </tetel>
+    <tetel>
+        <question>
+            hashing
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            caching
+        </question>
+        <answer>
+        </answer>
+    </tetel>
 
 </questionlist>

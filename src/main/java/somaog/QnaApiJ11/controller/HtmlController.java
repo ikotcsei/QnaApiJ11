@@ -42,13 +42,13 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                designPatternRepository.getRandom().questionToHtmlString() +
+                designPatternRepository.getRandom().questionInHtmlString() +
                 "</div>" +
 
 
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
-                             designPatternRepository.getRandom().answerToHtmlString() +
+                             designPatternRepository.getRandom().answerInHtmlString() +
                 "</div>" +
 
                 "<script>" +
@@ -78,7 +78,7 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                basicAlgosRepository.getRandom().questionToHtmlString() +
+                basicAlgosRepository.getRandom().questionInHtmlString() +
                 "</div>" +
 
 
@@ -86,7 +86,7 @@ public class HtmlController {
 
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
-                basicAlgosRepository.getRandom().answerToHtmlString() +
+                basicAlgosRepository.getRandom().answerInHtmlString() +
                 //ezt akkor kene megjeleniteni ha nem nu
                 "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+
                 "</div>" +
@@ -106,7 +106,7 @@ public class HtmlController {
     //return html template from resources/static/login.html
     @GetMapping(value = "/links", produces = MediaType.TEXT_HTML_VALUE)
     public String loginAsHTML() {
-        return "links.html";
+        return "XMLUnderConstruction/links.html";
     }
 
 

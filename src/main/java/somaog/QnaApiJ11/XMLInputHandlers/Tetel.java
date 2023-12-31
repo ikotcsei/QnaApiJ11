@@ -5,13 +5,16 @@ import somaog.QnaApiJ11.utility.StringToHtmlConverter;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+
+        Base class for handling the xml , based on xml structure
+        stores question answer and links text in string
+        and htmlQuestion and htmlAnswer text in HTML format
+
+*/
 public class Tetel {
 
-    /*
-
-Base class for handling the xml , based on xml structure
-
- */
 
     private String question;
     private String answer;
@@ -22,17 +25,24 @@ Base class for handling the xml , based on xml structure
     private String htmlQuestion;
     private String htmlAnswer;
 
+    // store the links appeared in tetel
     private List<String> links = new ArrayList<>();
 
     public String getAnswer() {
         return answer;
     }
-    public String getHtmlAnswer() { return htmlAnswer; }
+
+    public String getHtmlAnswer() {
+        return htmlAnswer;
+    }
 
     public String getQuestion() {
         return question;
     }
-    public String getHtmlQuestion() { return htmlQuestion; }
+
+    public String getHtmlQuestion() {
+        return htmlQuestion;
+    }
 
     public void setQuestion(String question) {
 
@@ -48,25 +58,30 @@ Base class for handling the xml , based on xml structure
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.question + this.answer;
     }
 
-    public String toHtmlString() { return this.htmlQuestion + this.htmlAnswer; }
+    public String toHtmlString() {
+        return this.htmlQuestion + this.htmlAnswer;
+    }
 
-    public String answerToHtmlString(){ return this.htmlAnswer; }
+    public String answerInHtmlString() {
+        return this.htmlAnswer;
+    }
 
-    public String questionToHtmlString(){ return this.htmlQuestion; }
+    public String questionInHtmlString() {
+        return this.htmlQuestion;
+    }
 
-    public void addLink(String link){
+    public void addLink(String link) {
         this.links.add(link);
     }
 
-    public String getLastLink(){
-        if(links.isEmpty()) return null;
-        return links.get(links.size()-1);
+    public String getLastLink() {
+        if (links.isEmpty()) return null;
+        return links.get(links.size() - 1);
     }
-
 
 
 }

@@ -7,7 +7,22 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TetelHandler extends DefaultHandler {
+
+/**  class for parsing the xml file
+    <tetel>
+            <question>
+                tries
+            </question>
+            <links>https://en.wikipedia.org/wiki/Trie</links>
+            <links>https://.....</links>
+            <answer>
+                valami valasz
+            </answer>
+    </tetel>
+
+
+**/
+public class TetelParserHandler extends DefaultHandler {
 
 
     private static final String QUESTIONLIST = "questionlist";
@@ -19,10 +34,8 @@ public class TetelHandler extends DefaultHandler {
     //list of tetel
     private TetelLista tetelek;
 
-//    private List<String> links;
     //tmp storage building more line long tags
     private StringBuilder answerRowBuilder = new StringBuilder();
-//    private StringBuilder linkBuilder = new StringBuilder();
 
 
     @Override

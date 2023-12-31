@@ -1,12 +1,10 @@
 package somaog.QnaApiJ11.XMLInputHandlers;
 
-import org.springframework.util.ResourceUtils;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
@@ -19,7 +17,7 @@ public class InitXMLFilesToMemory {
                 "muveletek(beszur, torol, lekerdez kovi, lekerdez max) , rendezzuk elore, osszuk fel(shell sort), ";
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
-        TetelHandler tetelHandler = new TetelHandler();
+        TetelParserHandler tetelHandler = new TetelParserHandler();
         boolean quit = false;
         Scanner sc = new Scanner(System.in);
 
@@ -36,11 +34,11 @@ public class InitXMLFilesToMemory {
 
     }
 
-    /*
+    /**
     *    static fujnction to parse  xml to memory, returns list of Tetel
-    *  */
-
-
+     *
+     *
+    */
     public static List<Tetel> getAll(String file) throws ParserConfigurationException, SAXException, FileNotFoundException {
 
         final String fileOne = "bintree.xml";
@@ -69,7 +67,7 @@ public class InitXMLFilesToMemory {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
-        TetelHandler tetelHandler = new TetelHandler();
+        TetelParserHandler tetelHandler = new TetelParserHandler();
 
         boolean quit = false;
         Scanner sc = new Scanner(System.in);

@@ -1,19 +1,23 @@
-<!--atgondol-->
+<!--basic algos and DS -->
 <!--muveletigen, memoriahasznalat, peldak : mire hol hasznaljak, javaban mi hogy van megvalositva
     bestcase,worst case, average case-->
 <questionlist>
     <tetel>
         <question>
-            quicksort
+            quicksort - muveletigeny(best,worst,avg), mem. hasznalat
+            mikor hol, javaban hogy implementalva
         </question>
         <answer>
-            this is some sort of answer
+            time complex : n * logn
+            space complex ( total amount of memory ): logn
+
         </answer>
         <links>https://www.geeksforgeeks.org/quick-sort/</links>
     </tetel>
     <tetel>
         <question>
-            mergesort
+            mergesort - muveletigeny(best,worst,avg), mem. hasznalat
+            mikor hol, javaban hogy implementalva
         </question>
         <answer>
 
@@ -21,7 +25,7 @@
     </tetel>
     <tetel>
         <question>
-            binarysearch
+            binarysearch - array
         </question>
         <answer>
         </answer>
@@ -63,7 +67,6 @@
         <links>https://www.geeksforgeeks.org/binary-search-tree-data-structure/</links>
         <answer>
 
-
         </answer>
     </tetel>
 
@@ -77,7 +80,6 @@
 
         </answer>
     </tetel>
-
     <tetel>
         <question>
             N-ary tree
@@ -87,42 +89,46 @@
 
         </answer>
     </tetel>
+    <tetel>
+        <question>
+            basic data structures - how is implemented in java
+             pqueue, vector/arrayList
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            basic data structures - how is implemented in java
+            stack, queue,  hashtable
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            dijkstra
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            graf - szelessegi, melysegi bejaras
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            O(N), memoriaigeny
+            peldak
+        </question>
+        <answer>
+            O : 1, logn, n, n*logn, n2, 2^n, n!
+        </answer>
+    </tetel>
 
-    <tetel>
-        <question>
-            stacks
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            queues
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            priority queue
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-           vector / arraylist
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-           hashing, hashtable
-        </question>
-        <answer>
-        </answer>
-    </tetel>
 
 
 
