@@ -189,10 +189,28 @@
             prototype (C), client code also
         </question>
         <answer>
+            - copy instead of initalization
+            / Concrete prototype. The cloning method creates a new object
+            // in one go by calling the constructor of the current class and
+            // passing the current object as the constructor's argument.
+            // Performing all the actual copying in the constructor helps to
+            // keep the result consistent: the constructor will not return a
+            // result until the new object is fully built; thus, no object
+            // can have a reference to a partially-built clone.
+
             pl : java bean object visualizations
             statikus : obj = Prototype.Clone(), vagy obj = prototype.clone();
+                      MyClass copy = (MyClass) obj.clone();
 
             JAVA : streamtokenizer : can be customized respect to end on line char. etc.
+
+            mikor :  - jo mert ugy is tudunk masolni h semmit nem tudunk az osztalyrol/tipusrol
+            - copy instead of initalization , saves costs
+
+            Shallow clone vs deep clone.
+
+            <links>https://refactoring.guru/design-patterns/prototype</links>
+            <links>https://www.geeksforgeeks.org/prototype-design-pattern/</links>
         </answer>
     </tetel>
     <tetel>
@@ -255,7 +273,10 @@
             sok informaciot kell nyilvantartani, sok redundans. nem objektumonkent tartjuk
             nyilvan, hanem kiemeljuk
 
+            https://refactoring.guru/design-patterns/flyweight
+
             JAVA : String intern()
+            https://www.baeldung.com/string/intern
         </answer>
     </tetel>
     <tetel>

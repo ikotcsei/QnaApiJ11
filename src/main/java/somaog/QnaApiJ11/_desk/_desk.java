@@ -15,12 +15,13 @@ package somaog.QnaApiJ11._desk;
                https://www.baeldung.com/spring-boot-enable-disable-endpoints-at-runtime
 
 
-    1. functionalites
+    1. functionalites,todos
         add :
              - tudast feltolteni - napi X
-             - controllert kijavitani
+             - controllert kijavitani - ehhez kell tymeleaf v JAVASCRIPT - inkabb hogy ezt tanuljam.
              - kell <image> de kesobb kene megcsinalni
-             - resource handling vmi normalis
+             - logging ?
+             - exceptions
              - only one image or link displayed per Tetel, the last one.
                 ha null akkor ne
              - dyn add xml file

@@ -25,16 +25,19 @@
     </tetel>
     <tetel>
         <question>
-            binarysearch - array
+            binarysearch - array, in the java mem. model
         </question>
         <answer>
         </answer>
     </tetel>
     <tetel>
         <question>
-            bin tree - create, insert, search, traversal : pre, in, post
+            bin tree - create, insert, search, save, load, copy
+            traversal : pre, in, post
         </question>
         <answer>
+            save : inorder,preorder, array - bintree
+            load : array , in + post, pre + post, in + pre
         </answer>
     </tetel>
     <tetel>
@@ -46,7 +49,7 @@
     </tetel>
     <tetel>
         <question>
-            heap
+            heap,  in the java mem. model
         </question>
         <answer>
         </answer>
