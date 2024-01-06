@@ -1,0 +1,74 @@
+<questionlist>
+
+    <tetel>
+        <question>
+            Design a Chat Service (like Facebook Messenger or WhatsApp)
+
+            Considerations for real-time messaging and data synchronization across devices.
+            Handling high volumes of messages and maintaining low latency.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a Mass Social Media Service (like Facebook, Twitter, or Instagram)
+
+            Strategies for handling large-scale data and user traffic.
+            Implementing features like news feeds, post interactions, and multimedia content.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a Social Network and Message Board Service (like Quora, Reddit, or HackerNews)
+
+            Focusing on user-generated content, community engagement, and content moderation.
+            Ensuring scalability and efficient search functionality across numerous posts and threads
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a File Sharing Service (like Dropbox, Google Drive, or Google Photos)
+
+            Ensuring secure file storage, sharing, and synchronization across multiple devices.
+            Handling large file sizes and optimizing for fast upload/download speeds.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a Video Sharing Service (like YouTube, Netflix)
+
+            Managing large-scale video storage and optimizing streaming services for different devices.
+            Implementing user recommendations, content search, and playback quality adjustments.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a Proximity Service (like Yelp, Nearby Friends, Uber)
+
+            Integrating location-based services and real-time updates.
+            Balancing privacy concerns with functionality for services reliant on user location.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            Design a Search Engine Related Service (like Typeahead or WebCrawler)
+
+            Developing fast, predictive search capabilities for enhanced user experience.
+            Designing efficient web crawling and data indexing strategies for accurate search results.
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+
+</questionlist>

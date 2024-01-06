@@ -1,6 +1,8 @@
 package somaog.QnaApiJ11._desk;
 
 
+import java.util.List;
+
 /*  add a new qna :
        - copy file to /resources/
        - create repo file extend from TetelRepository
@@ -17,9 +19,17 @@ package somaog.QnaApiJ11._desk;
 
     1. functionalites,todos
         add :
+             - frontend JS : sajat projektbe javascript helloworld
              - tudast feltolteni - napi X
-             - controllert kijavitani - ehhez kell tymeleaf v JAVASCRIPT - inkabb hogy ezt tanuljam.
-             - kell <image> de kesobb kene megcsinalni
+             -frontend JS :
+                    add js project, helloworld,
+                    deploy, works ?
+                    json endpoint for react
+                    connect to endpoint
+
+             - frontend JS, linkek (kepek  ? ) normalis megjelenitese
+                - controllert kijavitani - ehhez kell tymeleaf v JAVASCRIPT - inkabb hogy ezt tanuljam.
+                - kell <image> de kesobb kene megcsinalni
              - logging ?
              - exceptions
              - only one image or link displayed per Tetel, the last one.
@@ -43,7 +53,28 @@ public class _desk {
 
     public static void main(String[] args) {
 
+
+
     }
+
+    class Proxy{
+
+        Target target;
+
+        void proxyCall(){
+            //if enabled
+            target.doSg();
+        }
+    }
+
+    class Target{
+
+        //target methods
+        void doSg(){
+
+        }
+    }
+
 
 
 

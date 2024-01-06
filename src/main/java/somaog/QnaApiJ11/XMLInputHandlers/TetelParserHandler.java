@@ -20,6 +20,12 @@ import java.util.List;
             </answer>
     </tetel>
 
+   ide is teszteket kene, min max, jol formazott hogy nez ki
+   pl hibas :
+         <answer>
+         <links></links>
+            valami valasz
+         </answer>
 
 **/
 public class TetelParserHandler extends DefaultHandler {

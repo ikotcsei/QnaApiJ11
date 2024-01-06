@@ -4,9 +4,30 @@
             observer(B), client code also
         </question>
         <answer>
-            pelda : timer ->* kijelzok
-            pl java  : event processing model, (subscription)
+            pelda : timer ->* kijelzok (subscription model)
+            pl java  : event processing model, delegation model lsd link
+
+            class OsOberver{
+            //a megvalositando register stb metodusok
+            }
+
+            class OsObserved{
+            //a megvalositando alert stb.
+            }
+
+            //clock
+            class Observer extends OsOberver{
+            // override register1
+            }
+
+            //timer
+            class Observed extends OsObserved{
+            private List(Observer) observerList;
+            //alert observers
+            }
+
         </answer>
+        <links>https://www.javatpoint.com/delegation-event-model-in-java</links>
     </tetel>
     <tetel>
         <question>
@@ -98,7 +119,9 @@
             nem tudjuk ki dolgozza fel a parancsot.
             client --create, activate---- cmdN,...cmd1 (parancsok sorozata ,FIFO),
             undo, doItLater, with chain of responsiblity
+            https://refactoring.guru/design-patterns/command
         </answer>
+        <links>https://refactoring.guru/design-patterns/command</links>
     </tetel>
 
     <tetel>
@@ -136,7 +159,10 @@
         </question>
         <answer>
             kb iterator, de eltero feluleten esvagy elteru muveletekkel
+            - hasznalhato composite - el pl.
+            https://refactoring.guru/design-patterns/visitor
         </answer>
+        <links>https://refactoring.guru/design-patterns/visitor</links>
     </tetel>
     <tetel>
         <question>
@@ -145,7 +171,9 @@
         <answer>
             absztrakicio levalasztasa az implementaciorol, kliens absztrakciot hivja, implementacio
             valtoztathato de a kliens kod nem valtozik
+            https://refactoring.guru/design-patterns/bridge
         </answer>
+        <links>https://refactoring.guru/design-patterns/bridge</links>
     </tetel>
     <tetel>
         <question>

@@ -54,6 +54,9 @@ public class HtmlController {
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
                              designPatternRepository.getRandom().answerInHtmlString() +
+
+                //ezt akkor kene megjeleniteni ha nem null a linkeke szama
+                "<a href=" + designPatternRepository.getRandom().getLastLink()+">link text</a>"+
                 "</div>" +
 
                 //ezt is kell blokkolni, tovabba csak akkor kirajzolni ha nem null

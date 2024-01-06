@@ -9,7 +9,27 @@
         </question>
         <answer>
             time complex : n * logn
-            space complex ( total amount of memory ): logn
+            space complex ( total amount of memory ): helyben rendez
+
+            invarians i -re : i. elemig már jo, kisebb mint pivot, (i + 1) lehet kisebb is nagyobb is mint pivot
+
+
+            int partition(int arr[],int low,int high)
+            {
+                int pivot=arr[high];
+                int i=(low-1);
+
+                for(int j=low;j less or eq. high;j++)
+                {
+                    if(arr[j] less pivot)
+                    {
+                        i++;
+                        swap(arr[i],arr[j]);
+                    }
+                }
+                swap(arr[i+1],arr[high]);
+                return (i+1);
+            }
 
         </answer>
         <links>https://www.geeksforgeeks.org/quick-sort/</links>
@@ -131,10 +151,12 @@
             O : 1, logn, n, n*logn, n2, 2^n, n!
         </answer>
     </tetel>
-
-
-
-
-
-
+    <tetel>
+        <question>
+            graf - szinezes
+        </question>
+        <answer>
+            negyszin tetel
+        </answer>
+    </tetel>
 </questionlist>

@@ -35,5 +35,41 @@
         <answer>
         </answer>
     </tetel>
+    <tetel>
+        <question>
+            server side client side rendering
+        </question>
+        <answer>
+            Server-side rendering is usually the choice for SEO-dependent websites with static content,
+            while client-side rendering is used to render dynamic content and improve the user experience.
+
+            Server-side pros:
+
+            Search engines can crawl the site for better SEO.
+            The initial page load is faster.
+            Great for static sites.
+
+            Server-side cons:
+
+            Frequent server requests.
+            An overall slow page rendering.
+            Full page reloads.
+            Non-rich site interactions.
+
+            Client-side pros:
+
+            Rich site interactions
+            Fast website rendering after the initial load.
+            Great for web applications.
+            Robust selection of JavaScript libraries.
+
+            Client-side cons:
+
+            Low SEO if not implemented correctly.
+            Initial load might require more time.
+            In most cases, requires an external library
+        </answer>
+        <links>https://www.freecodecamp.org/news/server-side-rendering-javascript/</links>
+    </tetel>
 
 </questionlist>
