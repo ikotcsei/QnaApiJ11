@@ -27,6 +27,11 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -55,42 +60,58 @@
 <!--				version needed here
 			last version : https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/-->
 
-				<executions>
+<!--				<executions>-->
 
-					<execution>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-						<phase>generate-resources</phase>
-					</execution>
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>install-node-and-npm</goal>-->
+<!--						</goals>-->
+<!--						<phase>generate-resources</phase>-->
+<!--					</execution>-->
 
-					<execution>
-						<id>npm install</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
-					</execution>
+<!--					<execution>-->
+<!--						<id>npm install</id>-->
+<!--						<goals>-->
+<!--							<goal>npm</goal>-->
+<!--						</goals>-->
+<!--						<phase>generate-resources</phase>-->
+<!--						<configuration>-->
+<!--							<arguments>install</arguments>-->
+<!--						</configuration>-->
+<!--					</execution>-->
 
-					<execution>
-						<id>npm run-script build</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<!-- arguments>run-script build</arguments-->
-						</configuration>
-					</execution>
+<!--					<execution>-->
+<!--						<id>npm run-script build</id>-->
+<!--						<goals>-->
+<!--							<goal>npm</goal>-->
+<!--						</goals>-->
+<!--						<phase>generate-resources</phase>-->
+<!--						<configuration>-->
+<!--&lt;!&ndash;							 <arguments>run-script build</arguments>&ndash;&gt;-->
+<!--						</configuration>-->
+<!--					</execution>-->
 
-				</executions>
+<!--					<execution>-->
+<!--						<id>webpack-build</id>-->
+<!--						<goals><goal>npm</goal></goals>-->
+<!--						<configuration>-->
+<!--                			<arguments>run watch</arguments>-->
+<!--           				 </configuration>-->
+<!--					</execution>-->
+
+<!--				</executions>-->
 
 				<configuration>
 					<nodeVersion>v16.14.2</nodeVersion>
+<!--					npm version ???-->
 				</configuration>
+
+<!--				npm and node version s
+				https://nodejs.org/dist/   - node versions
+				https://nodejs.org/dist/index.json   - which npm to use
+
+				lehet mivel projektenkent mass kell ilyen npm wrappert kene hasznalni
+-->
 
 
 			</plugin>

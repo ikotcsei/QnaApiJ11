@@ -1,4 +1,11 @@
 <!--toadd : equals, hashCode, ....
    deepcopy shallow copy https://www.baeldung.com/java-deep-copy
 
+   failfast, failsafe
+deepcpy shallow cpy
+lazyload : if null , init else no init
+
+methods common to all objects
+SampleJavaExamples  strongweak ref
+
 -->

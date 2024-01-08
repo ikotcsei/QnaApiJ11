@@ -99,7 +99,14 @@
         </question>
         <links>https://en.wikipedia.org/wiki/AVL_tree</links>
         <answer>
+            forgatasok : rotate_left, rotate_right, rotate_left_right, rotate_right_left
 
+            muvetek : insert logN, delete logN
+
+            After this insertion, if a tree becomes unbalanced, only ancestors of the newly inserted node are
+            unbalanced. This is because only those nodes have their sub-trees altered.[13] So it is necessary
+            to check each of the node's ancestors for consistency with the invariants of AVL trees: this is called
+            "retracing". This is achieved by considering the balance factor of each node.
 
         </answer>
     </tetel>

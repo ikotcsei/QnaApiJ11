@@ -18,7 +18,35 @@ import java.util.List;
 
 
     1. functionalites,todos
-        add :
+          add :
+
+             0. tudast feltolteni - napi X
+
+             0.11 create git save , bundle to war, serving on node ? ,
+                  - create json serv, req from js, test on node
+
+             0.1 copy bundle.js, index.html to target/classes/static + localhost:8080
+
+             0.2 reactJS project setup, ebben van webpack-es verzio ezt kene sztem
+             https://www.geeksforgeeks.org/reactjs-babel-introduction/?ref=lbp
+             ezalapjan mukodo webpack + js gfgreact, ezt most a QnaApiJ11 be kene megcsinalni
+             es ezzel
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+             osszehakkelni a 2-t
+
+
+             0.3 webpack install, webpack es npm osszehozni. bundle.js kell.
+                 loadereket installalni . jsx, css- hez stb kell.
+
+             0.4 e szerint vegigprobalni, minimal springBoot, react app
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+             lehet mivel projektenkent mass kell ilyen npm wrappert kene hasznalni
+
+             0.5 az npm run build nem fut, nincs npm ?? vagy
+
+             1. 1-2 sima js project osszedobni, npm-et tesztelni. itt leirva reszletesen ez tetszik
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+
              - frontend JS : sajat projektbe javascript helloworld
              - tudast feltolteni - napi X
              -frontend JS :
@@ -30,6 +58,7 @@ import java.util.List;
              - frontend JS, linkek (kepek  ? ) normalis megjelenitese
                 - controllert kijavitani - ehhez kell tymeleaf v JAVASCRIPT - inkabb hogy ezt tanuljam.
                 - kell <image> de kesobb kene megcsinalni
+             - add <every> tag to xml - amit mindenhol renderel az adott xml- hez
              - logging ?
              - exceptions
              - only one image or link displayed per Tetel, the last one.

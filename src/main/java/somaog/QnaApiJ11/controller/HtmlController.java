@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import somaog.QnaApiJ11.repository.BasicAlgosRepository;
 import somaog.QnaApiJ11.repository.DesignPatternRepository;
@@ -19,6 +20,11 @@ public class HtmlController {
 
     @Autowired
     BasicAlgosRepository basicAlgosRepository;
+
+    @RequestMapping(value = "/")
+    public String index(){
+        return "index";
+    }
 
     @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody // will return a String
