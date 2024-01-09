@@ -23,7 +23,7 @@ import java.util.List;
              0. tudast feltolteni - napi X
 
              0.11 create git save , bundle to war, serving on node ? ,
-                  - create json serv, req from js, test on node
+                  - create json serv, req from js, test on node asdf
 
              0.1 copy bundle.js, index.html to target/classes/static + localhost:8080
 
