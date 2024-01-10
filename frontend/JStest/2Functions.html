@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--function hoisting
+    arguments are passed by value
+-->
+<script>
+    function aPlusB(a, b){
+        return a + b;
+    }
+
+    var funcVar = function myFunction(a, b) {
+          return a * b;
+    }
+
+    const product = function (a, b) {return a * b};
+    document.write(product(2,3));
+
+    console.log(funcVar(1,2));
+<!--    myFunction(1,2);  is undefined-->
+    console.log(aPlusB(2,2));
+    console.log("type of function(a,b)... : " +typeof product)
+
+    const x = (x, y) => x * y;
+    console.log(x(3,4));
+
+
+    function sum(...args) {
+          let sum = 0;
+          for (let arg of args) sum += arg;
+          return sum;
+    }
+
+    console.log( sum(4, 9, 16, 25, 29, 100, 66, 77));
+
+<!--======================================================================-->
+    x = findMax(1, 123, 500, 115, 44, 88);
+
+    function findMax() {
+      let max = -Infinity;
+      for (let i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+          max = arguments[i];
+        }
+      }
+      return max;
+    }
+</script>
+</body>
+</html>
