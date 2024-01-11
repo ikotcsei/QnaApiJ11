@@ -1,5 +1,8 @@
 package somaog.QnaApiJ11.XMLInputHandlers;
 
+import somaog.QnaApiJ11.utility.CustomTetelMapper;
+
+import java.io.IOException;
 import java.util.List;
 
 
@@ -50,6 +53,12 @@ public class TetelLista {
     public Tetel getLastInserted() {
         if (tetelList.isEmpty()) return null;
         return tetelList.get(tetelList.size() - 1);
+    }
+
+    public void testJsonRepr() throws IOException {
+        for(Tetel t : tetelList){
+            CustomTetelMapper.doTheMapping(t);
+        }
     }
 
     @Override

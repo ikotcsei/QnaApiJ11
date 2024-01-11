@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Configuration;
 import org.xml.sax.SAXException;
 import somaog.QnaApiJ11.XMLInputHandlers.InitXMLFilesToMemory;
 import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
+import somaog.QnaApiJ11.utility.Car;
+import somaog.QnaApiJ11.utility.CustomTetelMapper;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.FileNotFoundException;
@@ -21,6 +23,7 @@ public class DesignPatternRepository extends TetelRepository{
         //vhogy ezt kene garantalni
 
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
+        tetelLista.testJsonRepr();
         nextRandom();
 
         //pring for testing

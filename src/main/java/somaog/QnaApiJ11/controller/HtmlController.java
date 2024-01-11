@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import somaog.QnaApiJ11.repository.BasicAlgosRepository;
 import somaog.QnaApiJ11.repository.DesignPatternRepository;
+import somaog.QnaApiJ11.utility.Car;
+import somaog.QnaApiJ11.utility.CustomTetelMapper;
+
+import java.io.IOException;
 
 @Controller  // to return HTML, no restcontroller and responsebody annotations.
 public class HtmlController {
@@ -29,20 +33,36 @@ public class HtmlController {
 
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
-    @ResponseBody // will return a String
-    public String welcomeAsHTML() {
-        return "<html>\n" + "<header><title>Welcome</title></header>\n" +
-                "<body>\n" + "Hello world\n" + "</body>\n" + "</html>";
+//    @ResponseBody // will return a String
+    public @ResponseBody  String welcomeAsHTML() {
+//        return "<html>\n" + "<header><title>Welcome</title></header>\n" +
+//                "<body>\n" + "Hello world\n" + "</body>\n" + "</html>";
+        return "hello world.";
     }
 
-//    @CrossOrigin(origins = "http://localhost:8080")
-//    @GetMapping(value = "/welcome", produces = MediaType.APPLICATION_JSON_VALUE)
-//    @ResponseBody // will return a String
-//    public ResponseEntity welcomeAsJSON() {
-         // https://www.baeldung.com/spring-boot-json
-    // es az objektet service-n keresztul olvassa ki, kell tetelservice
-//        return ResponseEntity.ok(javaobject);
-//    }
+    //json convert egyelore igy mukodik de ronda
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> welcomeAsJSON() throws IOException {
+//          https://www.baeldung.com/spring-boot-json
+//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+        //elvileg jackson2 library automappel vhogy springboot-ban
+        return ResponseEntity.ok().body(
+                CustomTetelMapper.doTheMapping(new Car(1,2)));
+
+    }
+
+    // testing automapper jackson - ide kell autoconverting
+    //https://www.baeldung.com/spring-type-conversions
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping(value = "/jsontest2", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Car> welcomeAsJSON2() throws IOException {
+//          https://www.baeldung.com/spring-boot-json
+//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+        //elvileg jackson2 library automappel vhogy springboot-ban
+        return ResponseEntity.ok(new Car(1,2));
+
+    }
 
     @GetMapping(value = "/dp", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody // will return a String

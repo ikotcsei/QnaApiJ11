@@ -1,8 +1,3 @@
-package somaog.QnaApiJ11._desk;
-
-
-import java.util.List;
-
 /*  add a new qna :
        - copy file to /resources/
        - create repo file extend from TetelRepository
@@ -25,6 +20,28 @@ import java.util.List;
              0.11 create git save , bundle to war, serving on node ? ,
                   - create json serv, req from js, test on node asdf
 
+             0.1 copy bundle.js, index.html to target/classes/static + localhost:8080
+
+             0.2 reactJS project setup, ebben van webpack-es verzio ezt kene sztem
+             https://www.geeksforgeeks.org/reactjs-babel-introduction/?ref=lbp
+             ezalapjan mukodo webpack + js gfgreact, ezt most a QnaApiJ11 be kene megcsinalni
+             es ezzel
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+             osszehakkelni a 2-t
+
+
+             0.3 webpack install, webpack es npm osszehozni. bundle.js kell.
+                 loadereket installalni . jsx, css- hez stb kell.
+
+             0.4 e szerint vegigprobalni, minimal springBoot, react app
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+             lehet mivel projektenkent mass kell ilyen npm wrappert kene hasznalni
+
+             0.5 az npm run build nem fut, nincs npm ?? vagy
+
+             1. 1-2 sima js project osszedobni, npm-et tesztelni. itt leirva reszletesen ez tetszik
+             https://stackoverflow.com/questions/62925978/spring-react-frontend-maven-plugin-not-working
+
              - frontend JS : sajat projektbe javascript helloworld
              - tudast feltolteni - napi X
              -frontend JS :
@@ -37,7 +54,6 @@ import java.util.List;
                 https://docs.spring.io/spring-framework/reference/core/validation/convert.html
                 spring type conversion : obj -> json, xml, dates stb....
                 https://www.baeldung.com/spring-type-conversions
-                add - converter, dto, resources, etcetc
 
              - frontend JS, linkek (kepek  ? ) normalis megjelenitese
                 - controllert kijavitani - ehhez kell tymeleaf v JAVASCRIPT - inkabb hogy ezt tanuljam.
@@ -62,34 +78,3 @@ import java.util.List;
     3. deploy  CI/CD setup
 *
 * */
-public class _desk {
-
-    public static void main(String[] args) {
-
-
-
-    }
-
-    class Proxy{
-
-        Target target;
-
-        void proxyCall(){
-            //if enabled
-            target.doSg();
-        }
-    }
-
-    class Target{
-
-        //target methods
-        void doSg(){
-
-        }
-    }
-
-
-
-
-
-}
