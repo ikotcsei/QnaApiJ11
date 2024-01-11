@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,12 +27,22 @@ public class HtmlController {
         return "index";
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody // will return a String
     public String welcomeAsHTML() {
         return "<html>\n" + "<header><title>Welcome</title></header>\n" +
                 "<body>\n" + "Hello world\n" + "</body>\n" + "</html>";
     }
+
+//    @CrossOrigin(origins = "http://localhost:8080")
+//    @GetMapping(value = "/welcome", produces = MediaType.APPLICATION_JSON_VALUE)
+//    @ResponseBody // will return a String
+//    public ResponseEntity welcomeAsJSON() {
+         // https://www.baeldung.com/spring-boot-json
+    // es az objektet service-n keresztul olvassa ki, kell tetelservice
+//        return ResponseEntity.ok(javaobject);
+//    }
 
     @GetMapping(value = "/dp", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody // will return a String
