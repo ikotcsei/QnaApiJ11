@@ -10,7 +10,7 @@ class App extends Component{
     componentDidMount() {
         console.log("component did mount, call to localhost");
 
-        axios.get("http://localhost:8081/welcome",{
+        axios.get("http://localhost:8081/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }

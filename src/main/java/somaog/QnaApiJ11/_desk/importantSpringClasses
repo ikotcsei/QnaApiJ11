@@ -1,0 +1,12 @@
+
+config :
+.....
+
+WebClient
+RestTemplate
+
+
+
+
+spring alapfogalmak atnezni, doksit olvasni : validation, databinding, etc
+https://docs.spring.io/spring-framework/reference/web/webmvc.html

@@ -53,7 +53,11 @@ public class HtmlController {
     }
 
     // testing automapper jackson - ide kell autoconverting
+    //https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/message-converters.html
     //https://www.baeldung.com/spring-type-conversions
+    //https://www.baeldung.com/spring-httpmessageconverter-rest
+    //https://docs.spring.io/spring-android/docs/current/reference/html/rest-template.html#MappingJackson2HttpMessageConverter
+    //https://docs.spring.io/spring-android/docs/current/reference/html/rest-template.html
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(value = "/jsontest2", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Car> welcomeAsJSON2() throws IOException {
