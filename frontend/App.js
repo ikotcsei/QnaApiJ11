@@ -4,7 +4,9 @@ import axios from 'axios';
 class App extends Component{
 
     state = {
-        persons: []
+        persons: [],
+        szam : 1,
+
       }
 
     componentDidMount() {

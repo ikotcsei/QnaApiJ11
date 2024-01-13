@@ -33,22 +33,23 @@ public class HtmlController {
 
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
-//    @ResponseBody // will return a String
     public @ResponseBody  String welcomeAsHTML() {
-//        return "<html>\n" + "<header><title>Welcome</title></header>\n" +
-//                "<body>\n" + "Hello world\n" + "</body>\n" + "</html>";
         return "hello world.";
     }
+
 
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> welcomeAsJSON() throws IOException {
+    public ResponseEntity<String> welcomeAsJSON() throws Exception {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
+        designPatternRepository.nextRandom();
         return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(new Car(1,2)));
+                CustomTetelMapper.doTheMapping(designPatternRepository.getRandom())
+        );
+
 
     }
 

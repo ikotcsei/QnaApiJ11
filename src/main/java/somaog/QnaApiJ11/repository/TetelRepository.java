@@ -44,7 +44,7 @@ public class TetelRepository {
 
     /**
     *    retrieves a random number from the tetellist, sets lastRandomTetel field
-    *    so random number can be read from there
+    *    so random number can be read from lastRandomTetel via getRandom()
     */
     public void nextRandom() throws Exception {
 
