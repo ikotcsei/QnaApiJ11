@@ -22,14 +22,16 @@ import java.util.List;
 
              0. tudast feltolteni - napi X
 
+             0.111
+                https://stackoverflow.com/questions/56360091/how-to-check-whether-response-json-of-an-api-is-empty-or-has-an-error
+                dealing with objects, array, json etc. null undef
+                null, undef check, typeof, object es array checkek : length , null , type stb
+
              0.11 create git save , bundle to war, serving on node ? ,
                   - create json serv, req from js, test on node asdf
 
-             - frontend JS : sajat projektbe javascript helloworld
-             - tudast feltolteni - napi X
              -frontend JS :
-                    add js project, helloworld,
-                    deploy, works ?
+                    deploy, works ? - > yes
                     json endpoint for react
                     connect to endpoint
 

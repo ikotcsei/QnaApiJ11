@@ -1,6 +1,8 @@
 legujabb doksi, function component instead of class  ????
-function + hooks miert jo ?
+function + hooks miert jo ? afsdaf
 
+w3schhol best basic examples
+https://www.w3schools.com/react/react_components.asp
 
 learn react doc :
 https://react.dev/learn/your-first-component
