@@ -35,6 +35,7 @@ import java.util.List;
                     json endpoint for react
                     connect to endpoint
 
+             - checkout resttemplate and restclient tests
              - converters in a springboot app :
                 https://docs.spring.io/spring-framework/reference/core/validation/convert.html
                 spring type conversion : obj -> json, xml, dates stb....
