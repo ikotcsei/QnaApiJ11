@@ -37,6 +37,13 @@
     </tetel>
     <tetel>
         <question>
+            syncronous vs asyncronous
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             server side client side rendering
         </question>
         <answer>
