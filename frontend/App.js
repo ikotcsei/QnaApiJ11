@@ -36,11 +36,11 @@ class App extends Component{
 
       return(
          <div>
-            <h1>{this.state.persons.question}</h1>
-            <div className="test" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
-            <pre>{JSON.stringify(this.state.persons, null, 2)}</pre>
+            <div className="question">{this.state.persons.question}</div>
+            <div className="answer" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
 
-            <div>{LinkList(this.state.persons.links)}</div>
+
+            <div className="links">{LinkList(this.state.persons.links)}</div>
             <div>{PictureList(this.state.persons.images)}</div>
 
          </div>
@@ -53,13 +53,16 @@ class App extends Component{
 
 }
 
+function prettyJson(jsonObj){
+    return <pre>{JSON.stringify(jsonObj, null, 2)}</pre>;
+}
+
 //function rendering the list of links
 function LinkList(propsList) {
 
     if(isEmpty(propsList) || objectIsUndefined(propsList)){
         return;
     }
-//    console.log("proplista :  " + propsList);
 
     const linkItems = propsList.map( (link) =>    <li> <a href={link}> {link} </a> </li> );
     return (
