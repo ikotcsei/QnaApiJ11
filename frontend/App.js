@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+//import testPic from './pictures/most.jpg';
+import './styles.css';
 
 
 class App extends Component{
@@ -35,10 +37,11 @@ class App extends Component{
       return(
          <div>
             <h1>{this.state.persons.question}</h1>
-            <div className="content" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
+            <div className="test" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
             <pre>{JSON.stringify(this.state.persons, null, 2)}</pre>
 
             <div>{LinkList(this.state.persons.links)}</div>
+            <div>{PictureList(this.state.persons.images)}</div>
 
          </div>
 
@@ -56,9 +59,24 @@ function LinkList(propsList) {
     if(isEmpty(propsList) || objectIsUndefined(propsList)){
         return;
     }
-    console.log("proplista :  " + propsList);
+//    console.log("proplista :  " + propsList);
 
     const linkItems = propsList.map( (link) =>    <li> <a href={link}> {link} </a> </li> );
+    return (
+        <ul>{linkItems}</ul>
+    );
+
+}
+
+//<img src="mypicture.png">
+function PictureList(propsList) {
+
+    if(isEmpty(propsList) || objectIsUndefined(propsList)){
+        return;
+    }
+//    console.log("proplista :  " + propsList);
+
+    const linkItems = propsList.map( (piclink) =>    <li> <img src={piclink} /> </li> );
     return (
         <ul>{linkItems}</ul>
     );

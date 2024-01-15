@@ -25,17 +25,18 @@ public class DesignPatternRepository extends TetelRepository{
         //ez a 2 egyutt kell fusson init resz, mehet super konstruktorba ?
         //vhogy ezt kene garantalni
 
-        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
-        tetelLista.testJsonRepr();
-        nextRandom();
+//        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
+//        tetelLista.testJsonRepr();
+//        nextRandom();
 
 //        org.springframework.web.client.RestTemplate
 //        RestTemplate myR = new RestTemplate();
 //        List<MessageConverter> myL = myR.getMessageConverters();
 
         //pring for testing
-//        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("teszt.xml"));
-//        System.out.println(tetelLista.toString());
+        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("teszt.xml"));
+        tetelLista.testJsonRepr();
+        nextRandom();
 
 
     }

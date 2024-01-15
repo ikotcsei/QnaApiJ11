@@ -36,7 +36,7 @@ public class TetelParserHandler extends DefaultHandler {
     private static final String QUESTION = "question";
     private static final String ANSWER = "answer";
     private static final String LINKS = "links";
-    private static final String IMAGE = "image";
+    private static final String IMAGES = "images";
 
 //    <img src="pic_trulli.jpg" alt="Italian Trulli">
     // <image>localhost:8080/most.jpg</image>
@@ -84,7 +84,7 @@ public class TetelParserHandler extends DefaultHandler {
             case LINKS:
                 answerRowBuilder = new StringBuilder();
                 break;
-            case IMAGE:
+            case IMAGES:
                 answerRowBuilder = new StringBuilder();
                 break;
         }
@@ -105,7 +105,7 @@ public class TetelParserHandler extends DefaultHandler {
             case LINKS:
                 tetelek.getLastInserted().addLink(answerRowBuilder.toString());
                 break;
-            case IMAGE:
+            case IMAGES:
                 tetelek.getLastInserted().addImage(answerRowBuilder.toString());
                 break;
 

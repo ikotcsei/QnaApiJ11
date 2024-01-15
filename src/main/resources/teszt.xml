@@ -14,4 +14,16 @@
         <links>https://www.geeksforgeeks.org/quick-sort/</links>
         <image>localhost:8080/most.jpg</image>
     </tetel>
+    <tetel>
+        <question>
+            iterator(B), client code also
+        </question>
+        <answer>
+            iterating over an aggregate, same muvelet over the objects. diff muvelet : latogato
+            pl : java iterator
+        </answer>
+        <links>https://www.index.hu</links>
+        <links>https://www.origo.hu</links>
+        <images>most.jpg</images>
+    </tetel>
 </questionlist>
