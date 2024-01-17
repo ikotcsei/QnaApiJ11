@@ -19,7 +19,7 @@ public class CustomTetelMapper {
     }
 
     public static String doTheMapping(Object in) throws IOException {
-        System.out.println(gson.toJson(in));
+//        System.out.println(gson.toJson(in));
         return gson.toJson(in);
     }
 

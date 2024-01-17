@@ -3,7 +3,17 @@ package somaog.QnaApiJ11._desk;
 
 import java.util.List;
 
-/*  add a new qna :
+/*  build n deploy  :
+                mvn clean install
+                npm run build
+                copy dist: * -> target/classes/somaog/templates
+                mvn package -> csak akkor compile ha kell, testfuttat, masolja a static es a template
+                mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.js-t
+                - static es template mappak build eseten masolodnak targetbe, felul kell irni package
+                elott.
+
+
+    add a new qna :
        - copy file to /resources/
        - create repo file extend from TetelRepository
        - autowire to controller
@@ -22,18 +32,15 @@ import java.util.List;
 
              0. tudast feltolteni - napi X
 
-             0.111
-                https://stackoverflow.com/questions/56360091/how-to-check-whether-response-json-of-an-api-is-empty-or-has-an-error
-                dealing with objects, array, json etc. null undef
-                null, undef check, typeof, object es array checkek : length , null , type stb
-
-             0.11 create git save , bundle to war, serving on node ? ,
-                  - create json serv, req from js, test on node asdf
 
              -frontend JS :
-                    deploy, works ? - > yes
-                    json endpoint for react
-                    connect to endpoint
+                    egy mukodo verzio amit tudok hasznalni / tesztelni , linkgerenalas, dp es ba is.
+                    es deploy
+
+                    anxios router  ezittegy/ -> localhost/dp, ...
+                    kepmegjelenites hogy lesz ? serve static backend or frontend
+                    minden xml filehoy route, js frontend kell, ezt vhogy sablonnal megoldani
+                    kepek vhogy normalis embeddel
 
              - checkout resttemplate and restclient tests
              - converters in a springboot app :

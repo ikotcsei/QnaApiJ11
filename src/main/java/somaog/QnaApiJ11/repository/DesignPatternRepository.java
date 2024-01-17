@@ -26,7 +26,7 @@ public class DesignPatternRepository extends TetelRepository{
         //vhogy ezt kene garantalni
 
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
-        tetelLista.testJsonRepr();
+//        tetelLista.testJsonRepr();
         nextRandom();
 
 //        org.springframework.web.client.RestTemplate

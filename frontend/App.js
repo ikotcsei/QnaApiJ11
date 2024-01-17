@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-//import testPic from './pictures/most.jpg';
 import './styles.css';
 
 
@@ -10,12 +9,15 @@ class App extends Component{
     state = {
         persons: [],
         szam : 1,
+//        const queryParameters = new URLSearchParams(window.location.search),
+//          const type = queryParameters.get("type"),
+//          const name = queryParameters.get("name")
 
       }
 
     componentDidMount() {
 
-        axios.get("http://localhost:8081/jsontest",{
+        axios.get("http://localhost:8080/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }
@@ -33,6 +35,8 @@ class App extends Component{
    render(){
 
       const links = this.state.persons.links;
+//      console.log(this.state.type);
+//      console.log(this.state.type);
 
       return(
          <div>
