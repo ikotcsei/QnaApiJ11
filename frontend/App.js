@@ -17,7 +17,7 @@ class App extends Component{
 
     componentDidMount() {
 
-        axios.get("http://localhost:8080/jsontest",{
+        axios.get("http://ezittegybukfenc.de:8080/QA/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }
