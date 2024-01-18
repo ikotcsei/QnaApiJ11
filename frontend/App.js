@@ -65,6 +65,7 @@ function prettyJson(jsonObj){
 }
 
 //function rendering the list of links
+//<a target="_self" href="https://www.youtube.com" >YT player</a>
 function LinkList(propsList) {
 
     if(isEmpty(propsList) || objectIsUndefined(propsList)){

@@ -19,24 +19,28 @@ import java.util.List;
 @Configuration
 public class DesignPatternRepository extends TetelRepository{
 
+    private String testFile = "teszt.xml";
+    private String realDataDesignPatterns = "designpatterns.xml";
 
     public DesignPatternRepository() throws Exception {
 
-        //ez a 2 egyutt kell fusson init resz, mehet super konstruktorba ?
+
+        //ez a 2 utasitas egyutt kell fusson init resz, mehet super konstruktorba ?
         //vhogy ezt kene garantalni
 
-        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("designpatterns.xml"));
-//        tetelLista.testJsonRepr();
+        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll(testFile));
         nextRandom();
+
+ //     uncomment this for test print the json form to the console
+//        tetelLista.testJsonRepr();
+
+
+
 
 //        org.springframework.web.client.RestTemplate
 //        RestTemplate myR = new RestTemplate();
 //        List<MessageConverter> myL = myR.getMessageConverters();
 
-        //pring for testing
-//        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("teszt.xml"));
-//        tetelLista.testJsonRepr();
-//        nextRandom();
 
 
     }

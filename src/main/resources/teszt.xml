@@ -11,8 +11,8 @@
         </answer>
         <links>https://www.geeksforgeeks.org/quick-sort/</links>
         <image>most.jpg</image>
-        <links>https://www.geeksforgeeks.org/quick-sort/</links>
-        <image>localhost:8080/most.jpg</image>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/645d5161fff33a24ccce4bb1</links>
+        <links>http://localhost:8080/javalinks.html</links>
     </tetel>
     <tetel>
         <question>
@@ -22,8 +22,7 @@
             iterating over an aggregate, same muvelet over the objects. diff muvelet : latogato
             pl : java iterator
         </answer>
-        <links>https://www.index.hu</links>
-        <links>https://www.origo.hu</links>
-        <images>most.jpg</images>
+        <links>http://localhost:8080/algos.png</links>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/645d5161fff33a24ccce4bb1</links>
     </tetel>
 </questionlist>

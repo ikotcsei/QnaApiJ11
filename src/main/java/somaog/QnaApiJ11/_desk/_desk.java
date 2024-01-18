@@ -21,10 +21,13 @@ import java.util.List;
 
     dynamically add xml file :
        - check a dir every 60sec, load if theres a new on
-       - how to add dynamically a new url ???
-             - create urls and bind it later ?
-             - create a new url in a file, reload spring context from file runtime, enable the urls
-               https://www.baeldung.com/spring-boot-enable-disable-endpoints-at-runtime
+            linux tomcat : /var/lib/tomcat9/webapps/..... basicalgos.xml
+            dynamicreposity manager , load, reload- update, delete ??? - eleg tomcat restart + filetorles
+            dynamicfrontend repo valasztas
+
+   embedding :
+           ok : links, picture
+           meg :
 
 
     1. functionalites,todos
