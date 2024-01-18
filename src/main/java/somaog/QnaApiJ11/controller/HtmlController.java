@@ -31,7 +31,7 @@ public class HtmlController {
         return "index";
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081"})
     @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
     public @ResponseBody  String welcomeAsHTML() {
         return "hello world.";

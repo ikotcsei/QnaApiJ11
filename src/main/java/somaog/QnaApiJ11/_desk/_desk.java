@@ -4,13 +4,13 @@ package somaog.QnaApiJ11._desk;
 import java.util.List;
 
 /*  build n deploy  :
+                CTRL + F5 !!!
                 mvn clean install
                 npm run build
-                copy dist: * -> target/classes/somaog/templates
+                copy dist/bundle.jss -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.jss"></script>
                 mvn package -> csak akkor compile ha kell, testfuttat, masolja a static es a template
-                mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.js-t
-                - static es template mappak build eseten masolodnak targetbe, felul kell irni package
-                elott.
+                mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.jss-t
+                - static es target mappak maguktol updatelodnek compile eseten
 
 
     add a new qna :
@@ -34,6 +34,7 @@ import java.util.List;
 
 
              -frontend JS :
+                    - betumeret kisebbre, telora optimalizalni vhogy : kis kepernyo kis betu
                     egy mukodo verzio amit tudok hasznalni / tesztelni , linkgerenalas, dp es ba is.
                     es deploy
 

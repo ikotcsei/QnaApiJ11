@@ -3,21 +3,26 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
+// !!!!!!!!!!!!!!!!!!!!!!!!   CTRL + F5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const productionURL = "http://ezittegybukfenc.de:8080/QA/jsontest";
+const testServerURL = "http://localhost:8081";
+
+const testServerURL2 = "http://localhost:8080";
+
+//need to set crossorigins on the backend for the phone
+const testOnMobilePhone ="http://192.168.0.153:8080";
 
 class App extends Component{
 
     state = {
         persons: [],
         szam : 1,
-//        const queryParameters = new URLSearchParams(window.location.search),
-//          const type = queryParameters.get("type"),
-//          const name = queryParameters.get("name")
 
       }
 
     componentDidMount() {
 
-        axios.get("http://ezittegybukfenc.de:8080/QA/jsontest",{
+        axios.get(testServerURL + "/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }
@@ -35,8 +40,6 @@ class App extends Component{
    render(){
 
       const links = this.state.persons.links;
-//      console.log(this.state.type);
-//      console.log(this.state.type);
 
       return(
          <div>
