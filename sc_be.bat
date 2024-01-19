@@ -1,1 +1,0 @@
-mvn package && cd "E:\IdeaProjects\QnaApiJ11\target" && java -jar QA.war

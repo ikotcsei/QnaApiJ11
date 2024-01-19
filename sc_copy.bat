@@ -1,2 +1,0 @@
-copy "E:\IdeaProjects\QnaApiJ11\frontend\dist\bundle.js" "E:\IdeaProjects\QnaApiJ11\src\main\resources\static\"
-copy "E:\IdeaProjects\QnaApiJ11\frontend\dist\index.html" "E:\IdeaProjects\QnaApiJ11\src\main\resources\templates\"
