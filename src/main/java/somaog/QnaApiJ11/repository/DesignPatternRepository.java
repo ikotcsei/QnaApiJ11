@@ -19,6 +19,7 @@ import java.util.List;
 @Configuration
 public class DesignPatternRepository extends TetelRepository{
 
+    //ezeket vhogy annotataion + konfig fileal megoldani
     private String testFile = "teszt.xml";
     private String realDataDesignPatterns = "designpatterns.xml";
 

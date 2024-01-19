@@ -1,0 +1,3 @@
+echo "dont use seconds to create filename and dir name, they change during the command. "
+cd ./spring-petclinic
+mvn clean && cd .. && mkdir pet_clinic_save_mm%date:~6,2%dd%date:~10,2%mm%time:~3,2% && mkdir g:\pet_clinic_save_mm%date:~6,2%dd%date:~10,2%mm%time:~3,2% && winrar a pet_clinic_save_mm%date:~6,2%dd%date:~10,2%mm%time:~3,2%.rar "./spring-petclinic" && copy pet_clinic_save* "g:\pet_clinic_save_mm%date:~6,2%dd%date:~10,2%mm%time:~3,2%" && move pet_clinic_save* "./pet_clinic_save_mm%date:~6,2%dd%date:~10,2%mm%time:~3,2%" 

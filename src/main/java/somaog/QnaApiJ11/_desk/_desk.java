@@ -37,6 +37,7 @@ import java.util.List;
 
 
              -frontend JS :
+                    - image /static/x.jpg a localhost:8080/x.jpg-n erheto el , atnezni a linkeket
                     - betumeret kisebbre, telora optimalizalni vhogy : kis kepernyo kis betu
                     egy mukodo verzio amit tudok hasznalni / tesztelni , linkgerenalas, dp es ba is.
                     es deploy
