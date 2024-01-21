@@ -1,3 +1,15 @@
+<!--asdf
+
+ usecase > UC  :
+  client code, hogy hasznalja
+
+patterns in java libs
+  https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/
+
+  http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html
+
+-->
+
 <questionlist>
     <tetel>
         <question>
@@ -87,9 +99,11 @@
             kozvetito(mediator, B), client code also
         </question>
         <answer>
+            UC : chatroom, a form with elements
             egyenrangu felek kommunikacioja, mindenki a kozvetiton keresztul kommunikal
             (mediator:)PARTY ---* MEMBERS | Notify(), Handle()
         </answer>
+        <links>https://refactoring.guru/design-patterns/mediator</links>
     </tetel>
 
     <tetel>
@@ -177,13 +191,15 @@
     </tetel>
     <tetel>
         <question>
-            absztrakt gyarto(C, kit), client code also
+            absztrakt factory(C, kit), client code also
         </question>
         <answer>
+            UC:
             abs factory : ShapeFactory
             ConcreteFactory f = Factoryprovider.getFactory("rectanglefactory"); // get the concrete  factory
             ConcreteProduct a = f.createProduct("square");  //get an instance
         </answer>
+        <links>https://refactoring.guru/design-patterns/abstract-factory</links>
     </tetel>
     <tetel>
         <question>
