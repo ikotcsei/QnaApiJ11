@@ -1,9 +1,34 @@
-<!--caching, sharding - tesznikak
+<!--caching, partitioning, sharding - tesznikak
 
 proxy,revproxy, ezekeet hozzaadni
 -->
 
 <questionlist>
+
+    <tetel>
+        <question>
+            Cacheing : where can we, eviction policie, invalidation policies
+        </question>
+        <answer>
+            where : request layer node cache in : mem, hd, both
+            what when expanded on multiple nodes ? - > each node with own cache, or global cache or distributed cache
+            CDN : cache that serves loads static data
+
+            cache invalidation : when the data is no more valid (pl modified in the database)
+                - write (through, around, back) cache
+
+            cache eviction: LRU, MRU , FIFO , LIFO, LFU- least freq. used
+        </answer>
+    </tetel>
+
+    <tetel>
+        <question>
+           Partitioning
+        </question>
+        <answer>
+
+        </answer>
+    </tetel>
 
     <tetel>
         <question>
