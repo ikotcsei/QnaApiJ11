@@ -7,5 +7,6 @@ lazyload : if null , init else no init
 
 methods common to all objects
 SampleJavaExamples  strongweak ref
+Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercacheing
 
 -->

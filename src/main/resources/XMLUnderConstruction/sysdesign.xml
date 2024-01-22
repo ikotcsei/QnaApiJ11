@@ -1,15 +1,68 @@
 <!--caching, partitioning, sharding - tesznikak
 
 proxy,revproxy, ezekeet hozzaadni
+
+add : api ratelimiter, webcrawler, tinyUrl
+
+fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
+    single point of failure,bandtwith - networking : ping, lag, , uptime .....
 -->
 
 <questionlist>
+    <tetel>
+        <question>
+            TinyUrl
+        </question>
+        <answer>
+        </answer>
+        <links>http://localhost:8080/dataPartition.jpg</links>
+    </tetel><tetel>
+        <question>
+            PasteBin
+        </question>
+        <answer>
+        </answer>
+        <links>http://localhost:8080/dataPartition.jpg</links>
+    </tetel>
+    <tetel>
+        <question>
+            Api Rate Limiter
+        </question>
+        <answer>
+        </answer>
+        <links>http://localhost:8080/dataPartition.jpg</links>
+    </tetel>
+
+    <tetel>
+        <question>
+            Proxy, Reverse Proxy
+        </question>
+        <answer>
+
+        </answer>
+        <links>http://localhost:8080/proxy.jpg</links>
+    </tetel>
+
+    <tetel>
+        <question>
+            LoadBalancing
+                describe, types
+        </question>
+        <answer>
+
+            types : lest connection, least response , least bandtwith, roundRobin, weightRR, ipHash
+            - health checks
+            - redundant load balancer - single point of failure
+        </answer>
+        <links>http://localhost:8080/caching.jpg</links>
+    </tetel>
 
     <tetel>
         <question>
             Cacheing : where can we, eviction policie, invalidation policies
         </question>
         <answer>
+            UC:
             where : request layer node cache in : mem, hd, both
             what when expanded on multiple nodes ? - > each node with own cache, or global cache or distributed cache
             CDN : cache that serves loads static data
@@ -18,16 +71,27 @@ proxy,revproxy, ezekeet hozzaadni
                 - write (through, around, back) cache
 
             cache eviction: LRU, MRU , FIFO , LIFO, LFU- least freq. used
+
+            server side caching
+            client side caching
         </answer>
+        <links>http://localhost:8080/caching.jpg</links>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links>
     </tetel>
 
     <tetel>
         <question>
            Partitioning
+                types, pros, cons
         </question>
         <answer>
-
+            UC:
+            horizontal :
+            vertical :
+            dirbased :
+            common problems :
         </answer>
+        <links>http://localhost:8080/dataPartition.jpg</links>
     </tetel>
 
     <tetel>
