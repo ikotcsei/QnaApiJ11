@@ -15,9 +15,18 @@ const testServerURL2 = "http://localhost:8081";
 const testOnMobilePhone ="http://192.168.0.153:8080";
 
 class App extends Component{
+    /*
+        tetel  = Object{
+            question
+            answer
+            ...
+            links []    array
+            images[]   array
+         }
+    */
 
     state = {
-        persons: [],
+        tetel: [],
         szam : 1,
 
       }
@@ -29,9 +38,9 @@ class App extends Component{
                        "Access-Control-Allow-Origin" : "*"  }
                        }
         ).then(res => {
-            const persons = res.data;
-            console.log(persons);
-            this.setState({ persons });
+            const tetel = res.data;
+            console.log(tetel);
+            this.setState({ tetel });
         })
         .catch((error) => {
               console.log(error.message)
@@ -41,17 +50,17 @@ class App extends Component{
 
    render(){
 
-      const links = this.state.persons.links;
+      const links = this.state.tetel.links;
 
       return(
          <div>
-            <div className="question">{this.state.persons.question}</div>
-            <div className="answer" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
+            <div className="question">{this.state.tetel.question}</div>
+            <div className="answer" dangerouslySetInnerHTML={{__html: this.state.tetel.htmlAnswer}}></div>
 
-            <Example />
+            <Example input={this.state.tetel.images} />
 
-            <div className="links">{LinkList(this.state.persons.links)}</div>
-            <div>{PictureList(this.state.persons.images)}</div>
+            <div className="links">{LinkList(this.state.tetel.links)}</div>
+            <div>{PictureList(this.state.tetel.images)}</div>
 
          </div>
 

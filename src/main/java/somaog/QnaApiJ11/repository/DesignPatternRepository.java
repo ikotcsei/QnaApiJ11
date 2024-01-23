@@ -32,11 +32,10 @@ public class DesignPatternRepository extends TetelRepository{
 
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll(this.inputfile));
         nextRandom();
-
+//        System.out.println(tetelLista.toString());
 
  //     uncomment this for test print the json form to the console
 //        tetelLista.testJsonRepr();
-
 
 
 
