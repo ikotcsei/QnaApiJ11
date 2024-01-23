@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './styles.css';
+import Example from './slideshow.js';
 
 // !!!!!!!!!!!!!!!!!!!!!!!!   CTRL + F5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const productionURL = "http://ezittegybukfenc.de:8080/QA/";
@@ -23,7 +24,7 @@ class App extends Component{
 
     componentDidMount() {
 
-        axios.get(productionURL + "/jsontest",{
+        axios.get(testServerURL + "/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }
@@ -47,6 +48,7 @@ class App extends Component{
             <div className="question">{this.state.persons.question}</div>
             <div className="answer" dangerouslySetInnerHTML={{__html: this.state.persons.htmlAnswer}}></div>
 
+            <Example />
 
             <div className="links">{LinkList(this.state.persons.links)}</div>
             <div>{PictureList(this.state.persons.images)}</div>

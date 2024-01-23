@@ -35,6 +35,13 @@ import java.util.List;
 
              0. tudast feltolteni - napi X
 
+             - meg hatra :
+                        -embed image : kerdes es valasz is
+                           - kell kulon <images><...> hozzaadni
+                           - adatok koze a keplinkekekt
+
+                        -dinamik file load
+                        -frontend normalis
 
              -frontend JS :
                     - image /static/x.jpg a localhost:8080/x.jpg-n erheto el , atnezni a linkeket
