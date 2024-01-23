@@ -60,6 +60,7 @@ class App extends Component{
             <Example input={this.state.tetel.images} />
 
             <div className="links">{LinkList(this.state.tetel.links)}</div>
+
             <div>{PictureList(this.state.tetel.images)}</div>
 
          </div>

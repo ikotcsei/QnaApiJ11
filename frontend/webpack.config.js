@@ -5,7 +5,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle file name
+//    sourceMapFilename: "[name].js.map", // ????
   },
+  devtool: "source-map",   //what is this line doing ?
   module: {
     rules: [
       {

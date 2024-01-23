@@ -35,6 +35,7 @@ import java.util.List;
 
              0. tudast feltolteni - napi X
 
+??? https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e
              - meg hatra :
                         -embed image : kerdes es valasz is
                            - kell kulon <images><...> hozzaadni

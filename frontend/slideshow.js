@@ -5,11 +5,11 @@ import ImageViewer from 'react-simple-image-viewer';
 function Example(imageList) {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const images = [
-    'http://localhost:8080/caching.jpg',
-    'http://localhost:8080/proxy.jpg',
-    'http://localhost:8080/dataPartition.jpg',
-  ];
+//  const images = [
+//    'http://localhost:8080/caching.jpg',
+//    'http://localhost:8080/proxy.jpg',
+//    'http://localhost:8080/dataPartition.jpg',
+//  ];
 
 //  var images = Object.values(imageList);
   console.log("imageList.input : " + imageList.input);
@@ -17,6 +17,7 @@ function Example(imageList) {
   //object
   console.log("imagesList : " + imageList);
 
+  const images = Object.values(imageList);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
