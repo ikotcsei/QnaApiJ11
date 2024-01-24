@@ -33,7 +33,7 @@ class App extends Component{
 
     componentDidMount() {
 
-        axios.get(testServerURL + "/jsontest",{
+        axios.get(productionURL + "/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }

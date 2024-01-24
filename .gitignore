@@ -35,3 +35,4 @@ build/
 ### VS Code ###
 .vscode/
 /_buildScripts/
+/src/main/java/XMLTrans/

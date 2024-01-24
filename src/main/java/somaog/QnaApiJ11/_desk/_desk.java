@@ -10,7 +10,8 @@ import java.util.List;
                 -frontend App.js req. beallit production url-re
 
                 npm run build
-                copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.jss"></script>
+                copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.js"></script>
+                modify xml file links for production
 
                 mvn clean install
 
@@ -31,23 +32,29 @@ import java.util.List;
             dynamicreposity manager , load, reload- update, delete ??? - eleg tomcat restart + filetorles
             dynamicfrontend repo valasztas
 
-   embedding :
-           ok : links, picture
-           meg :
 
 
     1. functionalites,todos
           add :
 
-             0. tudast feltolteni - napi X
+             0. tudast feltolteni - napi X  , sysdesignnal kezd
+
+             0.01.kepek linkek add xml + deploy , telon gyorsteszt
+                  link , image tagek oda vissza irasa xml-ben production serverhez
+                  FE : kepekhez igazitani valahogy az alap boxokat h telon elvezhetobb legyen
+
+             0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
+
+             0.03 exclude package from build XMLTrans
+                https://maven.apache.org/plugins/maven-javadoc-plugin/examples/exclude-package-names.html
 
 ??? https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e
 ez mozilla bug : https://discourse.mozilla.org/t/resend-request-in-network-tab-is-immediately-blocked/112551
 
 
              - meg hatra :
-                        -dinamik file load  - ez raer, tudom folyamatosan irni, es neha deploy
 
+                        -dinamik file load  - ez raer, tudom folyamatosan irni, es neha deploy
                         -frontend normalis : telefon teszt
 
              -frontend JS :
