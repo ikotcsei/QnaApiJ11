@@ -51,6 +51,7 @@ class App extends Component{
    render(){
 
       const links = this.state.tetel.links;
+      console.log("tetel.images = imageList.input : " + this.state.tetel.images)
 
       return(
          <div>
@@ -100,7 +101,7 @@ function PictureList(propsList) {
     }
 //    console.log("proplista :  " + propsList);
 
-    const linkItems = propsList.map( (piclink) =>    <li> <img src={piclink} /> </li> );
+    const linkItems = propsList.map( (piclink) =>    <li> <img src={piclink} width="800" height="700" /> </li> );
     return (
         <ul>{linkItems}</ul>
     );

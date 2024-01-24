@@ -5,11 +5,17 @@ import java.util.List;
 
 /*  build n deploy  :
                 CTRL + F5 !!!
-                mvn clean install
+                - localhost -> ezittegy xml-fileokban
+                -app.properties beallit
+                -frontend App.js req. beallit production url-re
+
                 npm run build
-                copy dist/bundle.jss -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.jss"></script>
+                copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.jss"></script>
+
+                mvn clean install
+
                 mvn package -> csak akkor compile ha kell, testfuttat, masolja a static es a template
-                mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.jss-t
+                mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.js-t
                 - static es target mappak maguktol updatelodnek compile eseten
 
 
@@ -36,13 +42,13 @@ import java.util.List;
              0. tudast feltolteni - napi X
 
 ??? https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e
-             - meg hatra :
-                        -embed image : kerdes es valasz is
-                           - kell kulon <images><...> hozzaadni
-                           - adatok koze a keplinkekekt
+ez mozilla bug : https://discourse.mozilla.org/t/resend-request-in-network-tab-is-immediately-blocked/112551
 
-                        -dinamik file load
-                        -frontend normalis
+
+             - meg hatra :
+                        -dinamik file load  - ez raer, tudom folyamatosan irni, es neha deploy
+
+                        -frontend normalis : telefon teszt
 
              -frontend JS :
                     - image /static/x.jpg a localhost:8080/x.jpg-n erheto el , atnezni a linkeket

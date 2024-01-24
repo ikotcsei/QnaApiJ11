@@ -9,4 +9,11 @@ function arrayTests(){
           console.log(arr[0]);
           console.log(arr[arr.length-1]);
 
+          var a = ["a", "b", "c"];
+          a.forEach(function(entry) {
+            console.log(entry);
+          });
+
+
+    // print one by one , copy an array, remove item
 }
