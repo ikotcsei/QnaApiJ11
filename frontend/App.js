@@ -9,7 +9,6 @@ const productionURL = "http://ezittegybukfenc.de:8080/QA/";
 
 const testServerURL = "http://localhost:8080";
 
-const testServerURL2 = "http://localhost:8081";
 
 //need to set crossorigins on the backend for the phone
 const testOnMobilePhone ="http://192.168.0.153:8080";
@@ -33,7 +32,7 @@ class App extends Component{
 
     componentDidMount() {
 
-        axios.get(productionURL + "/jsontest",{
+        axios.get(testOnMobilePhone + "/jsontest",{
                        headers: {
                        "Access-Control-Allow-Origin" : "*"  }
                        }

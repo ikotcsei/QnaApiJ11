@@ -39,7 +39,7 @@ public class HtmlController {
 
 
     //json convert egyelore igy mukodik de ronda
-    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de"})
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> welcomeAsJSON() throws Exception {
 //          https://www.baeldung.com/spring-boot-json
