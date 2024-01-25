@@ -39,9 +39,10 @@ import java.util.List;
 
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
-             0.01.kepek linkek add xml + deploy , telon gyorsteszt
+            0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
+             0.01.
                   link , image tagek oda vissza irasa xml-ben production serverhez
-                  FE : kepekhez igazitani valahogy az alap boxokat h telon elvezhetobb legyen
+                  linkhez - linknev/felirat
 
              0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
 
@@ -56,6 +57,7 @@ ez mozilla bug : https://discourse.mozilla.org/t/resend-request-in-network-tab-i
 
                         -dinamik file load  - ez raer, tudom folyamatosan irni, es neha deploy
                         -frontend normalis : telefon teszt
+                        -<fogalmak> -hozzaadni, megjelenites?
 
              -frontend JS :
                     - image /static/x.jpg a localhost:8080/x.jpg-n erheto el , atnezni a linkeket

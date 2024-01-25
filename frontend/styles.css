@@ -1,7 +1,7 @@
 .question {
-      width: 95%;
+      width: 800px;
     margin: auto;
-    font-size: 22px;
+    font-size: 26px;
     border: 5px solid;
     text-align: center;
     text-color: white;
@@ -10,19 +10,26 @@
 }
 
 .answer {
-    width: 95%;
+    width: 800px;
     margin: auto;
-    font-size: 14px;
+    font-size: 26px;
     border: 5px solid;
     background-color: #A8E4E5;
     border-color: #3EC3C7;
 }
 
 .links {
-    width: 95%;
+    width: 800px;
     margin: auto;
-    font-size: 18px;
+    font-size: 24px;
     border: 5px solid;
     background-color: #A8E4E5;
     border-color: #3EC3C7;
+}
+
+.image {
+    border: 5px solid #3EC3C7;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
 }

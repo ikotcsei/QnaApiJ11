@@ -100,7 +100,7 @@ function PictureList(propsList) {
     }
 //    console.log("proplista :  " + propsList);
 
-    const linkItems = propsList.map( (piclink) =>    <li> <img src={piclink} width="800" height="700" /> </li> );
+    const linkItems = propsList.map( (piclink) =>    <li> <img className="image" src={piclink} width="800" height="700" /> </li> );
     return (
         <ul>{linkItems}</ul>
     );
