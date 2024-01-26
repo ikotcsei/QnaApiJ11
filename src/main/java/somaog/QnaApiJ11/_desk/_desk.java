@@ -40,6 +40,7 @@ import java.util.List;
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
             0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
+                  api lekerdezni , filenev -> route legeneralni react router linket
              0.01.
                   link , image tagek oda vissza irasa xml-ben production serverhez
                   linkhez - linknev/felirat
