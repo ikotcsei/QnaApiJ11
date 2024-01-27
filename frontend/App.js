@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import {
+      BrowserRouter as Router,
+      Route,
+      Routes,
+      Link
+} from 'react-router-dom';
 import './styles.css';
 import Example from './slideshow.js';
 
@@ -52,8 +57,21 @@ class App extends Component{
       const links = this.state.tetel.links;
       console.log("tetel.images = imageList.input : " + this.state.tetel.images)
 
+
       return(
+      <Router>
          <div>
+            <nav>
+                      <ul>
+                     <li>
+                       <Link to="/users">Users</Link>
+                     </li>
+                     <li>
+                        <Link to="/about">About</Link>
+                      </li>
+                   </ul>
+                 </nav>
+
             <div className="question">{this.state.tetel.question}</div>
             <div className="answer" dangerouslySetInnerHTML={{__html: this.state.tetel.htmlAnswer}}></div>
 
@@ -63,7 +81,13 @@ class App extends Component{
 
             <div>{PictureList(this.state.tetel.images)}</div>
 
+                    <Routes>
+                      <Route path="/users" element={<Users />} />
+                      <Route path="/about" element={<About />} />
+                    </Routes>
+
          </div>
+      </Router>
 
 
       );
@@ -71,6 +95,24 @@ class App extends Component{
    }
 
 
+}
+
+function About() {
+  return (
+    <div style={{ padding: 20 }}>
+      <h2>About View</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+    </div>
+  );
+}
+
+function Users() {
+  return (
+      <div style={{ padding: 20 }}>
+        <h2>Users</h2>
+        <p>A usersek itt élnek. </p>
+      </div>
+    );
 }
 
 function prettyJson(jsonObj){

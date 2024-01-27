@@ -2,6 +2,13 @@
 
     <tetel>
         <question>
+            java -async = non blocking arch /programming
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             memory stack vs heap - concept
         </question>
         <answer>

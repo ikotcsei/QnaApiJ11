@@ -5,7 +5,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle file name
-//    sourceMapFilename: "[name].js.map", // ????
   },
   devtool: "source-map",   //what is this line doing ?
   module: {
@@ -26,9 +25,11 @@ module.exports = {
             }
     ],
   },
+  devServer: {
+      historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
-        //https://webpack.js.org/plugins/html-webpack-plugin/
       template: './index.html', // Use this HTML file as a template
     }),
   ],
