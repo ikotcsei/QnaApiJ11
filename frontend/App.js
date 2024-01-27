@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alllinks from './alllinks.js';
 import axios from 'axios';
 import {
       BrowserRouter as Router,
@@ -64,10 +65,10 @@ class App extends Component{
             <nav>
                       <ul>
                      <li>
-                       <Link to="/users">Users</Link>
+                       <Link to="/start">Start</Link>
                      </li>
                      <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/alllinks">Alllinks</Link>
                       </li>
                    </ul>
                  </nav>
@@ -82,8 +83,8 @@ class App extends Component{
             <div>{PictureList(this.state.tetel.images)}</div>
 
                     <Routes>
-                      <Route path="/users" element={<Users />} />
-                      <Route path="/about" element={<About />} />
+                      <Route path="/start" element={<Start />} />
+                      <Route path="/alllinks" element={<Alllinks />} />
                     </Routes>
 
          </div>
@@ -97,20 +98,16 @@ class App extends Component{
 
 }
 
-function About() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h2>About View</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-    </div>
-  );
-}
 
-function Users() {
+
+function Start() {
   return (
       <div style={{ padding: 20 }}>
-        <h2>Users</h2>
-        <p>A usersek itt élnek. </p>
+        <h2>Start</h2>
+        <p>designpatterns <br />
+           basicalgos <br />
+           sysdesign.... <br />
+        </p>
       </div>
     );
 }
