@@ -10,14 +10,11 @@ import {
 import './styles.css';
 import Example from './slideshow.js';
 
-// !!!!!!!!!!!!!!!!!!!!!!!!   CTRL + F5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const productionURL = "http://ezittegybukfenc.de:8080/QA/";
+import { testOnMobilePhone, testServerUrl, productionURL } from './globals.js';
 
-const testServerURL = "http://localhost:8080";
 
 
 //need to set crossorigins on the backend for the phone
-const testOnMobilePhone ="http://192.168.0.153:8080";
 
 class App extends Component{
     /*

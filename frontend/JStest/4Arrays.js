@@ -17,3 +17,26 @@ function arrayTests(){
 
     // print one by one , copy an array, remove item
 }
+
+
+const friendsArray = [
+    {
+        name: "John",
+        age: 19,
+    },
+    {
+        name: "Candy",
+        age: 18,
+    },
+    {
+        name: "mandy",
+        age: 20,
+    },
+];
+
+//helyett 1 api pontot hivni parameterezve
+const urlArray = [
+    {name : "http://localhost/designpatterns"},
+     {name: "http://localhost/basicalgos"},
+      {name: "http://localhost/sysdesign"},
+];
