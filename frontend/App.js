@@ -14,8 +14,6 @@ import { testOnMobilePhone, testServerUrl, productionURL } from './globals.js';
 
 
 
-//need to set crossorigins on the backend for the phone
-
 class App extends Component{
     /*
         tetel  = Object{
