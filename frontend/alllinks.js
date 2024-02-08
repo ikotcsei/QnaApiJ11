@@ -43,6 +43,7 @@ function Alllinks() {
     return (
         <div>
             <div>
+                Not working, will be used with dynamic routing.
                 {
                     urls[0].map(url => (<Link className="genLink"  to={url.name}> {url.name} </Link> ))
                 }

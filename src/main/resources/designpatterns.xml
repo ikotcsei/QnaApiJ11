@@ -13,6 +13,15 @@ patterns in java libs
 <questionlist>
     <tetel>
         <question>
+            patterns in java libs
+        </question>
+        <answer>
+            <links>https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/</links>
+            <links>http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html</links>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             observer(B), client code also
         </question>
         <answer>

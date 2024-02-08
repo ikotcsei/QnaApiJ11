@@ -59,7 +59,7 @@
         </question>
         <answer>
             save : inorder,preorder, array - bintree
-            load : array , in + post, pre + post, in + pre
+            load/build : array , in + post, pre + post, in + pre
         </answer>
     </tetel>
     <tetel>
@@ -71,7 +71,7 @@
     </tetel>
     <tetel>
         <question>
-            heap,  in the java mem. model
+            heap
         </question>
         <answer>
         </answer>
@@ -123,7 +123,7 @@
     </tetel>
     <tetel>
         <question>
-            basic data structures - how is implemented in java
+            basic data structures - how it is implemented in java
              pqueue, vector/arrayList
         </question>
         <answer>

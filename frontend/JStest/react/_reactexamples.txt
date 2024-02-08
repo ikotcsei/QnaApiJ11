@@ -1,4 +1,0 @@
-
-render a component on btn click
-https://simplefrontend.com/render-a-component-on-button-click-in-react/?utm_content=cmp-true
-https://betterprogramming.pub/rendering-components-in-onclick-events-in-react-bc0d7b54e1cd

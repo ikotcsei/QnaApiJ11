@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import somaog.QnaApiJ11.repository.BasicAlgosRepository;
 import somaog.QnaApiJ11.repository.DesignPatternRepository;
+import somaog.QnaApiJ11.repository.JavaBasicRepository;
+import somaog.QnaApiJ11.repository.SysDesignRepository;
 import somaog.QnaApiJ11.utility.Car;
 import somaog.QnaApiJ11.utility.CustomTetelMapper;
 
@@ -25,6 +27,12 @@ public class HtmlController {
 
     @Autowired
     BasicAlgosRepository basicAlgosRepository;
+
+    @Autowired
+    SysDesignRepository sysDesignRepository;
+
+    @Autowired
+    JavaBasicRepository javaBasicRepository;
 
     @RequestMapping(value = "/")
     public String index(){
@@ -41,13 +49,59 @@ public class HtmlController {
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> welcomeAsJSON() throws Exception {
+    public ResponseEntity<String> produceDesignPattern() throws Exception {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
         designPatternRepository.nextRandom();
         return ResponseEntity.ok().body(
                 CustomTetelMapper.doTheMapping(designPatternRepository.getRandom())
+        );
+
+
+    }
+
+
+    //json convert egyelore igy mukodik de ronda
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
+    @GetMapping(value = "/sysdesign", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> produceSysDesign() throws Exception {
+//          https://www.baeldung.com/spring-boot-json
+//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+        //elvileg jackson2 library automappel vhogy springboot-ban
+        sysDesignRepository.nextRandom();
+        return ResponseEntity.ok().body(
+                CustomTetelMapper.doTheMapping(sysDesignRepository.getRandom())
+        );
+
+
+    }
+
+    //json convert egyelore igy mukodik de ronda
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
+    @GetMapping(value = "/basicalgos", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> produceBasicAlgos() throws Exception {
+//          https://www.baeldung.com/spring-boot-json
+//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+        //elvileg jackson2 library automappel vhogy springboot-ban
+        basicAlgosRepository.nextRandom();
+        return ResponseEntity.ok().body(
+                CustomTetelMapper.doTheMapping(basicAlgosRepository.getRandom())
+        );
+
+
+    }
+
+    //json convert egyelore igy mukodik de ronda
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
+    @GetMapping(value = "/basicjava", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> produceJavaBasic() throws Exception {
+//          https://www.baeldung.com/spring-boot-json
+//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+        //elvileg jackson2 library automappel vhogy springboot-ban
+        javaBasicRepository.nextRandom();
+        return ResponseEntity.ok().body(
+                CustomTetelMapper.doTheMapping(javaBasicRepository.getRandom())
         );
 
 

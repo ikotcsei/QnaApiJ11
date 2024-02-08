@@ -2,14 +2,16 @@
 
     <tetel>
         <question>
-            java -async = non blocking arch /programming
+            eventloop
         </question>
         <answer>
+            <links>https://iorilan.medium.com/do-you-know-event-loop-asked-by-my-interviewer-19d270a246c8</links>
         </answer>
     </tetel>
+
     <tetel>
         <question>
-            memory stack vs heap - concept
+            java -async = non blocking arch /programming
         </question>
         <answer>
         </answer>
