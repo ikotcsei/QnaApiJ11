@@ -39,6 +39,7 @@ import java.util.List;
 
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
+            0.0001 - add next tetel btn to FE, instead of reload
             0.001 - add naming : <n></n> to links - nem hosszuak erthetoek
             0.01 inne folyt kov, react router v6 : https://reactrouter.com/en/main/start/tutorial
             0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?

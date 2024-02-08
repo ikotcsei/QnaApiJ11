@@ -14,6 +14,14 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 <questionlist>
     <tetel>
         <question>
+            thread 1.0 what is, definition real basics
+        </question>
+        <answer>
+            what up
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             javabasic test
         </question>
         <answer>
@@ -63,11 +71,12 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercacheing
 
             <links>https://www.baeldung.com/java-deep-copy</links>
+            <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links>
         </answer>
     </tetel>
     <tetel>
         <question>
-            memory
+            java n memory
         </question>
         <answer>
             <links>https://medium.com/nerd-for-tech/java-memory-explained-43de6de157be</links>
