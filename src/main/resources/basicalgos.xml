@@ -4,7 +4,11 @@
     peldak : mire hol hasznaljak, javaban mi hogy van megvalositva
 
     TODO :
-    variacio, konbinacio, permutacio, hatv halmaz  - bevesznemvesz + leggyorsabb algo
+    - variacio, konbinacio, permutacio, hatv halmaz  - bevesznemvesz + leggyorsabb algo
+    - errol eloszor exel : adatszerk : abs - impl - impl javaban, build/init, delete, bovites, csokkentes, alapmuv : insert,delete, read/w
+    - backtracking : general solution
+    - basic math : osszegyujteni - furmulak becslesek : princeton link , hackers delight ....
+    - bitmanipulation : osszegyujteni
 
     -->
 <questionlist>

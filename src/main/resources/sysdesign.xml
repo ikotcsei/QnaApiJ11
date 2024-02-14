@@ -6,6 +6,7 @@ add : api ratelimiter, webcrawler, tinyUrl
 
 fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
     single point of failure,bandtwith - networking : ping, lag, , uptime .....
+    latency, throughput
 -->
 
 <questionlist>
