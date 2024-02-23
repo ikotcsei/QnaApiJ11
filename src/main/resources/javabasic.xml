@@ -25,6 +25,18 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
     </tetel>
     <tetel>
         <question>
+            java Stream api (stream, predicat, lambda, optional, supplier, consumer, function- func .interface)
+        </question>
+        <answer>
+            usecases : data aggregation - have a loads of table data pl. and filter them out (???)
+                      use streams to express data querys - pl collectionban keresés, szures
+            darkside:
+            sunnyside:
+        </answer>
+        <links>https://www.oracle.com/technical-resources/articles/java/ma14-java-se-8-streams.html</links>
+    </tetel>
+    <tetel>
+        <question>
             javabasic test
         </question>
         <answer>
@@ -45,7 +57,9 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         </question>
         <answer>
             - basic : hashing in java,  hashmap ,hashset hash table, how are they implemented, ordos
-            - bucket index (K) = hashcode(K) mod (n-1)
+            - object : hashCode() - jvm dependant, based on memoryaddresses
+            - hashCode contract : during exec app hashcode same, eq => same hc ( vissza nem )
+            - bucket :  index (K) = hashcode(K) mod (n-1)
             - node(K,V) : int hashcode, K key, V value, Node(K,V) next pointer.
             - map.put(K,V) : hash code collision : ua final hash value, ugyanabba a bucketbe kerulnek.
               ekkor check equals(): key es value Y: replace N:connect object to the existing one
