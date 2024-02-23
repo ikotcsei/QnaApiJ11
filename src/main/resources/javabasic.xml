@@ -1,4 +1,7 @@
-<!--toadd : equals, hashCode, ....
+<!--toadd :
+  effective java KONYV topikok
+
+equals, hashCode, ....
    deepcopy shallow copy https://www.baeldung.com/java-deep-copy
 
    failfast, failsafe - collection iterator pl. documentationban
@@ -48,8 +51,13 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
               ekkor check equals(): key es value Y: replace N:connect object to the existing one
 
             - rehashing : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
+
+            -double hashing : instead of insert rehashing with a diff function / modified function
             - weak hashmap
             <links>https://hn.algolia.com/?q=hashing</links>
+            <links>http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap12.htm</links>
+            <links>https://hn.algolia.com/?q=hashing</links>
+            <links>https://akshatm.svbtle.com/consistent-hash-rings-theory-and-implementation</links>
         </answer>
     </tetel>
     <tetel>
