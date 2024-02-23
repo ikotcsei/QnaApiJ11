@@ -1,7 +1,7 @@
 <!--toadd : equals, hashCode, ....
    deepcopy shallow copy https://www.baeldung.com/java-deep-copy
 
-   failfast, failsafe
+   failfast, failsafe - collection iterator pl. documentationban
 deepcpy shallow cpy
 lazyload : if null , init else no init
 
@@ -38,10 +38,16 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
     </tetel>
     <tetel>
         <question>
-            hashing
+            hashing, hashcode, equals
         </question>
         <answer>
             - basic : hashing in java,  hashmap ,hashset hash table, how are they implemented, ordos
+            - bucket index (K) = hashcode(K) mod (n-1)
+            - node(K,V) : int hashcode, K key, V value, Node(K,V) next pointer.
+            - map.put(K,V) : hash code collision : ua final hash value, ugyanabba a bucketbe kerulnek.
+              ekkor check equals(): key es value Y: replace N:connect object to the existing one
+
+            - rehashing : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
             - weak hashmap
             <links>https://hn.algolia.com/?q=hashing</links>
         </answer>

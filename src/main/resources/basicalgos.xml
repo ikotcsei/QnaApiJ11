@@ -4,6 +4,7 @@
     peldak : mire hol hasznaljak, javaban mi hogy van megvalositva
 
     TODO :
+    - add : tries etc  - from geeks
     - variacio, konbinacio, permutacio, hatv halmaz  - bevesznemvesz + leggyorsabb algo
     - errol eloszor exel : adatszerk : abs - impl - impl javaban, build/init, delete, bovites, csokkentes, alapmuv : insert,delete, read/w
     - backtracking : general solution
@@ -79,7 +80,7 @@
     </tetel>
     <tetel>
         <question>
-            heap
+            heap - kupac
         </question>
         <answer>
         </answer>
