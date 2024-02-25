@@ -13,7 +13,7 @@ import java.util.List;
             <question>
                 tries
             </question>
-            <links>https://en.wikipedia.org/wiki/Trie</links>
+            <links>https://en.wikipedia.org/wiki/Trie</links><ln>linknev-ez egybol a link utan jojjon</ln>
             <links>https://.....</links>
             <answer>
                 valami valasz
@@ -25,6 +25,7 @@ import java.util.List;
          <answer>
          <links></links>
             valami valasz
+         <ln>linknev-ez egybol a link utan jojjon</ln>
          </answer>
 
 **/
@@ -36,22 +37,21 @@ public class TetelParserHandler extends DefaultHandler {
     private static final String QUESTION = "question";
     private static final String ANSWER = "answer";
     private static final String LINKS = "links";
+    private static final String LN = "ln";
     private static final String IMAGES = "images";
 
-//    <img src="pic_trulli.jpg" alt="Italian Trulli">
-    // <image>localhost:8080/most.jpg</image>
 
     //list of tetel
     private TetelLista tetelek;
 
     //tmp storage building more line long tags
+    //egymasba nem fuzheto tagek eseten eleg answerrowbuilder
     private StringBuilder answerRowBuilder = new StringBuilder();
 
+
     //the link struct object  link { String url, String name}
-    class link{
-        private String url;
-        private String name;
-    }
+    //stored here until </links> tag, and add
+    private Link linkbuilder;
 
 
     @Override
@@ -89,10 +89,15 @@ public class TetelParserHandler extends DefaultHandler {
                 break;
             case LINKS:
                 answerRowBuilder = new StringBuilder();
+                linkbuilder = new Link();
                 break;
             case IMAGES:
                 answerRowBuilder = new StringBuilder();
                 break;
+            case LN:
+                answerRowBuilder = new StringBuilder();
+                break;
+
         }
     }
 
@@ -109,10 +114,15 @@ public class TetelParserHandler extends DefaultHandler {
                 latestArticle().setAnswer(answerRowBuilder.toString());
                 break;
             case LINKS:
-                tetelek.getLastInserted().addLink(answerRowBuilder.toString());
+                linkbuilder.setUrl(answerRowBuilder.toString());
+                linkbuilder.setName(answerRowBuilder.toString());
+                tetelek.getLastInserted().addLink(linkbuilder);
                 break;
             case IMAGES:
                 tetelek.getLastInserted().addImage(answerRowBuilder.toString());
+                break;
+            case LN:
+                tetelek.getLastInserted().getLastLink().setName(answerRowBuilder.toString());
                 break;
 
         }

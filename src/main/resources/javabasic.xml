@@ -20,7 +20,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             gyakori exceptionok
         </question>
         <answer>
-            <links>https://rollbar.com/blog/most-common-java-exceptions/#</links>
+            <links>https://rollbar.com/blog/most-common-java-exceptions/#</links><ln>common java exceptions</ln>
         </answer>
     </tetel>
     <tetel>
@@ -41,8 +41,9 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 
             SYNC TASK :
 
-            <links>https://en.wikipedia.org/wiki/Thread_(computing)#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg</links>
-            <links>https://www.tutorialspoint.com/difference-between-thread-context-switch-and-process-context-switch</links>
+            <links>https://en.wikipedia.org/wiki/Thread_(computing)#</links><ln>wiki trhreads</ln>
+            <links>https://en.wikipedia.org/wiki/Thread_(computing)#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg</links><ln>wiki threads pic</ln>
+            <links>https://www.tutorialspoint.com/difference-between-thread-context-switch-and-process-context-switch</links><ln>tutorialspot threads </ln>
         </answer>
     </tetel>
     <tetel>
@@ -50,7 +51,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             real time applications
         </question>
         <answer>
-            <links>https://www.codingninjas.com/studio/library/real-time-applications</links>
+            <links>https://www.codingninjas.com/studio/library/real-time-applications</links><ln>realtime apps 1.0</ln>
         </answer>
     </tetel>
     <tetel>
@@ -63,7 +64,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             darkside:
             sunnyside:
         </answer>
-        <links>https://www.oracle.com/technical-resources/articles/java/ma14-java-se-8-streams.html</links>
+        <links>https://www.oracle.com/technical-resources/articles/java/ma14-java-se-8-streams.html</links><ln>oracle on streams</ln>
     </tetel>
     <tetel>
         <question>
@@ -79,6 +80,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         </question>
         <answer>
             <links>https://iorilan.medium.com/all-you-need-to-know-about-login-sso-ldap-saml-oauth-openid-i-was-recently-asked-this-question-aea8ae47ce2b</links>
+            <ln>auth n autho full list</ln>
         </answer>
     </tetel>
     <tetel>
@@ -145,10 +147,10 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         </question>
         <answer>
             <links>https://medium.com/nerd-for-tech/java-memory-explained-43de6de157be</links>
-            <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links>
+            <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
             <links>https://deepu.tech/memory-management-in-jvm/</links>
-            <links>https://iorilan.medium.com/what-exactly-happens-when-you-new-an-object-ea38d9740617</links>
-            <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links>
+            <links>https://iorilan.medium.com/what-exactly-happens-when-you-new-an-object-ea38d9740617</links><ln>when new() an obj</ln>
+            <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links><ln>jenkov mem</ln>
             <images>http://localhost:8080/javabasic/j_mem1.jpg</images>
             <images>http://localhost:8080/javabasic/j_mem2.jpg</images>
             <images>http://localhost:8080/javabasic/JVM_architecture.jpg</images>

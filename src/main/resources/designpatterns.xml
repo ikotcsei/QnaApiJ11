@@ -16,8 +16,8 @@ patterns in java libs
             patterns in java libs
         </question>
         <answer>
-            <links>https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/</links>
-            <links>http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html</links>
+            <links>https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/</links><ln>stackoverflow patterns</ln>
+            <links>http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html</links><ln>edu patterns</ln>
         </answer>
     </tetel>
     <tetel>
@@ -48,7 +48,7 @@ patterns in java libs
             }
 
         </answer>
-        <links>https://www.javatpoint.com/delegation-event-model-in-java</links>
+        <links>https://www.javatpoint.com/delegation-event-model-in-java</links><ln>delegation event model</ln>
     </tetel>
     <tetel>
         <question>
@@ -263,7 +263,7 @@ patterns in java libs
             Shallow clone vs deep clone.
 
             <links>https://refactoring.guru/design-patterns/prototype</links>
-            <links>https://www.geeksforgeeks.org/prototype-design-pattern/</links>
+            <links>https://www.geeksforgeeks.org/prototype-design-pattern/</links><ln>gfg prototype dp</ln>
         </answer>
     </tetel>
     <tetel>
@@ -326,11 +326,10 @@ patterns in java libs
             sok informaciot kell nyilvantartani, sok redundans. nem objektumonkent tartjuk
             nyilvan, hanem kiemeljuk
 
-            https://refactoring.guru/design-patterns/flyweight
-
-            JAVA : String intern()
-            https://www.baeldung.com/string/intern
         </answer>
+        <links>https://www.baeldung.com/string/intern</links><ln>JAVA : String intern()</ln>
+        <links>https://refactoring.guru/design-patterns/flyweight</links>
+
     </tetel>
     <tetel>
         <question>

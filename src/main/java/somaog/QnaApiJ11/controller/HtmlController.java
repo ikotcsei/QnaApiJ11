@@ -61,7 +61,7 @@ public class HtmlController {
         //elvileg jackson2 library automappel vhogy springboot-ban
         designPatternRepository.nextRandom();
 
-//        System.out.println(CustomTetelMapper.doTheMapping(new _dummy.jsondummy()));
+        System.out.println(CustomTetelMapper.doTheMapping(designPatternRepository.getRandom()));
 
         return ResponseEntity.ok().body(
                 CustomTetelMapper.doTheMapping(designPatternRepository.getRandom())
@@ -161,7 +161,7 @@ public class HtmlController {
                              designPatternRepository.getRandom().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
-                "<a href=" + designPatternRepository.getRandom().getLastLink()+">link text</a>"+
+                "<a href=" + designPatternRepository.getRandom().getLastLink() +">link text</a>"+
                 "</div>" +
 
                 //ezt is kell blokkolni, tovabba csak akkor kirajzolni ha nem null
@@ -207,7 +207,7 @@ public class HtmlController {
                 basicAlgosRepository.getRandom().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
-                "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+
+//                "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+
                 "</div>" +
 
                 "<script>" +

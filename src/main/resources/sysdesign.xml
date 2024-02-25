@@ -46,6 +46,7 @@
             webcrawler
         </question>
         <answer>
+            adsf
         </answer>
         <links></links>
     </tetel>
@@ -117,7 +118,7 @@
             client side caching
         </answer>
         <links>http://localhost:8080/caching.jpg</links>
-        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside chach</ln>
     </tetel>
 
     <tetel>

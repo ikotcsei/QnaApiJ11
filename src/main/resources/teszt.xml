@@ -9,7 +9,7 @@
             space complex ( total amount of memory ): logn
 
         </answer>
-        <links>https://www.geeksforgeeks.org/quick-sort/</links>
+        <links>https://www.geeksforgeeks.org/quick-sort/</links><ln>linknev1</ln>
         <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/645d5161fff33a24ccce4bb1</links>
         <links>http://ezittegybukfenc.de:8080/QA/javalinks.html</links>
@@ -23,7 +23,7 @@
             iterating over an aggregate, same muvelet over the objects. diff muvelet : latogato
             pl : java iterator
         </answer>
-        <links>http://ezittegybukfenc.de:8080/QA/algos.png</links>
+        <links>http://ezittegybukfenc.de:8080/QA/algos.png</links><ln>linknev2</ln>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/645d5161fff33a24ccce4bb1</links>
         <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
         <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>

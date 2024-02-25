@@ -1,4 +1,4 @@
-
+import LinkList from './common.js';
 import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom';
 
@@ -20,18 +20,19 @@ function DesignPatterns(){
 
 //function rendering the list of links
 //<a target="_self" href="https://www.youtube.com" >YT player</a>
-function LinkList(propsList) {
+//function LinkList(propsList) {
+//
+//    if(isEmpty(propsList) || objectIsUndefined(propsList)){
+//        return;
+//    }
+//
+//    const linkItems = propsList.map( (link) =>    <li> <a href={link.url}> {link.name} </a> </li> );
+//    return (
+//        <ul>{linkItems}</ul>
+//    );
+//
+//}
 
-    if(isEmpty(propsList) || objectIsUndefined(propsList)){
-        return;
-    }
-
-    const linkItems = propsList.map( (link) =>    <li> <a href={link}> {link} </a> </li> );
-    return (
-        <ul>{linkItems}</ul>
-    );
-
-}
 
 //<img src="mypicture.png">
 function PictureList(propsList) {

@@ -26,7 +26,7 @@ public class Tetel {
     private String htmlAnswer;
 
     // store the links appeared in tetel
-    private List<String> links = new ArrayList<>();
+    private List<Link> links = new ArrayList<>();
 
     private List<String> images = new ArrayList<>();
 
@@ -78,12 +78,12 @@ public class Tetel {
         return this.htmlQuestion;
     }
 
-    public void addLink(String link) {
+    public void addLink(Link link) {
         this.links.add(link);
     }
 
 
-    public String getLastLink() {
+    public Link getLastLink() {
         if (links.isEmpty()) return null;
         return links.get(links.size() - 1);
     }
@@ -97,5 +97,46 @@ public class Tetel {
         return images.get(images.size() - 1);
     }
 
+
+}
+
+class Link{
+
+    // defined empty string not null to json mapping will have a name attribute no matter what
+    private String url = "";
+    private String name = "";
+
+    Link(){
+
+    }
+
+    Link(String url){
+        this.url = url;
+        this.name = url;
+    }
+
+    Link(String url, String name){
+        this.url = url;
+        this.name = name;
+    }
+
+    public String getUrl(){
+        return this.url;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setUrl(String url){
+        this.url = url;
+    }
+}
+
+class Image{
 
 }
