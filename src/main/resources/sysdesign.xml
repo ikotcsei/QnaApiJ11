@@ -1,15 +1,54 @@
-<!--caching, partitioning, sharding - tesznikak
+<!--sharding - tesznikak
 
-proxy,revproxy, ezekeet hozzaadni
-
-add : api ratelimiter, webcrawler, tinyUrl
-
-fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
-    single point of failure,bandtwith - networking : ping, lag, , uptime .....
-    latency, throughput
 -->
 
 <questionlist>
+    <tetel>
+        <question>
+            fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
+            single point of failure,bandtwith - networking : ping, lag, , uptime .....
+            latency, throughput
+        </question>
+        <answer>
+            bandwith : capacity measure, mekkora a cso atmeroje (width) amin folyik,
+                        mpbs ??
+            latency : data speed, milyen gyorsan folyik a viz  , t0: req send, t1 resp arrive
+                      latency = t1-t0 , sec
+            throughput : how much water runnign throuhg the pipe
+                         data transmitted / time period   , mbps
+            reliability : he measure of the length of time infrastructure operates without disruption
+                          vagy a vszinusege h a rendszer meghibasodik egy adott idoszakban
+            availability : az az idoszak ami alatt a rendszer mukodokepes es teljesiti a feladatat
+            scalability : the capability of a system to grow and manage increased demand
+                          increased : data , amount of work, pl transactions,
+                         vertical - horizontal scaleing
+
+            service or managebility : how easy to maintain and operate
+        </answer>
+        <links></links>
+    </tetel>
+    <tetel>
+        <question>
+            estimates
+        </question>
+        <answer>
+            - read / write heavy
+            - bandwith
+            - memory - caching
+            - storage estimates . hd
+            - data size estimation
+            - soap vs rest api
+        </answer>
+        <links></links>
+    </tetel>
+    <tetel>
+        <question>
+            webcrawler
+        </question>
+        <answer>
+        </answer>
+        <links></links>
+    </tetel>
     <tetel>
         <question>
             TinyUrl
@@ -17,7 +56,8 @@ fogalmak :scalability,reliability,availability,efficiency, service ormanagebilit
         <answer>
         </answer>
         <links>http://localhost:8080/dataPartition.jpg</links>
-    </tetel><tetel>
+    </tetel>
+    <tetel>
         <question>
             DropBox
         </question>

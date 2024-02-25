@@ -17,10 +17,40 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 <questionlist>
     <tetel>
         <question>
+            gyakori exceptionok
+        </question>
+        <answer>
+            <links>https://rollbar.com/blog/most-common-java-exceptions/#</links>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             thread 1.0 what is, definition real basics
         </question>
         <answer>
-            what up
+            THREAD : thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler,
+            which is typically a part of the operating system.[1] In many cases, a thread is a component of a process.
+
+            - context switch : thread, process
+
+            PROCESS :
+
+            THREAD :
+
+            ASYNCRONOUS  task: task ami futtathato fuggetlenul,parhuzamosan (new thread), nem blokkolja a main th-t.
+
+            SYNC TASK :
+
+            <links>https://en.wikipedia.org/wiki/Thread_(computing)#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg</links>
+            <links>https://www.tutorialspoint.com/difference-between-thread-context-switch-and-process-context-switch</links>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            real time applications
+        </question>
+        <answer>
+            <links>https://www.codingninjas.com/studio/library/real-time-applications</links>
         </answer>
     </tetel>
     <tetel>
@@ -67,11 +97,13 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             - rehashing : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
 
             -double hashing : instead of insert rehashing with a diff function / modified function
+
             - weak hashmap
             <links>https://hn.algolia.com/?q=hashing</links>
             <links>http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap12.htm</links>
             <links>https://hn.algolia.com/?q=hashing</links>
             <links>https://akshatm.svbtle.com/consistent-hash-rings-theory-and-implementation</links>
+            <links>https://www.baeldung.com/java-weakhashmap</links>
         </answer>
     </tetel>
     <tetel>
@@ -88,13 +120,18 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         </question>
         <answer>
             equals, hashCode
-            deepcopy, shallow copy
+            deepcopy - fully independent copy of the object
+            shallow copy - pass a pointer, modification will address the old object also
 
-            failfast, failsafe
-            deepcpy shallow cpy
+            failfast - abort as soon as possible
+                     - java iterator : ConcurrentModificationException if the underlying collection is
+                       structurally modified while iterating
+            failsafe - system dont abort on failure , create a clone and iterate on it.
+                     - nem tudja garantalni h amit iteral az "naprakesz" = weakly guarantee
             lazyload : if null , init else no init
 
-            methods common to all objects
+            methods common to all objects (toString, hashCode, equals, getClass, clone, wait, notify, )
+
             SampleJavaExamples  strongweak ref
             Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercacheing
 
