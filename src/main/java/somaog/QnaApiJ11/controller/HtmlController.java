@@ -18,6 +18,12 @@ import somaog.QnaApiJ11.utility.Car;
 import somaog.QnaApiJ11.utility.CustomTetelMapper;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+
 
 @Controller  // to return HTML, no restcontroller and responsebody annotations.
 public class HtmlController {
@@ -54,6 +60,9 @@ public class HtmlController {
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
         designPatternRepository.nextRandom();
+
+//        System.out.println(CustomTetelMapper.doTheMapping(new _dummy.jsondummy()));
+
         return ResponseEntity.ok().body(
                 CustomTetelMapper.doTheMapping(designPatternRepository.getRandom())
         );

@@ -47,6 +47,12 @@ public class TetelParserHandler extends DefaultHandler {
     //tmp storage building more line long tags
     private StringBuilder answerRowBuilder = new StringBuilder();
 
+    //the link struct object  link { String url, String name}
+    class link{
+        private String url;
+        private String name;
+    }
+
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {

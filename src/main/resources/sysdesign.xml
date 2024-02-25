@@ -134,7 +134,6 @@
         </answer>
         <links>http://localhost:8080/dataPartition.jpg</links>
     </tetel>
-
     <tetel>
         <question>
             Design a Chat Service (like Facebook Messenger or WhatsApp)
