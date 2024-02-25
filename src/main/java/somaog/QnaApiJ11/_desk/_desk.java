@@ -39,16 +39,16 @@ import java.util.List;
 
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
-            0.00001 - add naming : <n></n> to links - nem hosszuak erthetoek
-            0.0001 - add next tetel btn to FE, instead of reload
-            0.01 inne folyt kov, react router v6 : https://reactrouter.com/en/main/start/tutorial
-            0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
-                  api lekerdezni , filenev -> route legeneralni react router linket
              0.01.
                   link , image tagek oda vissza irasa xml-ben production serverhez
                   linkhez - linknev/felirat
 
-             0.02 frontendrol elerheto legyen egyszerre tobb is, react router ? valasztogomb ?
+            0.0001 - functionality : add next tetel btn to FE, instead of reload
+            0.02 frontendrol elerheto legyen egyszerre tobb is, dinamikus frissites
+                  file felmasol -> dinamikus konyvtars  -> membetolt, felulir stb ->
+                  api lekerdezni , filenev -> route legeneralni react router linket
+
+
 
              0.03 exclude package from build XMLTrans
                 https://maven.apache.org/plugins/maven-javadoc-plugin/examples/exclude-package-names.html
