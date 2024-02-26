@@ -39,6 +39,9 @@ import java.util.List;
 
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
+             0- valamiert a sysdesignban az image linkkent jelenik meg, legyen image render egybol ?
+                xml-ek rendbe, image-re cserel a link ha kell
+
              0.01.
                   link , image tagek oda vissza irasa xml-ben production serverhez
                   linkhez - linknev/felirat
