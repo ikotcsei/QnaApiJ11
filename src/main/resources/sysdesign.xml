@@ -25,7 +25,6 @@
 
             service or managebility : how easy to maintain and operate
         </answer>
-        <links></links>
     </tetel>
     <tetel>
         <question>
@@ -39,7 +38,6 @@
             - data size estimation
             - soap vs rest api
         </answer>
-        <links></links>
     </tetel>
     <tetel>
         <question>
@@ -48,7 +46,6 @@
         <answer>
             adsf
         </answer>
-        <links></links>
     </tetel>
     <tetel>
         <question>
@@ -56,7 +53,7 @@
         </question>
         <answer>
         </answer>
-        <links>http://localhost:8080/dataPartition.jpg</links>
+        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>
@@ -64,7 +61,7 @@
         </question>
         <answer>
         </answer>
-        <links>http://localhost:8080/dataPartition.jpg</links>
+        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>
@@ -72,7 +69,7 @@
         </question>
         <answer>
         </answer>
-        <links>http://localhost:8080/dataPartition.jpg</links>
+        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
     </tetel>
 
     <tetel>
@@ -82,7 +79,7 @@
         <answer>
 
         </answer>
-        <links>http://localhost:8080/proxy.jpg</links>
+        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
     </tetel>
 
     <tetel>
@@ -96,7 +93,6 @@
             - health checks
             - redundant load balancer - single point of failure
         </answer>
-        <links>http://localhost:8080/caching.jpg</links>
     </tetel>
 
     <tetel>
@@ -117,7 +113,7 @@
             server side caching
             client side caching
         </answer>
-        <links>http://localhost:8080/caching.jpg</links>
+        <images>http://192.168.0.153:8080/caching.jpg</images>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside chach</ln>
     </tetel>
 
@@ -133,7 +129,7 @@
             dirbased :
             common problems :
         </answer>
-        <links>http://localhost:8080/dataPartition.jpg</links>
+        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>

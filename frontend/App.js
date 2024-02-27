@@ -2,166 +2,125 @@ import React, { Component } from 'react';
 import Alllinks from './alllinks.js';
 import axios from 'axios';
 import {
-      BrowserRouter as Router,
-      Route,
-      Routes,
-      Link
+    createBrowserRouter,
+    RouterProvider,
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Link
 } from 'react-router-dom';
 import './styles.css';
 import Example from './slideshow.js';
+import RootLayout from './pages/Root.js';
+import Load from './pages/Load.js';
+import Start from './pages/Start.js';
+import DesignPatterns from './pages/DesignPatterns.js';
+import SysDesign from './pages/SysDesign.js';
+import BasicAlgos from './pages/BasicAlgos.js';
+import JavaBasic from './pages/JavaBasic.js';
 
-import { testOnMobilePhone, testServerUrl, productionURL } from './globals.js';
+import ErrorBoundary from './components/ErrorBoundary.js';
 
+import { currentServerURL } from './globals.js';
 
+const router = createBrowserRouter([
+    {
+        path : '/',
+        element : <RootLayout />,
+        children :[
+            { path : '/', element: <Start />},
+            { path : '/alllinks', element: <Alllinks />},
+            { path : '/start', element: <Start />},
+            { path : '/designpatterns', element: <DesignPatterns />,
+                loader : async () => {
+                    const response = await fetch(currentServerURL + 'jsontest');
 
-class App extends Component{
-    /*
-        tetel  = Object{
-            question
-            answer
-            ...
-            links []    array
-            images[]   array
-         }
-    */
+                    if (!response.ok){
+                        console.log("error in the response.");
+                        setError('soma : fetching the data failed .');
+                    } else {
+                        console.log("else ag fut.");
+                        const resData = await response.json();
+                        //this data will be auto enabled by router in component
+                        console.log("resdata : "  + resData);
+                        return resData;
+                    }
+                },
+            },
+            { path : '/sysdesign', element: <SysDesign />,
+                loader : async () => {
+                    const response = await fetch(currentServerURL + 'sysdesign');
 
-    state = {
-        tetel: [],
-        szam : 1,
+                    if (!response.ok){
+                        console.log("error in the response.");
+                        setError('soma : fetching the data failed .');
+                    } else {
+                        console.log("else ag fut.");
+                        const resData = await response.json();
+                        //this data will be auto enabled by router in component
+                        console.log("resdata : "  + resData);
+                        return resData;
+                    }
+                },
+            },
+            { path : '/basicalgos', element: <BasicAlgos />,
+                loader : async () => {
+                    const response = await fetch(currentServerURL + 'basicalgos');
 
-      }
+                    if (!response.ok){
+                        console.log("error in the response.");
+                        setError('soma : fetching the data failed .');
+                    } else {
+                        console.log("else ag fut.");
+                        const resData = await response.json();
+                        //this data will be auto enabled by router in component
+                        console.log("resdata : "  + resData);
+                        return resData;
+                    }
+                },
+            },
+            { path : '/javabasic', element: <JavaBasic />,
+                loader : async () => {
+                    const response = await fetch(currentServerURL + 'basicjava');
 
-    componentDidMount() {
+                    if (!response.ok){
+                        console.log("error in the response.");
+                        setError('soma : fetching the data failed .');
+                    } else {
+                        console.log("else ag fut.");
+                        const resData = await response.json();
+                        //this data will be auto enabled by router in component
+                        console.log("resdata : "  + resData);
+                        return resData;
+                    }
+                },
+            },
+            { path : '/load', element: <Load />,
+                loader : async () => {
+                    const response = await fetch(currentServerURL + 'jsontest');
 
-        axios.get(testOnMobilePhone + "/jsontest",{
-                       headers: {
-                       "Access-Control-Allow-Origin" : "*"  }
-                       }
-        ).then(res => {
-            const tetel = res.data;
-            console.log(tetel);
-            this.setState({ tetel });
-        })
-        .catch((error) => {
-              console.log(error.message)
-        })
-
+                    if (!response.ok){
+                        console.log("error in the response.");
+                        setError('soma : fetching the data failed .');
+                    } else {
+                        console.log("else ag fut.");
+                        const resData = await response.json();
+                        //this data will be auto enabled by router in component
+                        console.log("resdata : "  + resData);
+                        return resData;
+                    }
+                },
+            }
+        ]
     }
-
-   render(){
-
-      const links = this.state.tetel.links;
-      console.log("tetel.images = imageList.input : " + this.state.tetel.images)
+]);
 
 
-      return(
-      <Router>
-         <div>
-            <nav>
-                      <ul>
-                     <li>
-                       <Link to="/start">Start</Link>
-                     </li>
-                     <li>
-                        <Link to="/alllinks">Alllinks</Link>
-                      </li>
-                   </ul>
-                 </nav>
 
-            <div className="question">{this.state.tetel.question}</div>
-            <div className="answer" dangerouslySetInnerHTML={{__html: this.state.tetel.htmlAnswer}}></div>
-
-            <Example input={this.state.tetel.images} />
-
-            <div className="links">{LinkList(this.state.tetel.links)}</div>
-
-            <div>{PictureList(this.state.tetel.images)}</div>
-
-                    <Routes>
-                      <Route path="/start" element={<Start />} />
-                      <Route path="/alllinks" element={<Alllinks />} />
-                    </Routes>
-
-         </div>
-      </Router>
-
-
-      );
-
-   }
-
-
+function Appp(){
+    return <RouterProvider router={router} />;
 }
 
 
 
-function Start() {
-  return (
-      <div style={{ padding: 20 }}>
-        <h2>Start</h2>
-        <p>designpatterns <br />
-           basicalgos <br />
-           sysdesign.... <br />
-        </p>
-      </div>
-    );
-}
-
-function prettyJson(jsonObj){
-    return <pre>{JSON.stringify(jsonObj, null, 2)}</pre>;
-}
-
-//function rendering the list of links
-//<a target="_self" href="https://www.youtube.com" >YT player</a>
-function LinkList(propsList) {
-
-    if(isEmpty(propsList) || objectIsUndefined(propsList)){
-        return;
-    }
-
-    const linkItems = propsList.map( (link) =>    <li> <a href={link}> {link} </a> </li> );
-    return (
-        <ul>{linkItems}</ul>
-    );
-
-}
-
-//<img src="mypicture.png">
-function PictureList(propsList) {
-
-    if(isEmpty(propsList) || objectIsUndefined(propsList)){
-        return;
-    }
-//    console.log("proplista :  " + propsList);
-
-    const linkItems = propsList.map( (piclink) =>    <li> <img className="image" src={piclink} width="800" height="700" /> </li> );
-    return (
-        <ul>{linkItems}</ul>
-    );
-
-}
-
-
-
-function isEmpty( list ){
-    if( list && list.length ){
-            return false;
-    }
-    return true;
-}
-
-function jsonIsEmpty( jsonObj ){
-    return isEmpty(Object.entries( jsonObj ));
-}
-
-function objectIsUndefined( object ){
-    if( object === undefined){
-        return 1;
-    }
-    return 0;
-}
-
-
-
-
-export default App;
+export default Appp;

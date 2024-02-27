@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { testOnMobilePhone, testServerUrl, productionURL, currentServerURL } from '../globals.js';
 
 async function fetchMoviesBadStatus() {
   const response = await fetch('http://localhost:8080/jsontest');

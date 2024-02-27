@@ -2,7 +2,7 @@ import React, { Component ,useState ,useEffect }  from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import { globalsVarTest, testOnMobilePhone } from './globals.js';
+import { testOnMobileURL } from './globals.js';
 
 //add function component call to backend
 //https://codedamn.com/news/reactjs/axios-network-requests
@@ -23,7 +23,7 @@ function Alllinks() {
     // Call fetchData on component mount
     useEffect(() => {
 
-      axios.get(testOnMobilePhone + "/jsontest",{
+      axios.get(testOnMobilePhone + "jsontest",{
                              headers: {
                              "Access-Control-Allow-Origin" : "*"  }
                              }
