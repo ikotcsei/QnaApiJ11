@@ -17,6 +17,33 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 <questionlist>
     <tetel>
         <question>
+            java lamda expressions
+        </question>
+        <answer>
+            functional interface : one abs func (ekv) lambda expression (ekv) method reference
+            interface MyFirst{   void func(String s); }
+            MyFirst myF = System.out::println;
+            MyFirst myF = (s) -> {  System.out.println(s) };
+            () -> { expr; }       LAMBDA EXPR
+            System.out::println   METHOD REFERENCE
+
+
+            expression : pl x + 1, new Object(), 1 + 1
+            statement : double aValue = 8933.234;  // declaration statement, which is only one expression
+            block : more statements
+
+            System.out::println   METHOD REFERENCE
+            () -> { expr; }       LAMBDA EXPR
+            a -> 2*a ;
+            (int a) -> 2*a;
+            () -> { statements;  }
+            <links>https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-LambdaExpression</links><ln>oracle lambda examples</ln>
+            <links>https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-Expression</links><ln>oracle expressions</ln>
+            <links>https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</links><ln>oracle lambda tutorial</ln>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             gyakori exceptionok
         </question>
         <answer>
@@ -146,6 +173,8 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             java n memory
         </question>
         <answer>
+            GC basic working : minorgc, majorgc,marknsweep GC
+            String  :
             valamike
             <links>https://medium.com/nerd-for-tech/java-memory-explained-43de6de157be</links><ln>medium javamem</ln>
             <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
@@ -154,6 +183,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links><ln>jenkov mem</ln>
             <images>http://192.168.0.153:8080/javabasic/j_mem1.jpg</images>
             <images>http://192.168.0.153:8080/javabasic/j_mem2.jpg</images>
+            <images>http://192.168.0.153:8080/javabasic/JVM_architecture.jpg</images>
             <images>http://192.168.0.153:8080/javabasic/JVM_architecture.jpg</images>
         </answer>
     </tetel>
