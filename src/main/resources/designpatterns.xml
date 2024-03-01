@@ -16,9 +16,10 @@ patterns in java libs
             patterns in java libs
         </question>
         <answer>
-            <links>https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/</links><ln>stackoverflow patterns</ln>
-            <links>http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html</links><ln>edu patterns</ln>
+            empty
         </answer>
+        <links>https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries/</links><ln>stackoverflow patterns</ln>
+        <links>http://cecs.wright.edu/~tkprasad/courses/ceg860/paper/node26.html</links><ln>edu patterns</ln>
     </tetel>
     <tetel>
         <question>
@@ -262,9 +263,9 @@ patterns in java libs
 
             Shallow clone vs deep clone.
 
-            <links>https://refactoring.guru/design-patterns/prototype</links>
-            <links>https://www.geeksforgeeks.org/prototype-design-pattern/</links><ln>gfg prototype dp</ln>
         </answer>
+        <links>https://refactoring.guru/design-patterns/prototype</links>
+        <links>https://www.geeksforgeeks.org/prototype-design-pattern/</links><ln>gfg prototype dp</ln>
     </tetel>
     <tetel>
         <question>
