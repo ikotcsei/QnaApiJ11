@@ -53,7 +53,7 @@
         </question>
         <answer>
         </answer>
-        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>
@@ -61,7 +61,7 @@
         </question>
         <answer>
         </answer>
-        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>
@@ -69,7 +69,7 @@
         </question>
         <answer>
         </answer>
-        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
 
     <tetel>
@@ -79,7 +79,7 @@
         <answer>
 
         </answer>
-        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
 
     <tetel>
@@ -113,7 +113,7 @@
             server side caching
             client side caching
         </answer>
-        <images>http://192.168.0.153:8080/caching.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside chach</ln>
     </tetel>
 
@@ -129,7 +129,7 @@
             dirbased :
             common problems :
         </answer>
-        <images>http://192.168.0.153:8080/dataPartition.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
     <tetel>
         <question>

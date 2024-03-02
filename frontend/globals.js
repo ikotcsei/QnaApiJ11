@@ -5,4 +5,4 @@ export const testServerURL = "http://localhost:8080/";
 
 export const productionURL = "http://ezittegybukfenc.de:8080/QA/";
 
-export const currentServerURL = testOnMobileURL;
+export const currentServerURL = productionURL;

@@ -11,7 +11,8 @@ import java.util.List;
 
                 npm run build
                 copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.js"></script>
-                modify xml file links for production
+                modify xml file links for production ???? ez mar nem kell sztem
+
 
                 mvn clean install
 

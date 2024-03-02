@@ -231,8 +231,8 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         <links>https://deepu.tech/memory-management-in-jvm/</links>
         <links>https://iorilan.medium.com/what-exactly-happens-when-you-new-an-object-ea38d9740617</links><ln>when new() an obj</ln>
         <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links><ln>jenkov mem</ln>
-        <images>http://192.168.0.153:8080/javabasic/j_mem1.jpg</images>
-        <images>http://192.168.0.153:8080/javabasic/j_mem2.jpg</images>
-        <images>http://192.168.0.153:8080/javabasic/JVM_architecture.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem2.jpg</images>
+        <images>http://ezittegybukfenc.de:8080/QA/javabasic/JVM_architecture.jpg</images>
     </tetel>
 </questionlist>

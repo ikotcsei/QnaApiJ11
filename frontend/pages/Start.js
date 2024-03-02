@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { testOnMobilePhone, testServerUrl, productionURL, currentServerURL } from '../globals.js';
 
 async function fetchMoviesBadStatus() {
-  const response = await fetch('http://localhost:8080/jsontest');
+  const response = await fetch(currentServerURL + 'jsontest');
 
   if (!response.ok) {
     const message = `An error has occured: ${response.status}`;
