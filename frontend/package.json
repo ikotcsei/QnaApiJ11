@@ -7,6 +7,9 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
+  "scriptsComments": {
+    "start": "This is a valid comment."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

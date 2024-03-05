@@ -23,7 +23,7 @@ function Alllinks() {
     // Call fetchData on component mount
     useEffect(() => {
 
-      axios.get(testOnMobilePhone + "jsontest",{
+      axios.get(testOnMobileURL + "jsontest",{
                              headers: {
                              "Access-Control-Allow-Origin" : "*"  }
                              }
@@ -35,7 +35,6 @@ function Alllinks() {
               })
 
       console.log("use effect data : " + data);
-      console.log(globalsVarTest)
     }, []);
 
 

@@ -4,10 +4,10 @@ package somaog.QnaApiJ11._desk;
 import java.util.List;
 
 /*  build n deploy  :
-                CTRL + F5 !!!
+                CTRL + F5 !!! CTRL + F5 !!! empty cache ? or skip ... HELLO !!!! *********** CTRL + F5 !!!
                 - localhost -> ezittegy xml-fileokban XMLTrans
                 -app.properties beallit
-                -frontend App.js req. beallit production url-re
+                -frontend  globals.js req. beallit production url-re
 
                 npm run build
                 copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.js"></script>
@@ -33,7 +33,11 @@ import java.util.List;
             dynamicreposity manager , load, reload- update, delete ??? - eleg tomcat restart + filetorles
             dynamicfrontend repo valasztas
 
+    0. deployment - production todos
 
+       - 404 resource not found error tho in dev environment working.
+         probably FE routing error , follow this : (html5 pushstate problem)
+         https://stackoverflow.com/questions/41246261/react-routing-is-able-to-handle-different-url-path-but-tomcat-returns-404-not-av/41249464#41249464
 
     1. functionalites,todos
           add :

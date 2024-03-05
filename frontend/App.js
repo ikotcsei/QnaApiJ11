@@ -113,14 +113,14 @@ const router = createBrowserRouter([
             }
         ]
     }
-]);
+], { basename: "/QA" });
 
 
 
-function Appp(){
+function App(){
     return <RouterProvider router={router} />;
 }
 
 
 
-export default Appp;
+export default App;

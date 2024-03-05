@@ -46,8 +46,8 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 
             1,
             - diamond operator
-            Predicate<String> nameValidation = (String x) -> x.length() > 0;
-            Predicate<String> nameValidation = x -> x.length() > 0;
+            PredicateString nameValidation = (String x) -> x.length() > 0;
+            PredicateString nameValidation = x -> x.length() > 0;
             -local var inference : var a = 3;
 
 
