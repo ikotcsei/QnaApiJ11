@@ -7,6 +7,13 @@
             client server rendering/routing
         </question>
         <answer>
+            render : run js code and generate html
+            client side
+                routing : borwser url to react router , resolve. if not found to server ??
+                render : download index.html, bundle.js, render it locally, browser html
+
+            ssr with react router az hogy van ?
+
         </answer>
     </tetel>
     <tetel>
