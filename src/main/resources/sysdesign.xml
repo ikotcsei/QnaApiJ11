@@ -1,8 +1,14 @@
 <!--sharding - tesznikak
-     client/server side routing, rendering
 -->
 
 <questionlist>
+    <tetel>
+        <question>
+            client server rendering/routing
+        </question>
+        <answer>
+        </answer>
+    </tetel>
     <tetel>
         <question>
             fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
