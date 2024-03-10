@@ -64,6 +64,7 @@
             interface MyFirst{   void func(String s); }
             interface Empty{   void emptyfunc(); }
             MyFirst myF = System.out::println;
+            MyFirst myF = Classname::functionname;
             MyFirst myF = (s) -> {  System.out.println(s) };
             Empty myE = () -> {};
             Empty myE = () -> {System.out.println("asdf")};
@@ -97,10 +98,14 @@
             gyakori exceptionok - exception, error, checked / unchecked
         </question>
         <answer>
+            classhierarch :
+            throwable - ERROR - unchecked : cannot recover, JVM error, LinkageError
+            throwable - EXCEPTION - RuntimeException - Unchecked : ClassCast, Arithmetic, NullPointer, File not found....
+                                  - IOException - Checked : FileIO, networkIO, ...
         </answer>
+        <links>https://www.geeksforgeeks.org/exceptions-in-java/</links><ln>java exceptions hierarchy</ln>
         <links>https://rollbar.com/blog/most-common-java-exceptions/#</links><ln>common java exceptions</ln>
-        <links>https://res.cloudinary.com/practicaldev/image/fetch/s--UXYAie4U--/c_limit%2Cf_auto%2Cfl_
-            progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w3vz8kaml2qskir1o8uc.png</links><ln>exceptions cheatsheet</ln>
+        <links>https://res.cloudinary.com/practicaldev/image/fetch/s--UXYAie4U--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w3vz8kaml2qskir1o8uc.png</links><ln>exceptions cheatsheet</ln>
     </tetel>
     <tetel>
         <question>
