@@ -4,17 +4,45 @@
 <questionlist>
     <tetel>
         <question>
+            FE - react useState,useEffect,await - async,function component,
+
+        </question>
+        <answer>
+            props upndown,hooks : { useState, useEffect ...},await - async,
+            function component, class component, context API,
+            redux, routing
+        </answer>
+        <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836800#overview</links><ln>http req fetch UD</ln>
+        <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836950#overview</links><ln>async await UD</ln>
+    </tetel>
+    <tetel>
+        <question>
             client server rendering/routing
         </question>
         <answer>
-            render : run js code and generate html
-            client side
-                routing : borwser url to react router , resolve. if not found to server ??
-                render : download index.html, bundle.js, render it locally, browser html
+            render : pl. run js code and generate html de nem csak ez , bongeszo engine is rendereli a html-t
 
-            ssr with react router az hogy van ?
+            CLIENT SIDE
+                routing : borwser url to react router , resolve. if not found, get to server ??
+                render : download index.html, css, js, etc. files. render it together.
+
+                usecase : large amount users, more dynamic
+
+            SERVER SIDE
+                routing : link resolving takes place on  the server, each link - http get
+                          new html
+                render : create html, bundle.js on server side, return to client
+                usecase :
+                    static website, webapp with less users, less interactivity
+                    becase on reload the server has to rebuild the whole page and
+                    send it to client
+
+
+
 
         </answer>
+        <links>https://www.youtube.com/watch?v=mZEv4mHsU5E</links><ln>serversiderender with react router</ln>
+        <images>http://ezittegybukfenc.de:8080/QA/sysdesign/SSRwithRR.jpg</images><ln>SSR with react router</ln>
     </tetel>
     <tetel>
         <question>
@@ -102,7 +130,7 @@
         </question>
         <answer>
 
-            types : lest connection, least response , least bandtwith, roundRobin, weightRR, ipHash
+            types : least connection, least response , least bandtwith, roundRobin, weightRR, ipHash
             - health checks
             - redundant load balancer - single point of failure
         </answer>
@@ -110,11 +138,12 @@
 
     <tetel>
         <question>
-            Cacheing : where can we, eviction policie, invalidation policies
+            Cacheing : where can we cache - layer, place, invalidation policies, eviction policies
         </question>
         <answer>
             UC:
             where : request layer node cache in : mem, hd, both
+            where : processor layers also cache pl. - we can have them in each layer
             what when expanded on multiple nodes ? - > each node with own cache, or global cache or distributed cache
             CDN : cache that serves loads static data
 
@@ -154,65 +183,71 @@
         <answer>
         </answer>
     </tetel>
-    <tetel>
-        <question>
-            Design a Mass Social Media Service (like Facebook, Twitter, or Instagram)
 
-            Strategies for handling large-scale data and user traffic.
-            Implementing features like news feeds, post interactions, and multimedia content.
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            Design a Social Network and Message Board Service (like Quora, Reddit, or HackerNews)
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a Mass Social Media Service (like Facebook, Twitter, or Instagram)-->
 
-            Focusing on user-generated content, community engagement, and content moderation.
-            Ensuring scalability and efficient search functionality across numerous posts and threads
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            Design a File Sharing Service (like Dropbox, Google Drive, or Google Photos)
+<!--            Strategies for handling large-scale data and user traffic.-->
+<!--            Implementing features like news feeds, post interactions, and multimedia content.-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
 
-            Ensuring secure file storage, sharing, and synchronization across multiple devices.
-            Handling large file sizes and optimizing for fast upload/download speeds.
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            Design a Video Sharing Service (like YouTube, Netflix)
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a Social Network and Message Board Service (like Quora, Reddit, or HackerNews)-->
 
-            Managing large-scale video storage and optimizing streaming services for different devices.
-            Implementing user recommendations, content search, and playback quality adjustments.
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            Design a Proximity Service (like Yelp, Nearby Friends, Uber)
+<!--            Focusing on user-generated content, community engagement, and content moderation.-->
+<!--            Ensuring scalability and efficient search functionality across numerous posts and threads-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
 
-            Integrating location-based services and real-time updates.
-            Balancing privacy concerns with functionality for services reliant on user location.
-        </question>
-        <answer>
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
-            Design a Search Engine Related Service (like Typeahead or WebCrawler)
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a File Sharing Service (like Dropbox, Google Drive, or Google Photos)-->
 
-            Developing fast, predictive search capabilities for enhanced user experience.
-            Designing efficient web crawling and data indexing strategies for accurate search results.
-        </question>
-        <answer>
-        </answer>
-    </tetel>
+<!--            Ensuring secure file storage, sharing, and synchronization across multiple devices.-->
+<!--            Handling large file sizes and optimizing for fast upload/download speeds.-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
+
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a Video Sharing Service (like YouTube, Netflix)-->
+
+<!--            Managing large-scale video storage and optimizing streaming services for different devices.-->
+<!--            Implementing user recommendations, content search, and playback quality adjustments.-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
+
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a Proximity Service (like Yelp, Nearby Friends, Uber)-->
+
+<!--            Integrating location-based services and real-time updates.-->
+<!--            Balancing privacy concerns with functionality for services reliant on user location.-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
+
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            Design a Search Engine Related Service (like Typeahead or WebCrawler)-->
+
+<!--            Developing fast, predictive search capabilities for enhanced user experience.-->
+<!--            Designing efficient web crawling and data indexing strategies for accurate search results.-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--    </tetel>-->
 
 </questionlist>

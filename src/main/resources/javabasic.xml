@@ -1,16 +1,7 @@
 <!--toadd :
+  event loop
+
   effective java KONYV topikok
-
-equals, hashCode, ....
-   deepcopy shallow copy https://www.baeldung.com/java-deep-copy
-
-   failfast, failsafe - collection iterator pl. documentationban
-deepcpy shallow cpy
-lazyload : if null , init else no init
-
-methods common to all objects
-SampleJavaExamples  strongweak ref
-Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercacheing
 
 -->
 
@@ -30,7 +21,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             type inference
         </question>
         <answer>
-            variable - var, generics, function parameter
+            type inference - var, generics, function parameter
             var a = 3; // inferred to integer
             var b = 1.0; // inferred to double
 
@@ -46,9 +37,16 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
 
             1,
             - diamond operator
-            PredicateString nameValidation = (String x) -> x.length() > 0;
-            PredicateString nameValidation = x -> x.length() > 0;
+            Predicate*String* nameValidation = (String x) -> x.length() > 0;
+            Predicate*String* nameValidation = x -> x.length() > 0;
             -local var inference : var a = 3;
+
+            - argument inference
+            public static *U* void addBox(U u,java.util.List*Box*U** boxes) { ...
+                full call:
+            BoxDemo.*Integer*addBox(Integer.valueOf(10), listOfIntegerBoxes);
+                integer is inferred so :
+            BoxDemo.addBox(Integer.valueOf(20), listOfIntegerBoxes);
 
 
 
@@ -96,34 +94,52 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
     </tetel>
     <tetel>
         <question>
-            gyakori exceptionok
+            gyakori exceptionok - exception, error, checked / unchecked
         </question>
         <answer>
         </answer>
         <links>https://rollbar.com/blog/most-common-java-exceptions/#</links><ln>common java exceptions</ln>
+        <links>https://res.cloudinary.com/practicaldev/image/fetch/s--UXYAie4U--/c_limit%2Cf_auto%2Cfl_
+            progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w3vz8kaml2qskir1o8uc.png</links><ln>exceptions cheatsheet</ln>
     </tetel>
     <tetel>
         <question>
             thread 1.0 what is, definition real basics
         </question>
         <answer>
-            THREAD : thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler,
+
+            PROCESS : program loaded to mem by OS, assigned heap and under execution. its active.
+
+            THREAD : is a segment or part of a process that executes some task, sequence of instructions, can run concurrently
+                process can have multiple threads running concurrently(conc. = the processor can switch execution resources
+            between threads, resulting in concurrent execution)
+            is the smallest sequence of programmed instructions that can be managed independently by a scheduler,
             which is typically a part of the operating system.[1] In many cases, a thread is a component of a process.
 
-            - context switch : thread, process
+            ASYNCRONOUS  task:(non-blocking task) task ami futtathato fuggetlenul, parhuzamosan (new thread), nem blokkolja a main th-t.
 
-            PROCESS :
+            SYNC TASK : ami nem async, blocking task
 
-            THREAD :
+            CONTEXT SWITCH : thread, process - store the state so it can be restored - threadstack, registers,
 
-            ASYNCRONOUS  task: task ami futtathato fuggetlenul,parhuzamosan (new thread), nem blokkolja a main th-t.
+            executorservice: workers, assign tasks
+                ExecutorService executorService =
+                new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue*Runnable*());
 
-            SYNC TASK :
+            java Future : A Future represents the result of an asynchronous computation.
+                         (get, isDone, cancel, isCancelled ...)
+
 
         </answer>
         <links>https://en.wikipedia.org/wiki/Thread_(computing)#</links><ln>wiki trhreads</ln>
         <links>https://en.wikipedia.org/wiki/Thread_(computing)#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg</links><ln>wiki threads pic</ln>
         <links>https://www.tutorialspoint.com/difference-between-thread-context-switch-and-process-context-switch</links><ln>tutorialspot threads </ln>
+        <links>https://www.baeldung.com/java-executor-service-tutorial</links><ln>baeldung executor service</ln>
+        <links>https://docs.oracle.com/cd/E19253-01/816-5137/mtintro-25092/index.html</links><ln>oracle threads 1.0</ln>
+        <links>https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html</links><ln>javadoc executorservice</ln>
+        <links>https://medium.com/geekculture/concurrency-in-java-executor-service-part-1-918b5db79c72</links><ln>medium ex.serv.overview</ln>
+
     </tetel>
     <tetel>
         <question>
@@ -151,14 +167,6 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
     </tetel>
     <tetel>
         <question>
-            javabasic test
-        </question>
-        <answer>
-            javabasic test
-        </answer>
-    </tetel>
-    <tetel>
-        <question>
             authentication n authorization
         </question>
         <answer>
@@ -175,16 +183,18 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             - basic : hashing in java,  hashmap ,hashset hash table, how are they implemented, ordos
             - object : hashCode() - jvm dependant, based on memoryaddresses
             - hashCode contract : during exec app hashcode same, eq => same hc ( vissza nem )
-            - bucket :  index (K) = hashcode(K) mod (n-1)
+            - bucket :  index (K) = hashcode(K) mod (n-1), ahol hashcode(K) hashing function
             - node(K,V) : int hashcode, K key, V value, Node(K,V) next pointer.
-            - map.put(K,V) : hash code collision : ua final hash value, ugyanabba a bucketbe kerulnek.
+            - map.put(K,V) : hash code collision : index(K) megegyezik(=ugyanabba a bucketbe kerulnek).
               ekkor check equals(): key es value Y: replace N:connect object to the existing one
 
             - rehashing : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
 
-            -double hashing : instead of insert rehashing with a diff function / modified function
+            - hashmap, hashtable, treemap, linkedhashmap
 
-            - weak hashmap
+            - double hashing : instead of insert rehashing with a diff function / modified function
+
+            - weak hashmap : keys are weak references, garbage collected eagerly - memory effective
         </answer>
         <links>https://hn.algolia.com/?q=hashing</links>
         <links>http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap12.htm</links>
@@ -222,7 +232,8 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
             java n memory
         </question>
         <answer>
-            GC basic working : minorgc, majorgc,marknsweep GC
+            GC basic working : minorgc, majorgc,marknsweep GC, GC cycle
+
             String  :
             valamike
         </answer>
@@ -231,6 +242,7 @@ Integer a = 1000; Integer b = 1000; a==b true, ha a, b = 100 false. Integercache
         <links>https://deepu.tech/memory-management-in-jvm/</links>
         <links>https://iorilan.medium.com/what-exactly-happens-when-you-new-an-object-ea38d9740617</links><ln>when new() an obj</ln>
         <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links><ln>jenkov mem</ln>
+        <links>https://www.freecodecamp.org/news/garbage-collection-in-java-what-is-gc-and-how-it-works-in-the-jvm/</links><ln>java garbage collection</ln>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem2.jpg</images>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/JVM_architecture.jpg</images>

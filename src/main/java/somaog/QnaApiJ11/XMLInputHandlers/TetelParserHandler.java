@@ -9,6 +9,9 @@ import java.util.List;
 
 
 /**  class for parsing the xml file
+ *   validatinx sax xml :
+ *   https://docs.oracle.com/javase%2Ftutorial%2F/jaxp/sax/validation.html
+ *   https://docs.oracle.com/javase%2Ftutorial%2F/jaxp/sax/parsing.html
     <tetel>
             <question>
                 tries
