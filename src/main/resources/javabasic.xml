@@ -200,12 +200,16 @@
             - double hashing : instead of insert rehashing with a diff function / modified function
 
             - weak hashmap : keys are weak references, garbage collected eagerly - memory effective
+
+            - hash spec tipusok :
+                Consistent hashing :
         </answer>
         <links>https://hn.algolia.com/?q=hashing</links>
         <links>http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap12.htm</links>
         <links>https://hn.algolia.com/?q=hashing</links>
         <links>https://akshatm.svbtle.com/consistent-hash-rings-theory-and-implementation</links>
         <links>https://www.baeldung.com/java-weakhashmap</links>
+        <links>https://www.geeksforgeeks.org/consistent-hashing/</links><ln>GFG consistent hashing</ln>
     </tetel>
     <tetel>
         <question>

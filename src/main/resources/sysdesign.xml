@@ -72,6 +72,7 @@
             estimates
         </question>
         <answer>
+            - tinyURL, pasteBin,
             - read / write heavy
             - bandwith
             - memory - caching
@@ -79,6 +80,7 @@
             - data size estimation
             - soap vs rest api
         </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b5dac93e7ae59a1af6b</links><ln>tiny URL estimates</ln>
     </tetel>
     <tetel>
         <question>
@@ -87,6 +89,7 @@
         <answer>
             adsf
         </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b72ac93e7ae59a1b059</links><ln>DG webcrawler </ln>
     </tetel>
     <tetel>
         <question>
@@ -94,23 +97,23 @@
         </question>
         <answer>
         </answer>
-        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b5dac93e7ae59a1af6b</links><ln>DG tiny URL</ln>
     </tetel>
-    <tetel>
-        <question>
-            DropBox
-        </question>
-        <answer>
-        </answer>
-        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
-    </tetel>
+<!--    <tetel>-->
+<!--        <question>-->
+<!--            DropBox-->
+<!--        </question>-->
+<!--        <answer>-->
+<!--        </answer>-->
+<!--        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>-->
+<!--    </tetel>-->
     <tetel>
         <question>
             Api Rate Limiter
         </question>
         <answer>
         </answer>
-        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b70ac93e7ae59a1b025</links><ln>api rate limiter</ln>
     </tetel>
 
     <tetel>
@@ -120,7 +123,7 @@
         <answer>
 
         </answer>
-        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/645d5161fff33a24ccce4bb1</links><ln>proxy, reverse prox</ln>
     </tetel>
 
     <tetel>
@@ -129,7 +132,7 @@
                 describe, types
         </question>
         <answer>
-
+            distribute incoming load
             types : least connection, least response , least bandtwith, roundRobin, weightRR, ipHash
             - health checks
             - redundant load balancer - single point of failure
