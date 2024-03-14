@@ -141,7 +141,7 @@
 
     <tetel>
         <question>
-            Cacheing : where can we cache - layer, place, invalidation policies, eviction policies
+            Caching : where can we cache - layer, place, invalidation policies, eviction policies
         </question>
         <answer>
             UC:
@@ -150,16 +150,18 @@
             what when expanded on multiple nodes ? - > each node with own cache, or global cache or distributed cache
             CDN : cache that serves loads static data
 
-            cache invalidation : when the data is no more valid (pl modified in the database)
-                - write (through, around, back) cache
+            CACHE INVALIDATION : when the data is no more valid (pl modified in the database)
+                - write strats (through, around, back) cache
+                - cache INVALIDATION METHODS : purge, refresh, ban, ttl, stale while revalidate
+                - read strats (through, aside )
 
-            cache eviction: LRU, MRU , FIFO , LIFO, LFU- least freq. used
+            CACHE EVICTION: LRU, MRU , FIFO , LIFO, LFU- least freq. used
 
             server side caching
             client side caching
         </answer>
         <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
-        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside chach</ln>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside cache</ln>
     </tetel>
 
     <tetel>
@@ -168,12 +170,16 @@
                 types, pros, cons
         </question>
         <answer>
+            Partitioning : process of dividing a large DB into smaller more manageable
+                parts called partitions or shards.
             UC:
-            horizontal :
-            vertical :
+            Methods  - horizontal, vertical, hibrid
+            Partitioning crit : key/hash based, list, RR, composite
+
             dirbased :
             common problems :
         </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b7aac93e7ae59a1b0c1</links><ln>DG data partitioning</ln>
         <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
     <tetel>
