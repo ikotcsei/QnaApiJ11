@@ -5,7 +5,6 @@ import '../styles.css';
 function RootLayout(){
     return(
         <>
-            <h1>rootlayout</h1>
             <MainNavigation className="navigation" />
             <Outlet className="navigation" />
         </>

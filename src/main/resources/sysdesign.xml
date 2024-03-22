@@ -1,7 +1,17 @@
 <!--sharding - tesznikak
+
+    network tul: bandwidth, througput, latency
+    server tul: bandwidth, ip, openports, ...
 -->
 
 <questionlist>
+    <tetel>
+        <question>
+            microservices architecture(epitokovek)
+        </question>
+        <answer>
+        </answer>
+    </tetel>
     <tetel>
         <question>
             FE - react useState,useEffect,await - async,function component,
@@ -46,13 +56,13 @@
     </tetel>
     <tetel>
         <question>
-            fogalmak :scalability,reliability,availability,efficiency, service ormanagebility
+            fogalmak :scalability,reliability,availability,efficiency, service rmanagebility
             single point of failure,bandtwith - networking : ping, lag, , uptime .....
             latency, throughput
         </question>
         <answer>
             bandwith : capacity measure, mekkora a cso atmeroje (width) amin folyik,
-                        mpbs ??
+                        mpbs ?? ez througput csak fixed time  ? sztem sec
             latency : data speed, milyen gyorsan folyik a viz  , t0: req send, t1 resp arrive
                       latency = t1-t0 , sec
             throughput : how much water runnign throuhg the pipe
@@ -69,18 +79,20 @@
     </tetel>
     <tetel>
         <question>
-            estimates
+            estimates( traffic : create=write, read, kbyte/sec; storage,TB ;
+                       bandwith : write + read, kb/sec ; mem-caching : GB)
         </question>
         <answer>
-            - tinyURL, pasteBin,
+            - tinyURL(r/w 100:1, 80:20 rule), pasteBin,
             - read / write heavy
             - bandwith
-            - memory - caching
+            - memory - caching 80:20rule
             - storage estimates . hd
             - data size estimation
             - soap vs rest api
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b5dac93e7ae59a1af6b</links><ln>tiny URL estimates</ln>
+        <links>https://github.com/systemdesign42/system-design?tab=readme-ov-file#system-design-fundamentals-1</links><ln>sysd42 backofenvelope</ln>
     </tetel>
     <tetel>
         <question>

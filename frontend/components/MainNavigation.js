@@ -17,7 +17,7 @@ function MainNavigation(){
                 <li>
                     <Link to="/alllinks">Alllinks</Link>
                 </li>
-                <h2>
+                <h1>
                     <li>
                         <Link to="/designpatterns">designpatterns </Link>
                     </li>
@@ -30,7 +30,7 @@ function MainNavigation(){
                     <li>
                         <Link to="/javabasic">java basic </Link>
                     </li>
-                </h2>
+                </h1>
             </ul>
         </nav>
 

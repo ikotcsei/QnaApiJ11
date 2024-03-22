@@ -18,6 +18,22 @@
     </tetel>
     <tetel>
         <question>
+            JVM reszei
+        </question>
+        <answer>
+            asdf
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            thread 2.0 patterns , use cases
+        </question>
+        <answer>
+            the thread 2.0 anwer
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             type inference
         </question>
         <answer>
@@ -241,17 +257,26 @@
             java n memory
         </question>
         <answer>
-            GC basic working : minorgc, majorgc,marknsweep GC, GC cycle
+            GCroot -> live -> live; dead; dead;
+            GCroots : active java threads; local vars and params of curr. ex. method; static variables; JNI references
+            generational garbage collection : young, old, permanent
+
+            GC basic working : minorgc, majorgc,marknsweep(first round mark, secound delete), GC cycle
+
+
+
 
             String  :
             valamike
         </answer>
+        <links>https://www.freecodecamp.org/news/garbage-collection-in-java-what-is-gc-and-how-it-works-in-the-jvm/</links><ln>java garbage collection</ln>
+        <links>https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/</links><ln>dyna gc roots</ln>
         <links>https://medium.com/nerd-for-tech/java-memory-explained-43de6de157be</links><ln>medium javamem</ln>
         <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
         <links>https://deepu.tech/memory-management-in-jvm/</links>
+        <links>https://gist.github.com/bossiernesto/ccb3a847e83ae0ddf7db0b0eae30870f#file-jvm-architecture-png</links><ln>JVM github</ln>
         <links>https://iorilan.medium.com/what-exactly-happens-when-you-new-an-object-ea38d9740617</links><ln>when new() an obj</ln>
         <links>https://jenkov.com/tutorials/java-concurrency/java-memory-model.html#java-memory-model-tutorial-video</links><ln>jenkov mem</ln>
-        <links>https://www.freecodecamp.org/news/garbage-collection-in-java-what-is-gc-and-how-it-works-in-the-jvm/</links><ln>java garbage collection</ln>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem2.jpg</images>
         <images>http://ezittegybukfenc.de:8080/QA/javabasic/JVM_architecture.jpg</images>
