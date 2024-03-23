@@ -162,12 +162,25 @@
     </tetel>
     <tetel>
         <question>
-            O(N), memoriaigeny
+            time complexity, space complexity, aux space complexity
             peldak
         </question>
         <answer>
+            time complexity:
             O : 1, logn, n, n*logn, n2, 2^n, n!
+
+            auxiliary space : extra space used to do the alg.
+            space complexity : input data space + auxiliary space
+
+            O(1) space complexity : kb :  a bemenet novelesevel nem valtozik a szukseges hely, konstans
+                extra helyet hasznalunk fel.
+
+            pl O(1) : Y intersect list : first get listlengths es hosszabbat leszamlalva eslo azonos node
+               nem O(1) : stackbe v hashmapbe tenni az elemeket
+
         </answer>
+        <links>https://stackoverflow.com/questions/43260889/what-is-o1-space-complexity</links><ln>space complexity</ln>
+        <links>https://www.geeksforgeeks.org/what-is-the-difference-between-auxiliary-space-and-space-complexity/</links><ln>GFG space complexity</ln>
     </tetel>
     <tetel>
         <question>

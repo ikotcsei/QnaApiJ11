@@ -14,6 +14,13 @@
     </tetel>
     <tetel>
         <question>
+            architectures - event driven, message driven, microservice, monolith,...
+        </question>
+        <answer>
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
             FE - react useState,useEffect,await - async,function component,
 
         </question>

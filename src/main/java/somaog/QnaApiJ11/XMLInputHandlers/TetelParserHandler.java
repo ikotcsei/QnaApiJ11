@@ -12,6 +12,11 @@ import java.util.List;
  *   validatinx sax xml :
  *   https://docs.oracle.com/javase%2Ftutorial%2F/jaxp/sax/validation.html
  *   https://docs.oracle.com/javase%2Ftutorial%2F/jaxp/sax/parsing.html
+ *
+ *   stax vs sax  : stax allapottolfuggo olvasas
+ *
+ *   ha NEM JOL FORMALT az XML file input nem indul a server
+ *
     <tetel>
             <question>
                 tries
@@ -23,8 +28,9 @@ import java.util.List;
             </answer>
     </tetel>
 
+    ilyenkor ROSSZUL FORMAZOTT xml-nel elindul a server!!
    ide is teszteket kene, min max, jol formazott hogy nez ki
-   pl hibas :
+   pl hibas es elindul:
          <answer>
          <links></links>
             valami valasz
