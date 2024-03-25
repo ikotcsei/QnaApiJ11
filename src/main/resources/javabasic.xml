@@ -254,9 +254,15 @@
     </tetel>
     <tetel>
         <question>
-            java n memory
+            java n memory, references
         </question>
         <answer>
+            reference : pass by value,
+            primitive wrappers are immutable. Integer  : i = i + 1;  - unwrap i, add one, wrap it to another object.
+                                                    i = 77;  - also creates a new integer object
+                        - can be used as keys in hashmap,
+
+
             GCroot -> live -> live; dead; dead;
             GCroots : active java threads; local vars and params of curr. ex. method; static variables; JNI references
             generational garbage collection : young, old, permanent
