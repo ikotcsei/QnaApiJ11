@@ -38,6 +38,8 @@
         <links>https://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html</links><ln>oracle concurrency doc</ln>
         <links>https://medium.com/ing-blog/how-does-non-blocking-io-work-under-the-hood-6299d2953c74</links><ln>non blocking IO medium</ln>
         <links>https://www.linkedin.com/pulse/java-sockets-io-blocking-non-blocking-asynchronous-aliaksandr-liakh/</links>IO - NIO - async - sync<ln></ln>
+        <links>https://www.linkedin.com/pulse/unraveling-nodejs-understanding-non-blocking-io-event-sutradhar/</links><ln>event loop linkedin</ln>
+        <links>https://inside.caratlane.com/demystifying-the-event-loop-in-node-js-unleashing-the-power-of-asynchronous-programming-91cec8ce2b5e</links><ln>eventloop good pic</ln>
     </tetel>
     <tetel>
         <question>
