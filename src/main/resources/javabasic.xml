@@ -29,8 +29,15 @@
             thread 2.0 patterns , use cases
         </question>
         <answer>
-            the thread 2.0 anwer
+            - executor service : UC : processing independent tasks, pl : transactions, req:one thread per task
+            - nonblocking code
+            - shared obj, reads and writes, locking - a shared file that has 100x read, 1xwrite
+            - transactions
+            - thread patterns : ...
         </answer>
+        <links>https://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html</links><ln>oracle concurrency doc</ln>
+        <links>https://medium.com/ing-blog/how-does-non-blocking-io-work-under-the-hood-6299d2953c74</links><ln>non blocking IO medium</ln>
+        <links>https://www.linkedin.com/pulse/java-sockets-io-blocking-non-blocking-asynchronous-aliaksandr-liakh/</links>IO - NIO - async - sync<ln></ln>
     </tetel>
     <tetel>
         <question>
@@ -278,6 +285,7 @@
         <links>https://www.freecodecamp.org/news/garbage-collection-in-java-what-is-gc-and-how-it-works-in-the-jvm/</links><ln>java garbage collection</ln>
         <links>https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/</links><ln>dyna gc roots</ln>
         <links>https://medium.com/nerd-for-tech/java-memory-explained-43de6de157be</links><ln>medium javamem</ln>
+        <links>https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/considerations.html</links><ln>oracle doc reference types</ln>
         <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
         <links>https://deepu.tech/memory-management-in-jvm/</links>
         <links>https://gist.github.com/bossiernesto/ccb3a847e83ae0ddf7db0b0eae30870f#file-jvm-architecture-png</links><ln>JVM github</ln>

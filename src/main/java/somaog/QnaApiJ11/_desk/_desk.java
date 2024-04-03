@@ -42,9 +42,11 @@ import java.util.List;
     1. functionalites,todos
           add :
 
+
              0. tudast feltolteni - napi X  , sysdesignnal kezd
 
-             0- frontendet szebbre,
+             0- frontendet szebbre, tomcat serveren routing : redirect to ezittegybukfenc:8080/QA/ , h reload jo legyen
+                - rewrite valve, web.xml, rewrites.config
 
             0.0001 - functionality : add next tetel btn to FE, instead of reload
             0.02 frontendrol elerheto legyen egyszerre tobb is, dinamikus frissites
