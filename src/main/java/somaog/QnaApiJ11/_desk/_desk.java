@@ -3,16 +3,22 @@ package somaog.QnaApiJ11._desk;
 
 import java.util.List;
 
-/*  build n deploy  :
-                CTRL + F5 !!! CTRL + F5 !!! empty cache ? or skip ... HELLO !!!! *********** CTRL + F5 !!!
-                - localhost -> ezittegy xml-fileokban XMLTrans
-                -app.properties beallit
-                -frontend  globals.js req. beallit production url-re
+/*  **** setup local servers : start frontend,
+                               start backend;
 
-                npm run build
+
+   ***build n deploy  :
+
+                CTRL + F5 !!! CTRL + F5 !!! empty cache ? or skip ... HELLO !!!! *********** CTRL + F5 !!!
+
+
+                - localhost -> ezittegybukfenc.de:8080/QA/  miatt xml-fileokban XMLTrans
+                - app.properties beallit
+                - frontend  globals.js ben. currentServerURL = productionURL;
+
+                npm run build, read _buildScripts/
                 copy dist/bundle.js -> /static/, dist/index.html -> /templates/, <script defer="defer" src="bundle.js"></script>
                 modify xml file links for production ???? ez mar nem kell sztem
-
 
                 mvn clean install
 
@@ -20,12 +26,19 @@ import java.util.List;
                 mappakat targetbe. thymeleaf template indexet serveli ami kerese a ./static/bundle.js-t
                 - static es target mappak maguktol updatelodnek compile eseten
 
+                move war to prod server : deployWar.bat
 
-    add a new qna :
+
+    add a new topic (xml file)  :
        - copy file to /resources/
        - create repo file extend from TetelRepository
        - autowire to controller
        - add url to controller
+
+    addimage :
+      ../static/<xml_filename>/ - be masolni
+      links : productionURL + /<xml_filename>/fileneve
+      <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
 
     dynamically add xml file :
        - check a dir every 60sec, load if theres a new on

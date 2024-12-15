@@ -1,5 +1,4 @@
 <!--toadd :
-  event loop
 
   effective java KONYV topikok
 
@@ -18,6 +17,58 @@
     </tetel>
     <tetel>
         <question>
+            pypz
+        </question>
+        <answer>
+            DATA PIPELINES  realtime data -> b - b - b - b   automatization, orchestration, end user consuming that data
+            live orchestration (modern hibrid environment):
+                    sources , transformatioin, data storage, delivery
+
+        </answer>
+        <links>https://pypz.dev/</links><ln>the doc</ln>
+    </tetel>
+    <tetel>
+        <question>
+            java io vs nio
+        </question>
+        <answer>
+            - java blocking server : read response, have to wait for the full response arriving
+            - java non blocking server implementation :  read part of the msg that arrived already, do sg else.
+
+
+        </answer>
+        <links>https:/chat.openai.com/?q=java io vs java nio</links><ln>chatgpt io vs nio</ln>
+        <links>https://www.baeldung.com/java-asynchronous-programming</links><ln>java async prog</ln>
+        <links>https://www.baeldung.com/java-io-vs-nio</links><ln>baeldung : io vs nio</ln>
+        <links>https://www.linkedin.com/pulse/java-sockets-io-blocking-non-blocking-asynchronous-aliaksandr-liakh/</links><ln>linkedin : io types</ln>
+    </tetel>
+    <tetel>
+        <question>
+            eventloop
+        </question>
+        <answer>
+            promblem : try to acheive concurrency with one thread of execution
+            call stack : currently executing function
+            callback queue : the finished operations callback
+            eventloop : The event loop continuously checks the call stack and the
+                        callback queue. If the call stack is empty, it takes the first
+                        function from the callback queue and pushes it onto the call
+                        stack for execution.
+
+            execution : the function on top of the callstack is executed, if this contains
+                        async code it might initiate further async operations
+
+            repeat : the eventloop continues this process ensure that the call stack is
+                     always empty before taking the next func from the callback queue
+        </answer>
+        <links>https:/chat.openai.com/?q=what is an eventloop</links><ln>chatgpt eventloop</ln>
+        <links>https://www.linkedin.com/pulse/event-loop-implementation-java-harold-johan-castillo-obando-cdsxe/</links><ln>java eventloop</ln>
+        <links>https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/</links><ln>gfg event loop theory</ln>
+        <links>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop</links><ln>js event loop</ln>
+        <links>https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick#what-is-the-event-loop</links><ln>node js eventloop</ln>
+    </tetel>
+    <tetel>
+        <question>
             JVM reszei
         </question>
         <answer>
@@ -33,13 +84,24 @@
             - nonblocking code
             - shared obj, reads and writes, locking - a shared file that has 100x read, 1xwrite
             - transactions
+            - java : executorservice, future, completeable future, forkjoin framework
             - thread patterns : ...
         </answer>
+        <links>https://www.baeldung.com/java-future</links><ln>ex service, future, compl future, forkjoin </ln>
         <links>https://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html</links><ln>oracle concurrency doc</ln>
         <links>https://medium.com/ing-blog/how-does-non-blocking-io-work-under-the-hood-6299d2953c74</links><ln>non blocking IO medium</ln>
-        <links>https://www.linkedin.com/pulse/java-sockets-io-blocking-non-blocking-asynchronous-aliaksandr-liakh/</links>IO - NIO - async - sync<ln></ln>
+        <links>https://www.linkedin.com/pulse/java-sockets-io-blocking-non-blocking-asynchronous-aliaksandr-liakh/</links><ln>IO - NIO - async - sync</ln>
         <links>https://www.linkedin.com/pulse/unraveling-nodejs-understanding-non-blocking-io-event-sutradhar/</links><ln>event loop linkedin</ln>
         <links>https://inside.caratlane.com/demystifying-the-event-loop-in-node-js-unleashing-the-power-of-asynchronous-programming-91cec8ce2b5e</links><ln>eventloop good pic</ln>
+    </tetel>
+    <tetel>
+        <question>
+            thread 3.0 patterns , java.util.concurrent
+        </question>
+        <answer>
+            - executor service : UC : processing independent tasks, pl : transactions, req:one thread per task
+            - java : executorservice, future, completeable future, forkjoin framework
+        </answer>
     </tetel>
     <tetel>
         <question>
@@ -60,13 +122,13 @@
             Myclass.class.cast("cast this obj to  string");
             Myclass.class.isInstanceof(intvariable) evk object instanceOf, de lehet primitive tipus is, instanceof nem
 
-            1,
-            - diamond operator
-            Predicate*String* nameValidation = (String x) -> x.length() > 0;
-            Predicate*String* nameValidation = x -> x.length() > 0;
-            -local var inference : var a = 3;
 
-            - argument inference
+            - DIAMOND operator
+                Predicate*String* nameValidation = (String x) -> x.length() > 0;
+                Predicate*String* nameValidation = x -> x.length() > 0;
+            - LOCAL VAR inference : var a = 3;
+
+            - ARGUMENT inference
             public static *U* void addBox(U u,java.util.List*Box*U** boxes) { ...
                 full call:
             BoxDemo.*Integer*addBox(Integer.valueOf(10), listOfIntegerBoxes);
@@ -124,9 +186,9 @@
         </question>
         <answer>
             classhierarch :
-            throwable - ERROR - unchecked : cannot recover, JVM error, LinkageError
-            throwable - EXCEPTION - RuntimeException - Unchecked : ClassCast, Arithmetic, NullPointer, File not found....
-                                  - IOException - Checked : FileIO, networkIO, ...
+            throwable - ERROR - UNCHECKED : cannot recover, JVM error, LinkageError
+            throwable - EXCEPTION - RuntimeException - UNCHECKED : ClassCast, Arithmetic, NullPointer, File not found....
+                                  - IOException - CHECKED : FileIO, networkIO, ...
         </answer>
         <links>https://www.geeksforgeeks.org/exceptions-in-java/</links><ln>java exceptions hierarchy</ln>
         <links>https://rollbar.com/blog/most-common-java-exceptions/#</links><ln>common java exceptions</ln>
@@ -137,6 +199,19 @@
             thread 1.0 what is, definition real basics
         </question>
         <answer>
+
+            concurrency, real parrarelism : UC
+
+            CONCURRENCY: way of designing and writing programs that can execute multiple tasks or
+            processes at the same time, without waiting for one to finish before starting another.
+            can use shared resources. can run on singlecore. Java : thread, executor, futures, syncronizers...
+            UCtask:
+
+            PARALELLISM :task divided into subtasks, the subtasks are ran paralell.
+            is a subset of concurrent programming, that focuses on exploiting the hardware capabilities
+            of multicore processors, distributed systems etc. can use shared or distributed resources.
+            requires multicore or distributed system. Java : streams, fork/join, CompleteableFuture
+            UCtask:
 
             PROCESS : program loaded to mem by OS, assigned heap and under execution. its active.
 
@@ -160,8 +235,14 @@
             java Future : A Future represents the result of an asynchronous computation.
                          (get, isDone, cancel, isCancelled ...)
 
+            HOWTO THREADSAFE : control escape rule - references also dont escape; immutable; stateless;
+                local primitive; compose from TS objects etc
+
+
 
         </answer>
+        <links>https://www.baeldung.com/java-asynchronous-programming</links><ln>java async prog</ln>
+        <links>https://www.baeldung.com/java-thread-safety</links><ln>how-to-thread-safety</ln>
         <links>https://en.wikipedia.org/wiki/Thread_(computing)#</links><ln>wiki trhreads</ln>
         <links>https://en.wikipedia.org/wiki/Thread_(computing)#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg</links><ln>wiki threads pic</ln>
         <links>https://www.tutorialspoint.com/difference-between-thread-context-switch-and-process-context-switch</links><ln>tutorialspot threads </ln>
@@ -169,6 +250,8 @@
         <links>https://docs.oracle.com/cd/E19253-01/816-5137/mtintro-25092/index.html</links><ln>oracle threads 1.0</ln>
         <links>https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html</links><ln>javadoc executorservice</ln>
         <links>https://medium.com/geekculture/concurrency-in-java-executor-service-part-1-918b5db79c72</links><ln>medium ex.serv.overview</ln>
+        <links>https://www.geeksforgeeks.org/difference-between-concurrency-and-parallelism/</links><ln>gfg paralell vs concurrent</ln>
+        <links>https://www.zenduty.com/blog/concurrency-parallelism-asyncio/</links><ln>paralell vs concurrent</ln>
 
     </tetel>
     <tetel>
@@ -178,6 +261,7 @@
         <answer>
         </answer>
         <links>https://www.codingninjas.com/studio/library/real-time-applications</links><ln>realtime apps 1.0</ln>
+        <links>https:/chat.openai.com/?q=realtime application</links><ln>chatgpt realtime application </ln>
     </tetel>
     <tetel>
         <question>
@@ -200,8 +284,10 @@
             authentication n authorization
         </question>
         <answer>
-            valami
+            check links
         </answer>
+
+        <links>https:/chat.openai.com/?q=authentication and authorization in java detailed</links><ln>chatGPT java auth. </ln>
         <links>https://iorilan.medium.com/all-you-need-to-know-about-login-sso-ldap-saml-oauth-openid-i-was-recently-asked-this-question-aea8ae47ce2b</links>
         <ln>auth n autho full list</ln>
     </tetel>
@@ -267,10 +353,10 @@
         </question>
         <answer>
             reference : pass by value,
-            primitive wrappers are immutable. Integer  : i = i + 1;  - unwrap i, add one, wrap it to another object.
-                                                    i = 77;  - also creates a new integer object
-                        - can be used as keys in hashmap,
-
+            primitive wrappers are immutable.
+            Integer  : i = i + 1;  - unwrap i, add one, wrap it to another object.
+                       i = 77;  - also creates a new integer object
+                        - can be used as keys in hashmap, why ?
 
             GCroot -> live -> live; dead; dead;
             GCroots : active java threads; local vars and params of curr. ex. method; static variables; JNI references

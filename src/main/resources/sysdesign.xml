@@ -2,6 +2,9 @@
 
     network tul: bandwidth, througput, latency
     server tul: bandwidth, ip, openports, ...
+
+    architectures - event driven, message driven, microservice, monolith,...
+    concurrency : ......
 -->
 
 <questionlist>
@@ -14,7 +17,7 @@
     </tetel>
     <tetel>
         <question>
-            architectures - event driven, message driven, microservice, monolith,...
+            architectures - event driven
         </question>
         <answer>
         </answer>
