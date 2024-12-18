@@ -3,11 +3,43 @@
     network tul: bandwidth, througput, latency
     server tul: bandwidth, ip, openports, ...
 
-    architectures - event driven, message driven, microservice, monolith,...
+  later :
+    architectures - event driven, message driven, microservice, monolith, distributed...
     concurrency : ......
 -->
 
 <questionlist>
+    <tetel>
+        <question>
+            sys design tradeoffs
+            strong vs eventual consistency
+            latency vs throughput
+            ACID vs BASE properties
+            ReadThroug vs WriteThrough cache
+            BatchProcessing vs Stream Processing
+        </question>
+        <answer>
+            * strong : ok, its done send to client when writing to db is done.
+                    financial system
+              eventual : ok, its done sent to client before writing to DB.
+                        guarantees only that it will be written in the future
+                    social media data feed
+
+            * latency : measures delay, single request from start to finish.
+                       low latency more responsive system
+
+              throughput : amount of data transferred in a given time over a
+                      network
+
+            * ACID : atomicity , consistency, isolation, durability - banking pl.
+              BASE : basic avail, soft state, eventuall consistency,
+             BASE is better for large-scale applications needing high
+             availability and scalability.
+
+            *
+        </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/readthrough-vs-writethrough-cache</links><ln>read/write through cache</ln>
+    </tetel>
     <tetel>
         <question>
             microservices architecture(epitokovek)
@@ -18,8 +50,36 @@
     <tetel>
         <question>
             architectures - event driven
+            pros, cons, solutions
         </question>
         <answer>
+
+            In an event-driven architecture, system components communicate through the production
+            and consumption of events. When a component performs an action that other components
+            might be interested in, it publishes an event. Other components, known as event consumers,
+            listen for these events and react accordingly. This decouples components, allowing
+            for more scalable and resilient systems. EDA is particularly useful in applications
+            requiring real-time processing and responsiveness.
+
+            Kafka, RabbitMQ pl.
+            - event generation, transmission, processing, and storage
+
+        </answer>
+    </tetel>
+    <tetel>
+        <question>
+            architectures - message driven
+            pros, cons, solutions
+        </question>
+        <answer>
+
+            Message-driven architecture centers around the exchange of messages between
+            components to enable communication and coordination. Unlike event-driven systems,
+            where events represent a state change, messages in this context are explicit requests
+            or commands directed from one component to another. This approach can be synchronous
+            or asynchronous and is often used to integrate disparate systems or components,
+            ensuring reliable communication and decoupling of services
+
         </answer>
     </tetel>
     <tetel>
@@ -66,7 +126,7 @@
     </tetel>
     <tetel>
         <question>
-            fogalmak :scalability,reliability,availability,efficiency, service rmanagebility
+            fogalmak :scalability,reliability,availability,efficiency, service managebility
             single point of failure,bandtwith - networking : ping, lag, , uptime .....
             latency, throughput
         </question>
@@ -121,14 +181,6 @@
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b5dac93e7ae59a1af6b</links><ln>DG tiny URL</ln>
     </tetel>
-<!--    <tetel>-->
-<!--        <question>-->
-<!--            DropBox-->
-<!--        </question>-->
-<!--        <answer>-->
-<!--        </answer>-->
-<!--        <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>-->
-<!--    </tetel>-->
     <tetel>
         <question>
             Api Rate Limiter
@@ -157,8 +209,15 @@
             distribute incoming load
             types : least connection, least response , least bandtwith, roundRobin, weightRR, ipHash
             - health checks
-            - redundant load balancer - single point of failure
+            - redundant load balancer - single point of failure, 2LB : both pinging each other, daemon;
+                if ping fails : ip switching dynamically
+
+            -what if more than 2 ? for leader election : zookeper, everyone tries to write a shared entry, who
+             can that is the leader. deep topic.
         </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/load-balancing</links><ln>DIO loadbalancere</ln>
+        <links>https://lethain.com/introduction-to-architecting-systems-for-scale/</links><ln>good articles</ln>
+        <links>https://www.vmware.com/topics/load-balancing</links><ln>LB artikül</ln>
     </tetel>
 
     <tetel>
@@ -184,16 +243,21 @@
         </answer>
         <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside cache</ln>
+        <links>https://lethain.com/introduction-to-architecting-systems-for-scale/</links><ln>good articles</ln>
     </tetel>
 
     <tetel>
         <question>
-           Partitioning
+           Partitioning (Sharding)
                 types, pros, cons
         </question>
         <answer>
+            Problem : pl. database table first 100 rows are read 99% of the time. create a shard based on that, to
+                achieve performance boost.
+            Shard manager : creates, merges, resize shards etc. based on a database dynamicall (?),
             Partitioning : process of dividing a large DB into smaller more manageable
                 parts called partitions or shards.
+
             UC:
             Methods  - horizontal, vertical, hibrid
             Partitioning crit : key/hash based, list, RR, composite
