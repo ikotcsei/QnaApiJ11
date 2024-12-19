@@ -12,6 +12,54 @@
     <tetel>
         <question>
             sys design tradeoffs
+            Polling vs Long-Polling vs Webhooks
+            CDN vs direct server
+            serverless vs server based
+            stateful vs stateless
+            read heavy vs write heavy
+        </question>
+        <answer>0
+            * polling : request fixed intervals pl. 5sec, client initiates requests
+               + : easy   - : inefficient
+                uc : task status update
+
+              longpolling : server holds the request open until new data
+                  is available to send back to the client. near real-teioei9
+               + : efficient  - : coonection hold on server, more resource
+                 uc : notification system
+
+              webhooks :  client can accept http/ post req, server event -> send data to client
+               + : realtime, efficient
+               - : more complex, client inc malicious data
+                 uc: ecommerence update invetory when a product is sold, payment processing
+                     third party integration : sync data across tools slack, github, etc. on an event
+
+        </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b72ac93e7ae59a1b059</links><ln>DG webcrawler </ln>
+    </tetel>
+    <tetel>
+        <question>
+            sys design tradeoffs
+            sql nosql
+            primary replica vs peer to peer replica
+            data compression vs deduplication
+            server caching client caching
+            REST vs RPC
+        </question>
+        <answer>
+            * primary replica - master slave : master writes to slaves, slaves can be read to spread load evenly
+              peer to peer : pl bittorrent fileshare, all nodes write and read
+               + : decentral - no single point of filure, bottleneck, spreads
+                    load evenly over the network
+               - : more complex, data consistency, handleing data conflicts
+
+            * data compression vs deduplication
+        </answer>
+        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/primaryreplica-vs-peertopeer-replication</links><ln>tradeoffs</ln>
+    </tetel>
+    <tetel>
+        <question>
+            sys design tradeoffs
             strong vs eventual consistency
             latency vs throughput
             ACID vs BASE properties
@@ -36,16 +84,17 @@
              BASE is better for large-scale applications needing high
              availability and scalability.
 
-            *
+            * batch : process large amount in scheldued intervals. pl payroll process at
+                a huge company. character : delayed processing, high throughput
+                + : resource efficient, simple
+                - : no realtime
+
+             stream : continous realtime processing data, pl fraud detection when processing
+                  bank card transaction data, if fraud immident response
+                + : real time, dynamic response
+                - : more complex, more resource intensive
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/readthrough-vs-writethrough-cache</links><ln>read/write through cache</ln>
-    </tetel>
-    <tetel>
-        <question>
-            microservices architecture(epitokovek)
-        </question>
-        <answer>
-        </answer>
     </tetel>
     <tetel>
         <question>
@@ -163,15 +212,6 @@
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b5dac93e7ae59a1af6b</links><ln>tiny URL estimates</ln>
         <links>https://github.com/systemdesign42/system-design?tab=readme-ov-file#system-design-fundamentals-1</links><ln>sysd42 backofenvelope</ln>
-    </tetel>
-    <tetel>
-        <question>
-            webcrawler
-        </question>
-        <answer>
-            adsf
-        </answer>
-        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b72ac93e7ae59a1b059</links><ln>DG webcrawler </ln>
     </tetel>
     <tetel>
         <question>
