@@ -1,4 +1,7 @@
-<!--sharding - tesznikak
+<!--
+    react : add jegyzet fenykep stb
+     sharding - tesznikak
+
 
     network tul: bandwidth, througput, latency
     server tul: bandwidth, ip, openports, ...
@@ -17,6 +20,7 @@
             serverless vs server based
             stateful vs stateless
             read heavy vs write heavy
+            token bucket vs leaky bucket
         </question>
         <answer>0
             * polling : request fixed intervals pl. 5sec, client initiates requests
@@ -33,6 +37,8 @@
                - : more complex, client inc malicious data
                  uc: ecommerence update invetory when a product is sold, payment processing
                      third party integration : sync data across tools slack, github, etc. on an event
+
+            * traffic control : token bucket leaky bucket
 
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b72ac93e7ae59a1b059</links><ln>DG webcrawler </ln>
@@ -280,6 +286,8 @@
 
             server side caching
             client side caching
+            readthrough cache vs write thru
+
         </answer>
         <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside cache</ln>
@@ -288,7 +296,7 @@
 
     <tetel>
         <question>
-           Partitioning (Sharding)
+           Partitioning (Sharding - horizontal partitioning)
                 types, pros, cons
         </question>
         <answer>
