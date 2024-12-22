@@ -1,5 +1,7 @@
 <!--
+    usecase mindenhez sysdes tradeoff
     react : add jegyzet fenykep stb
+    modular monolith architecture
      sharding - tesznikak
 
 
@@ -35,7 +37,7 @@
               webhooks :  client can accept http/ post req, server event -> send data to client
                + : realtime, efficient
                - : more complex, client inc malicious data
-                 uc: ecommerence update invetory when a product is sold, payment processing
+                 uc: ecommerence update invetory when a product is sold, payment processing, - notification
                      third party integration : sync data across tools slack, github, etc. on an event
 
             * traffic control : token bucket leaky bucket
@@ -53,6 +55,7 @@
             REST vs RPC
         </question>
         <answer>
+            * sql nosql : horizontal scalability : nosql, vertical : sql
             * primary replica - master slave : master writes to slaves, slaves can be read to spread load evenly
               peer to peer : pl bittorrent fileshare, all nodes write and read
                + : decentral - no single point of filure, bottleneck, spreads
@@ -62,6 +65,7 @@
             * data compression vs deduplication
         </answer>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/primaryreplica-vs-peertopeer-replication</links><ln>tradeoffs</ln>
+        <links>https://chatgpt.com/c/6766657c-d61c-800e-bde4-86fad3cf0d27</links><ln>chatGPT sql vs nosql</ln>
     </tetel>
     <tetel>
         <question>
@@ -74,10 +78,10 @@
         </question>
         <answer>
             * strong : ok, its done send to client when writing to db is done.
-                    financial system
+                    uc : financial system
               eventual : ok, its done sent to client before writing to DB.
                         guarantees only that it will be written in the future
-                    social media data feed
+                    uc : social media data feed
 
             * latency : measures delay, single request from start to finish.
                        low latency more responsive system
@@ -147,6 +151,7 @@
             function component, class component, context API,
             redux, routing
         </answer>
+        <images>http://ezittegybukfenc.de:8080/QA/sysdesign/react_basic.png</images>
         <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836800#overview</links><ln>http req fetch UD</ln>
         <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836950#overview</links><ln>async await UD</ln>
     </tetel>
