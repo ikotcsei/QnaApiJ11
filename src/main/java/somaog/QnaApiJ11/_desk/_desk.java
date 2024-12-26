@@ -40,6 +40,7 @@ import java.util.List;
       links : productionURL + /<xml_filename>/fileneve
       <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
 
+    read in a row - :
     dynamically add xml file :
        - check a dir every 60sec, load if theres a new on
             linux tomcat : /var/lib/tomcat9/webapps/..... basicalgos.xml

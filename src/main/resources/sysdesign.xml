@@ -24,7 +24,7 @@
             read heavy vs write heavy
             token bucket vs leaky bucket
         </question>
-        <answer>0
+        <answer>
             * polling : request fixed intervals pl. 5sec, client initiates requests
                + : easy   - : inefficient
                 uc : task status update
@@ -113,12 +113,15 @@
         </question>
         <answer>
 
-            In an event-driven architecture, system components communicate through the production
-            and consumption of events. When a component performs an action that other components
-            might be interested in, it publishes an event. Other components, known as event consumers,
-            listen for these events and react accordingly. This decouples components, allowing
-            for more scalable and resilient systems. EDA is particularly useful in applications
-            requiring real-time processing and responsiveness.
+            In an event-driven architecture, system components communicate
+            through the production and consumption of events. When a
+            component performs an action that other components
+            might be interested in, it publishes an event. Other
+            components, known as event consumers,listen for these events
+            and react accordingly. This decouples components, allowing
+            for more scalable and resilient systems. EDA is particularly
+            useful in applications requiring real-time processing
+            and responsiveness.
 
             Kafka, RabbitMQ pl.
             - event generation, transmission, processing, and storage
@@ -143,6 +146,19 @@
     </tetel>
     <tetel>
         <question>
+            architectures - modular monolith
+            pros, cons, solutions
+        </question>
+        <answer>
+
+
+
+        </answer>
+        <links>https://dl.acm.org/doi/pdf/10.1145/3593856.3595909</links><ln>google modular monolith</ln>
+        <links>https://www.milanjovanovic.tech/blog/what-is-a-modular-monolith</links><ln>mod. mon. vs microservices</ln>
+    </tetel>
+    <tetel>
+        <question>
             FE - react useState,useEffect,await - async,function component,
 
         </question>
@@ -150,10 +166,17 @@
             props upndown,hooks : { useState, useEffect ...},await - async,
             function component, class component, context API,
             redux, routing
+
+            React Hooks are functions that let you "hook into" React
+            state and lifecycle features from functional components
+
         </answer>
+
         <images>http://ezittegybukfenc.de:8080/QA/sysdesign/react_basic.png</images>
+        <links>https://chatgpt.com/c/6768557e-4cac-800e-b192-f748769953bb</links><ln>CGPT react hooks</ln>
         <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836800#overview</links><ln>http req fetch UD</ln>
         <links>https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836950#overview</links><ln>async await UD</ln>
+
     </tetel>
     <tetel>
         <question>
@@ -182,7 +205,7 @@
 
         </answer>
         <links>https://www.youtube.com/watch?v=mZEv4mHsU5E</links><ln>serversiderender with react router</ln>
-        <images>http://ezittegybukfenc.de:8080/QA/sysdesign/SSRwithRR.jpg</images><ln>SSR with react router</ln>
+        <images>http://ezittegybukfenc.de:8080/QA/sysdesign/SSRwithRR.png</images><ln>SSR with react router</ln>
     </tetel>
     <tetel>
         <question>
@@ -205,6 +228,11 @@
                          vertical - horizontal scaleing
 
             service or managebility : how easy to maintain and operate
+
+            how does a module / subsystem affect :
+            ( redundancy, resiliance, scalability, availability, fault tolerance
+            consistency, partition tolerance, latency, network throughput,
+            egyszeruseg, penz, support, tech debt)
         </answer>
     </tetel>
     <tetel>
@@ -257,16 +285,27 @@
                 describe, types
         </question>
         <answer>
-            distribute incoming load
-            types : least connection, least response , least bandtwith, roundRobin, weightRR, ipHash
-            - health checks
+            - altalaban a network tul. on miket javit, milyen elonyei vannak
+              az LBnek ( resiliance, scalability, availability, fault tolerance
+              consistency, partition tolerance, latency, network throughput,
+              egyszeruseg, penz, support, tech debt)
+            - the traffic goes through the LB on the way back also !
+            distribute incoming load, hw loadbalancer,
+            types : least connection, least response , least bandtwith,
+               roundRobin, weightRoundRobin, ipHash
+            - health checks, session persistance (same client same backend),
+              ssl/tls termination
             - redundant load balancer - single point of failure, 2LB : both pinging each other, daemon;
                 if ping fails : ip switching dynamically
 
             -what if more than 2 ? for leader election : zookeper, everyone tries to write a shared entry, who
              can that is the leader. deep topic.
+
+            types : HW, SW, cloud based,DNS , global server
+            stateless vs stateful : no client info session or connection vs. ...
+
         </answer>
-        <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/load-balancing</links><ln>DIO loadbalancere</ln>
+        <links>https://www.designgurus.io/course-play/grokking-system-design-fundamentals/doc/load-balancing-algorithms</links><ln>DIO loadbalancere</ln>
         <links>https://lethain.com/introduction-to-architecting-systems-for-scale/</links><ln>good articles</ln>
         <links>https://www.vmware.com/topics/load-balancing</links><ln>LB artikül</ln>
     </tetel>
@@ -301,23 +340,29 @@
 
     <tetel>
         <question>
-           Partitioning (Sharding - horizontal partitioning)
+           Partitioning
                 types, pros, cons
         </question>
         <answer>
             Problem : pl. database table first 100 rows are read 99% of the time. create a shard based on that, to
                 achieve performance boost.
-            Shard manager : creates, merges, resize shards etc. based on a database dynamicall (?),
+            Shard manager : creates, merges, resize shards etc. based on a database dynamically (?),
             Partitioning : process of dividing a large DB into smaller more manageable
                 parts called partitions or shards.
 
-            UC:
-            Methods  - horizontal, vertical, hibrid
+            Methods  - horizontal=sharding, vertical, hibrid
             Partitioning crit : key/hash based, list, RR, composite
 
-            dirbased :
-            common problems :
+            Sharding : range, hash, directory - based sharding, dynamic, hibrid
+            benefits :
+                improved query performance, enchanced scalability,distributes the workload
+                data isolation - corruption not affecting all partitions
+                enables paralell processing etc. check links
+            UC: check links
+            -: links
+
         </answer>
+        <links>https://www.designgurus.io/course-play/grokking-system-design-fundamentals/doc/benefits-of-data-partitioning</links><ln>DG data partitioning 2</ln>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/638c0b7aac93e7ae59a1b0c1</links><ln>DG data partitioning</ln>
         <images>http://ezittegybukfenc.de:8080/QA/dataPartition.jpg</images>
     </tetel>
