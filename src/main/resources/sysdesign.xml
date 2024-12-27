@@ -315,16 +315,24 @@
             Caching : where can we cache - layer, place, invalidation policies, eviction policies
         </question>
         <answer>
+            + : reduced latency, improced sys performance, reduced network load
             UC:
             where : request layer node cache in : mem, hd, both
             where : processor layers also cache pl. - we can have them in each layer
             what when expanded on multiple nodes ? - > each node with own cache, or global cache or distributed cache
             CDN : cache that serves loads static data
 
+            CACHE REPLACEMENT : when cache full what to remove
+                - leastrecently used
+                - least frequently used
+                - FIFO, Random
+
             CACHE INVALIDATION : when the data is no more valid (pl modified in the database)
                 - write strats (through, around, back) cache
                 - cache INVALIDATION METHODS : purge, refresh, ban, ttl, stale while revalidate
                 - read strats (through, aside )
+
+            CACHE READ : through, aside
 
             CACHE EVICTION: LRU, MRU , FIFO , LIFO, LFU- least freq. used
 
@@ -333,7 +341,9 @@
             readthrough cache vs write thru
 
         </answer>
-        <images>http://ezittegybukfenc.de:8080/QA/caching.jpg</images>
+
+        <images>http://ezittegybukfenc.de:8080/QA/cache_inval_methods.png</images>
+        <links>https://www.designgurus.io/course-play/grokking-system-design-fundamentals/doc/types-of-caching</links><ln>DG caching</ln>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside cache</ln>
         <links>https://lethain.com/introduction-to-architecting-systems-for-scale/</links><ln>good articles</ln>
     </tetel>
