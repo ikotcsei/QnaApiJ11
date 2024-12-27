@@ -40,7 +40,10 @@ import java.util.List;
       links : productionURL + /<xml_filename>/fileneve
       <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
 
-    read in a row - :
+    read in a row - : ne random adja a tetelt hanem sorban : uj link + next / prev buttons
+
+    dynamicall read all picture files and add :
+
     dynamically add xml file :
        - check a dir every 60sec, load if theres a new on
             linux tomcat : /var/lib/tomcat9/webapps/..... basicalgos.xml
@@ -90,7 +93,7 @@ ez mozilla bug : https://discourse.mozilla.org/t/resend-request-in-network-tab-i
 
                     anxios router  ezittegy/ -> localhost/dp, ...
                     kepmegjelenites hogy lesz ? serve static backend or frontend
-                    minden xml filehoy route, js frontend kell, ezt vhogy sablonnal megoldani
+                    minden xml filehoz route, js frontend kell, ezt vhogy sablonnal megoldani
                     kepek vhogy normalis embeddel
 
              - checkout resttemplate and restclient tests

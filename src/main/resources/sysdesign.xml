@@ -342,7 +342,7 @@
 
         </answer>
 
-        <images>http://ezittegybukfenc.de:8080/QA/cache_inval_methods.png</images>
+        <images>http://ezittegybukfenc.de:8080/QA/sysdesign/cache_inval_methods.png</images>
         <links>https://www.designgurus.io/course-play/grokking-system-design-fundamentals/doc/types-of-caching</links><ln>DG caching</ln>
         <links>https://www.designgurus.io/course-play/grokking-the-system-design-interview/doc/65a625996f7f6d0ab356273b</links><ln>dg serverside vs clientside cache</ln>
         <links>https://lethain.com/introduction-to-architecting-systems-for-scale/</links><ln>good articles</ln>
@@ -354,18 +354,20 @@
                 types, pros, cons
         </question>
         <answer>
-            Problem : pl. database table first 100 rows are read 99% of the time. create a shard based on that, to
-                achieve performance boost.
-            Shard manager : creates, merges, resize shards etc. based on a database dynamically (?),
-            Partitioning : process of dividing a large DB into smaller more manageable
-                parts called partitions or shards.
+            Problem : pl. database table first 100 rows are read 99% of the time.
+               create a shard based on that, to achieve performance boost.
+            SHARD MANAGER : creates, merges, resize shards etc.
+                           based on a database dynamically (?),
+            PARTITIONING : process of dividing a large DB into smaller more
+                manageable parts called partitions or shards.
 
-            Methods  - horizontal=sharding, vertical, hibrid
+            METHODS  - horizontal=sharding, vertical, hibrid
             Partitioning crit : key/hash based, list, RR, composite
 
-            Sharding : range, hash, directory - based sharding, dynamic, hibrid
+            SHARDING : range, hash, directory - based sharding, dynamic, hibrid
             benefits :
-                improved query performance, enchanced scalability,distributes the workload
+                improved query performance, enchanced scalability,distributes
+                the workload
                 data isolation - corruption not affecting all partitions
                 enables paralell processing etc. check links
             UC: check links

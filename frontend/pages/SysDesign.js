@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom';
 import LinkList from './common.js';
+import '../styles.css';
 
 function SysDesign(){
 
