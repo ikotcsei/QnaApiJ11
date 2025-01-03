@@ -12,7 +12,15 @@
         <answer>
             minta
         </answer>
-        <links>https://www.baeldung.com/java-deep-copy</links>
+        <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
+    </tetel>
+    <tetel>
+        <question>
+            java Class literal
+        </question>
+        <answer>
+            minta
+        </answer>
         <links>https://programming.vip/docs/the-magic-of-strong-and-weak-references-in-java.html</links><ln>strong n weak references</ln>
     </tetel>
     <tetel>
@@ -47,18 +55,18 @@
             eventloop
         </question>
         <answer>
-            promblem : try to acheive concurrency with one thread of execution
+            PROMBLEM : try to acheive concurrency with one thread of execution
             call stack : currently executing function
             callback queue : the finished operations callback
-            eventloop : The event loop continuously checks the call stack and the
+            EVENTLOOP : The event loop continuously checks the call stack and the
                         callback queue. If the call stack is empty, it takes the first
                         function from the callback queue and pushes it onto the call
                         stack for execution.
 
-            execution : the function on top of the callstack is executed, if this contains
+            EXECUTION : the function on top of the callstack is executed, if this contains
                         async code it might initiate further async operations
 
-            repeat : the eventloop continues this process ensure that the call stack is
+            REPEAT : the eventloop continues this process ensure that the call stack is
                      always empty before taking the next func from the callback queue
         </answer>
         <links>https:/chat.openai.com/?q=what is an eventloop</links><ln>chatgpt eventloop</ln>
@@ -108,7 +116,7 @@
             type inference
         </question>
         <answer>
-            type inference - var, generics, function parameter
+            type INFERENCE - var, generics, function parameter
             var a = 3; // inferred to integer
             var b = 1.0; // inferred to double
 
@@ -140,14 +148,17 @@
 
         </answer>
         <links>https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html</links><ln>generic typeinf</ln>
-        <links>https://developer.oracle.com/learn/technical-articles/jdk-10-local-variable-type-inference</links><ln>locvar typeinf</ln>
+        <links>https://docs.oracle.com/en/java/javase/23/language/local-variable-type-inference.html</links><ln>loc var typeinf</ln>
     </tetel>
     <tetel>
         <question>
             java lamda expressions
         </question>
         <answer>
-            functional interface : one abs func (ekv) lambda expression (ekv) method reference
+            LAMBDA EXPR  () -> { expr; }
+            METHOD REFERENCE  System.out::println
+            functional interface : has one abs func (ekv) lambda expression (ekv) method reference
+
             interface MyFirst{   void func(String s); }
             interface Empty{   void emptyfunc(); }
             MyFirst myF = System.out::println;
@@ -155,16 +166,12 @@
             MyFirst myF = (s) -> {  System.out.println(s) };
             Empty myE = () -> {};
             Empty myE = () -> {System.out.println("asdf")};
-            () -> { expr; }       LAMBDA EXPR
-            System.out::println   METHOD REFERENCE
 
 
-            expression : pl x + 1, new Object(), 1 + 1
-            statement : double aValue = 8933.234;  // declaration statement, which is only one expression
-            block : more statements
+            EXPRESSION : pl x + 1, new Object(), 1 + 1
+            STATEMENT : double aValue = 8933.234;  // declaration statement, which is only one expression
+            BLOCK : more statements
 
-            System.out::println   METHOD REFERENCE
-            () -> { expr; }       LAMBDA EXPR
             a -> 2*a ;
             (int a) -> 2*a;
             () -> { statements;  }
@@ -269,7 +276,7 @@
         </question>
         <answer>
 
-            usecases : data aggregation - have a loads of table data pl. and filter them out (???)
+            USECASES : data aggregation - have a loads of table data pl. and filter them out (???)
                       use streams to express data querys - pl collectionban keresés, szures
             darkside:
             sunnyside:
@@ -296,21 +303,23 @@
             hashing, hashcode, equals
         </question>
         <answer>
+            hashcode CONTRACT (during app execution):
+            - when OVERRIDE EQUALS : override hashcode - a.equals(b) => a.hashCode() == b.hashCode() kell
             - basic : hashing in java,  hashmap ,hashset hash table, how are they implemented, ordos
             - object : hashCode() - jvm dependant, based on memoryaddresses
-            - hashCode contract : during exec app hashcode same, eq => same hc ( vissza nem )
+
             - bucket :  index (K) = hashcode(K) mod (n-1), ahol hashcode(K) hashing function
             - node(K,V) : int hashcode, K key, V value, Node(K,V) next pointer.
-            - map.put(K,V) : hash code collision : index(K) megegyezik(=ugyanabba a bucketbe kerulnek).
+            - map.put(K,V) : hash code collision : index(K) megegyezik(= ugyanabba a bucketbe kerulnek).
               ekkor check equals(): key es value Y: replace N:connect object to the existing one
 
-            - rehashing : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
+            - REHASHING : loadfactor 0.75 : ha 75%ot eleri a bucketek telitettsege noveli a tarmeretet
 
             - hashmap, hashtable, treemap, linkedhashmap
 
-            - double hashing : instead of insert rehashing with a diff function / modified function
+            - DOUBLE HASHING : instead of insert rehashing with a diff function / modified function
 
-            - weak hashmap : keys are weak references, garbage collected eagerly - memory effective
+            - WEAK HASHMAP : keys are weak references, garbage collected eagerly - memory effective
 
             - hash spec tipusok :
                 Consistent hashing :
@@ -327,16 +336,19 @@
             java concenpts
         </question>
         <answer>
-            equals, hashCode
-            deepcopy - fully independent copy of the object
-            shallow copy - pass a pointer, modification will address the old object also
+            EQUALS, HASHCODE
+            DEEPCOPY - fully independent copy of the object
+            SHALLOW COPY - pass a pointer, modification will address the old object also
 
-            failfast - abort as soon as possible
+            FAILFAST - abort as soon as possible
                      - java iterator : ConcurrentModificationException if the underlying collection is
                        structurally modified while iterating
-            failsafe - system dont abort on failure , create a clone and iterate on it.
+
+            FAILSAFE - system dont abort on failure , create a clone and iterate on it.
                      - nem tudja garantalni h amit iteral az "naprakesz" = weakly guarantee
-            lazyload : if null , init else no init
+                     - pl. new CopyOnWriteArrayList....
+
+            LAZYLOAD : if null , init else no init
 
             methods common to all objects (toString, hashCode, equals, getClass, clone, wait, notify, )
 
@@ -353,10 +365,12 @@
         </question>
         <answer>
             reference : pass by value,
-            primitive wrappers are immutable.
-            Integer  : i = i + 1;  - unwrap i, add one, wrap it to another object.
-                       i = 77;  - also creates a new integer object
-                        - can be used as keys in hashmap, why ?
+            primitive wrappers (pl. Integer) are immutable.
+            Integer i = i + 1;  - unwrap i, add one, wrap it to another object.
+                       i = 77;  - also creates a new integer object, possible
+                     caching small values -127,128
+                    - can be used as keys in hashmap :
+                      immutable, efficient hashCode(), equals()
 
             GCroot -> live -> live; dead; dead;
             GCroots : active java threads; local vars and params of curr. ex. method; static variables; JNI references
