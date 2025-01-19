@@ -16,7 +16,7 @@ async function fetchMoviesBadStatus() {
 
 function Start() {
   return (
-      <div style={{ padding: 20 }}>
+      <div>
         <h2>Choose one</h2>
         <p>
            -   beegetve 4 alap : sysdsgn, javaalap, basicalgos, designpatterns <br/>

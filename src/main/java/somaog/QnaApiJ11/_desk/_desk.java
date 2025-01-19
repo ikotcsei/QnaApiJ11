@@ -41,8 +41,10 @@ import java.util.List;
       <images>http://ezittegybukfenc.de:8080/QA/javabasic/j_mem1.jpg</images>
 
   FEATURE TO ADD :
+    menu is uj css
      kotcsei links : https://kotcsei.web.elte.hu/
     read in a row - : ne random adja a tetelt hanem sorban : uj link + next / prev buttons
+    reload a telo lehuzasara - kovetkezot adja  - ez routing problema sztem
 
     dynamicall read all picture files and add :
 
