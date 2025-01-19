@@ -4,6 +4,7 @@
     peldak : mire hol hasznaljak, javaban mi hogy van megvalositva
 
     TODO :
+    - add all important basic DS :
     - add : tries etc  - from geeks
     - variacio, konbinacio, permutacio, hatv halmaz  - bevesznemvesz + leggyorsabb algo
     - errol eloszor exel : adatszerk : abs - impl - impl javaban, build/init, delete, bovites, csokkentes, alapmuv : insert,delete, read/w
@@ -47,7 +48,7 @@
     </tetel>
     <tetel>
         <question>
-            mergesort - muveletigeny(best,worst,avg), mem. hasznalat
+            MERGESORT - muveletigeny(best,worst,avg), mem. hasznalat
             mikor hol, javaban hogy implementalva
         </question>
         <answer>
@@ -56,14 +57,14 @@
     </tetel>
     <tetel>
         <question>
-            binarysearch - array, in the java mem. model
+            BINARYSEARCH - array, in the java mem. model
         </question>
         <answer>
         </answer>
     </tetel>
     <tetel>
         <question>
-            bin tree - create, insert, search, save, load, copy
+            BINTREE - create, insert, search, save, load, copy
             traversal : pre, in, post
         </question>
         <answer>
@@ -73,21 +74,21 @@
     </tetel>
     <tetel>
         <question>
-            bintree - szelessegi kereses , melysegi kereses
+            BINTREE - szelessegi kereses , melysegi kereses
         </question>
         <answer>
         </answer>
     </tetel>
     <tetel>
         <question>
-            heap - kupac
+            HEAP - kupac
         </question>
         <answer>
         </answer>
     </tetel>
     <tetel>
         <question>
-            tries
+            TRIES
         </question>
         <links>https://en.wikipedia.org/wiki/Trie</links>
         <answer>

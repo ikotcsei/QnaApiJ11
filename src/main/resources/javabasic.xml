@@ -157,7 +157,10 @@
         <answer>
             LAMBDA EXPR  () -> { expr; }
             METHOD REFERENCE  System.out::println
-            functional interface : has one abs func (ekv) lambda expression (ekv) method reference
+
+            both lambda expr and method ref used to implement a functional interface
+            lambda expression : Runnable runnable = () -> System.out.println("Lambda Expression");
+            method ref : Runnable runnable = System.out::println;
 
             interface MyFirst{   void func(String s); }
             interface Empty{   void emptyfunc(); }
@@ -167,6 +170,9 @@
             Empty myE = () -> {};
             Empty myE = () -> {System.out.println("asdf")};
 
+            PREDICATE :  defined with lambda expression
+                Predicate*Integer* isPositive = number -> number > 0;
+                java.util.function.Predicate functional interface
 
             EXPRESSION : pl x + 1, new Object(), 1 + 1
             STATEMENT : double aValue = 8933.234;  // declaration statement, which is only one expression

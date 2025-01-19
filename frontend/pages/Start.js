@@ -28,7 +28,7 @@ function Start() {
             <Link to="/designpatterns">designpatterns </Link><br />
             <Link to="/basicalgos">basicalgos </Link><br />
             <Link to="/sysdesign">sys design </Link><br />
-            <Link to="/javabasic">java basic </Link><br />ü
+            <Link to="/javabasic">java basic </Link><br />
         </h2>
         </p>
       </div>
