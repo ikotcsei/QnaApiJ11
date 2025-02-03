@@ -6,37 +6,28 @@ import JavaBasic from '../pages/JavaBasic.js';
 import BasicAlgos from '../pages/BasicAlgos.js';
 import SysDesign from '../pages/SysDesign.js';
 import '../styles.css';
+import React, { useState } from "react"; // Import useState
 
-function MainNavigation(){
+function MainNavigation() {
+    const [isOpen, setIsOpen] = useState(false);
 
-    return(
-        <nav class="navbar">
-            <ul class="nav-links">
-//                <li>
-//                    <Link to="/start">Start</Link>
-//                </li>
-//                <li>
-//                    <Link to="/alllinks">Alllinks</Link>
-//                </li>
-                <h1>
-                    <li>
-                        <Link to="/designpatterns">designpatterns </Link>
-                    </li>
-                    <li>
-                        <Link to="/basicalgos">basicalgos </Link>
-                    </li>
-                    <li>
-                        <Link to="/sysdesign">sys design </Link>
-                    </li>
-                    <li>
-                        <Link to="/javabasic">java basic </Link>
-                    </li>
-                </h1>
-            </ul>
-        </nav>
+    const toggleMenu = () => {
+        setIsOpen((prev) => !prev);
+    };
 
-    );
-
+    return (
+            <nav className="navbar">
+                <div className="menu-toggle" onClick={toggleMenu}>
+                    ☰ {/* Hamburger icon */}
+                </div>
+                <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+                    <li><Link to="/designpatterns" onClick={() => setIsOpen(false)}>Design Patterns</Link></li>
+                    <li><Link to="/basicalgos" onClick={() => setIsOpen(false)}>Basic Algos</Link></li>
+                    <li><Link to="/sysdesign" onClick={() => setIsOpen(false)}>System Design</Link></li>
+                    <li><Link to="/javabasic" onClick={() => setIsOpen(false)}>Java Basics</Link></li>
+                </ul>
+            </nav>
+        );
 }
 
 export default MainNavigation;
