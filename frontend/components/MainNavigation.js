@@ -5,18 +5,19 @@ import DesignPatterns from '../pages/DesignPatterns.js';
 import JavaBasic from '../pages/JavaBasic.js';
 import BasicAlgos from '../pages/BasicAlgos.js';
 import SysDesign from '../pages/SysDesign.js';
+import '../styles.css';
 
 function MainNavigation(){
 
     return(
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/start">Start</Link>
-                </li>
-                <li>
-                    <Link to="/alllinks">Alllinks</Link>
-                </li>
+        <nav class="navbar">
+            <ul class="nav-links">
+//                <li>
+//                    <Link to="/start">Start</Link>
+//                </li>
+//                <li>
+//                    <Link to="/alllinks">Alllinks</Link>
+//                </li>
                 <h1>
                     <li>
                         <Link to="/designpatterns">designpatterns </Link>
