@@ -5,7 +5,8 @@
        - add url to controller
 
     dynamically add xml file :
-       - check a dir every 60sec, load if theres a new on
+       1 linux checks if there was a modification in the xml, if yes it restarts the server
+       2 check a dir every 60sec, load if theres a new on
        - how to add dynamically a new url ???
              - create urls and bind it later ?
              - create a new url in a file, reload spring context from file runtime, enable the urls
