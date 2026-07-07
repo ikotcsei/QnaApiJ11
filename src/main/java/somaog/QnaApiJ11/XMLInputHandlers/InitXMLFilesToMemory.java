@@ -7,6 +7,8 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class InitXMLFilesToMemory {
@@ -77,6 +79,11 @@ public class InitXMLFilesToMemory {
 
         try{
             for(String s : allFiles){
+
+
+                Path config = Paths.get("basicalgos.xml");
+                System.out.println("************" + config);
+
                 //itt a classpath a target/classes ben talalja meg a fileokat
                 saxParser.parse("classpath:"+s, tetelHandler);
                 result = tetelHandler.getTetelek();

@@ -50,6 +50,8 @@ import java.util.List;
 
     dynamically add xml file :
        - check a dir every 60sec, load if theres a new on
+            fileokat exportalni onnan read, pl 30 secenkent nezni h volt e valtozas, ha igen reload repository
+
             linux tomcat : /var/lib/tomcat9/webapps/..... basicalgos.xml
             dynamicreposity manager , load, reload- update, delete ??? - eleg tomcat restart + filetorles
             dynamicfrontend repo valasztas
