@@ -76,13 +76,11 @@ public class InitXMLFilesToMemory {
         TetelLista result;
 
 
-
         try{
             for(String s : allFiles){
 
 
-                Path config = Paths.get("basicalgos.xml");
-                System.out.println("************" + config);
+
 
                 //itt a classpath a target/classes ben talalja meg a fileokat
                 saxParser.parse("classpath:"+s, tetelHandler);
