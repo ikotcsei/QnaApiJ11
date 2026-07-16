@@ -1,0 +1,38 @@
+src/main/java/com/example/app
+├── controller
+│   └── UserController.java
+├── service
+│   ├── UserService.java
+│   └── UserServiceImpl.java
+├── repository
+│   └── UserRepository.java
+├── model
+│   └── User.java
+├── dto
+│   ├── UserDto.java
+│   └── CreateUserRequest.java
+├── mapper
+│   └── UserMapper.java
+├── exception
+│   ├── NotFoundException.java
+│   └── GlobalExceptionHandler.java
+├── config
+│   └── SecurityConfig.java
+└── Application.java
+
+
+typical backend flow :
+
+HTTP Request
+      │
+      ▼
+Controller - semmi bonyolult valasztas
+      │
+      ▼
+Service  - business logic, tobb repository, adatok osszegyujtese kiszolgalasa
+      │
+      ▼
+Repository - Only communicates with the database.
+      │
+      ▼
+Database

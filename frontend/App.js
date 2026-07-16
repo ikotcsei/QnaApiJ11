@@ -33,7 +33,8 @@ const router = createBrowserRouter([
             { path : '/start', element: <Start />},
             { path : '/designpatterns', element: <DesignPatterns />,
                 loader : async () => {
-                    // if nonrandom required fetch a, else fetch b
+                    // if nonrandom marked fetch a
+                     //        else fetch b
                     //
                     /* sending requestparam : <Link to="/users?id=123">Users</Link>
                        than
