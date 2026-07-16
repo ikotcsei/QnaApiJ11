@@ -37,11 +37,15 @@ public class InitXMLFilesToMemory {
     }
 
     /**
-    *    static fujnction to parse  xml to memory, returns list of Tetel
+     *   in String file
+     *   out List<Tetel>
      *
+     *    static fujnction to parse  xml to memory, returns list of Tetel
+     *   this function parsesfiles to memory, inits the repositorys for all topics
+     *   called from repository to init
      *
     */
-    public static List<Tetel> getAll(String file) throws ParserConfigurationException, SAXException, FileNotFoundException {
+    public static List<Tetel> getAll( String file ) throws ParserConfigurationException, SAXException, FileNotFoundException {
 
         final String fileOne = "bintree.xml";
         final String fileTwo = "graph.xml";

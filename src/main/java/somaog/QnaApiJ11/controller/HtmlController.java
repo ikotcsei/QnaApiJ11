@@ -108,6 +108,15 @@ public class HtmlController {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
+
+        /* adding non random tetel retrieval
+        *@GetMapping("/basicjava")
+            public ResponseEntity<String> produceJavaBasic(@RequestParam Int rndOrNot) {
+                ...
+                * if 1 = ... javaBasicRepository.nextNonRandom();
+            }
+        * */
+
         javaBasicRepository.nextRandom();
         return ResponseEntity.ok().body(
                 CustomTetelMapper.doTheMapping(javaBasicRepository.getRandom())

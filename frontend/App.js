@@ -33,6 +33,16 @@ const router = createBrowserRouter([
             { path : '/start', element: <Start />},
             { path : '/designpatterns', element: <DesignPatterns />,
                 loader : async () => {
+                    // if nonrandom required fetch a, else fetch b
+                    //
+                    /* sending requestparam : <Link to="/users?id=123">Users</Link>
+                       than
+                       loader: async ({ request }) => {
+                         const id = new URL(request.url).searchParams.get("id");
+                         const res = await fetch(`/api/users?id=${id}`);
+                         return res.json();
+                       }
+                    */
                     const response = await fetch(currentServerURL + 'jsontest');
 
                     if (!response.ok){

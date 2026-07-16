@@ -37,14 +37,16 @@ public class TetelRepository {
         return tetelLista.getTetelList().get(0);
     }
 
-    //reads the random number from the member
+    /*
+       retrieve Tetel via lastRandomTetel set by nextRandom
+    * */
     public Tetel getRandom() throws Exception {
         return lastRandomTetel;
     }
 
     /**
-    *    retrieves a random number from the tetellist, sets lastRandomTetel field
-    *    so random number can be read from lastRandomTetel via getRandom()
+    *    sets the lastRandomTetel field to a random Tetel from the tetellist, sets lastRandomTetel field
+    *    so random number can be read from lastRandomTetel more times
     */
     public void nextRandom() throws Exception {
 
