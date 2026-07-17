@@ -8,12 +8,11 @@ import SysDesign from '../pages/SysDesign.js';
 import '../styles.css';
 import React, { useState } from "react"; // Import useState
 
-/*
 
-*/
 
 function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
+    const [enabled, setEnabled] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen((prev) => !prev);
@@ -30,6 +29,11 @@ function MainNavigation() {
                     <li><Link to="/sysdesign" onClick={() => setIsOpen(false)}>System Design</Link></li>
                     <li><Link to="/javabasic" onClick={() => setIsOpen(false)}>Java Basics</Link></li>
                 </ul>
+
+                <button onClick={() => setEnabled(!enabled)}>
+                        {enabled ? "ON" : "OFF"}
+                </button>
+
             </nav>
         );
 }

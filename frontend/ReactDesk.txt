@@ -1,0 +1,17 @@
+i want to fetch data based on what data another child component has. how to do this . spa.
+
+Common ways:
+
+1 Lift the state up (recommended)
+    Parent owns the state.
+    Child updates it.
+    Parent/another child fetches based on it.
+2 React Context
+    Share state between siblings without prop drilling.
+3 Global state (Redux, Zustand, etc.)
+    If many components need it.
+4 Pass a callback
+    Child calls onChange(value).
+    Parent updates state and fetches.
+5 Don't use a loader
+    If the data depends on UI state, fetch in useEffect or with React Query/TanStack Query instead.
