@@ -27,7 +27,7 @@ function MainNavigation() {
                     <li><Link to="/designpatterns" onClick={() => setIsOpen(false)}>Design Patterns</Link></li>
                     <li><Link to="/basicalgos" onClick={() => setIsOpen(false)}>Basic Algos</Link></li>
                     <li><Link to="/sysdesign" onClick={() => setIsOpen(false)}>System Design</Link></li>
-                    <li><Link to="/javabasic" onClick={() => setIsOpen(false)}>Java Basics</Link></li>
+                    <li><Link to={`/javabasic?enabled=${enabled}`} onClick={() => setIsOpen(false)}>Java Basics</Link></li>
                 </ul>
 
                 <button onClick={() => setEnabled(!enabled)}>
