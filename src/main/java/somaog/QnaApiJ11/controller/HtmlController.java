@@ -6,10 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import somaog.QnaApiJ11.repository.BasicAlgosRepository;
 import somaog.QnaApiJ11.repository.DesignPatternRepository;
 import somaog.QnaApiJ11.repository.JavaBasicRepository;
@@ -104,7 +101,7 @@ public class HtmlController {
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/basicjava", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> produceJavaBasic() throws Exception {
+    public ResponseEntity<String> produceJavaBasic(@RequestParam boolean enabled) throws Exception {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
@@ -116,6 +113,9 @@ public class HtmlController {
                 * if 1 = ... javaBasicRepository.nextNonRandom();
             }
         * */
+        System.out.println("enabled:" + enabled);
+        // ha enabled akkor ne random legyen
+        // elore setup randomOrder, ill normalOrder repok es azokbol next
 
         javaBasicRepository.nextRandom();
         return ResponseEntity.ok().body(

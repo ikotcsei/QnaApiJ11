@@ -91,8 +91,10 @@ const router = createBrowserRouter([
                 },
             },
             { path : '/javabasic', element: <JavaBasic />,
-                loader : async () => {
-                    const response = await fetch(currentServerURL + 'basicjava');
+                loader : async ({ request }) => {
+                    const enabled = new URL(request.url).searchParams.get("enabled");
+
+                    const response = await fetch(currentServerURL + `basicjava?enabled=${enabled}`);
 
                     if (!response.ok){
                         console.log("error in the response.");
