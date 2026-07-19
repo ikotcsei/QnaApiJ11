@@ -9,7 +9,7 @@ import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
 /*  class for the xml files in mem
 * */
 @Configuration
-public class DesignPatternRepository extends TetelRepository{
+public class DesignPatternRepositoryRandom extends RandomTetelRepository {
 
     //ezeket vhogy annotataion + konfig fileal megoldani
     private String testFile = "teszt.xml";
@@ -23,7 +23,7 @@ public class DesignPatternRepository extends TetelRepository{
 
 
     // this is why https://stackoverflow.com/questions/72622054/cant-read-variables-from-application-properties
-    public DesignPatternRepository(@Value(value = "${inputfile}") String inputfile) throws Exception {
+    public DesignPatternRepositoryRandom(@Value(value = "${inputfile}") String inputfile) throws Exception {
 
         this.inputfile = inputfile;
 

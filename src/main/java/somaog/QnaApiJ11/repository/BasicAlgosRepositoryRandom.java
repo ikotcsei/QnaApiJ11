@@ -10,11 +10,11 @@ import java.io.FileNotFoundException;
 
 
 @Configuration
-public class JavaBasicRepository extends TetelRepository{
+public class BasicAlgosRepositoryRandom extends RandomTetelRepository {
 
-    public JavaBasicRepository() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
+    public BasicAlgosRepositoryRandom() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
-        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("javabasic.xml"));
+        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("basicalgos.xml"));
         nextRandom();
     }
 }

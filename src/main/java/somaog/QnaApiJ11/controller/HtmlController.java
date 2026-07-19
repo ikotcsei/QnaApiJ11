@@ -7,35 +7,30 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import somaog.QnaApiJ11.repository.BasicAlgosRepository;
-import somaog.QnaApiJ11.repository.DesignPatternRepository;
-import somaog.QnaApiJ11.repository.JavaBasicRepository;
-import somaog.QnaApiJ11.repository.SysDesignRepository;
+import somaog.QnaApiJ11.repository.BasicAlgosRepositoryRandom;
+import somaog.QnaApiJ11.repository.DesignPatternRepositoryRandom;
+import somaog.QnaApiJ11.repository.JavaBasicRepositoryRandom;
+import somaog.QnaApiJ11.repository.SysDesignRepositoryRandom;
 import somaog.QnaApiJ11.utility.Car;
 import somaog.QnaApiJ11.utility.CustomTetelMapper;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
 
 
 @Controller  // to return HTML, no restcontroller and responsebody annotations.
 public class HtmlController {
 
     @Autowired
-    DesignPatternRepository designPatternRepository;
+    DesignPatternRepositoryRandom designPatternRepository;
 
     @Autowired
-    BasicAlgosRepository basicAlgosRepository;
+    BasicAlgosRepositoryRandom basicAlgosRepository;
 
     @Autowired
-    SysDesignRepository sysDesignRepository;
+    SysDesignRepositoryRandom sysDesignRepository;
 
     @Autowired
-    JavaBasicRepository javaBasicRepository;
+    JavaBasicRepositoryRandom javaBasicRepository;
 
     @RequestMapping(value = "/")
     public String index(){
