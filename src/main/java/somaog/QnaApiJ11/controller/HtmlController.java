@@ -49,7 +49,7 @@ public class HtmlController {
     @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> produceDesignPattern() throws Exception {
 //          https://www.baeldung.com/spring-boot-json
-//     es az objektet service-n keresztul olvassa ki, kell tetelservice
+//     es az objektet service-n keresztul olvassa ki, kell tetelservicea
         //elvileg jackson2 library automappel vhogy springboot-ban
         designPatternRepository.initNextRandomTetel();
 
