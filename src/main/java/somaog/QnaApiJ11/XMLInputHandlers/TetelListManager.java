@@ -9,29 +9,29 @@ import java.util.List;
 /** List of Tetel entries, used by repositories to retrive Tetel Items
  *
  */
-public class TetelLista {
+public class TetelListManager {
 
     //get last item, amit utljara szurtunk be biztos h az az utolso ?
     private List<Tetel> tetelList;
 
 
-    TetelLista() {
+    TetelListManager() {
         tetelList = null;
     }
 
-    TetelLista(List<Tetel> tetelList) {
+    TetelListManager(List<Tetel> tetelList) {
 
         this.tetelList = tetelList;
     }
 
-    public static TetelLista createNewEmpty() {
+    public static TetelListManager createNewEmpty() {
 
-        return new TetelLista();
+        return new TetelListManager();
     }
 
-    public static TetelLista createNew(List<Tetel> tetelList) {
+    public static TetelListManager createNew(List<Tetel> tetelList) {
 
-        return new TetelLista(tetelList);
+        return new TetelListManager(tetelList);
     }
 
     public boolean isEmpty() {

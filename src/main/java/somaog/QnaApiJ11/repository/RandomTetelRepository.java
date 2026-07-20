@@ -1,7 +1,7 @@
 package somaog.QnaApiJ11.repository;
 
 import somaog.QnaApiJ11.XMLInputHandlers.Tetel;
-import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
+import somaog.QnaApiJ11.XMLInputHandlers.TetelListManager;
 
 import java.util.Random;
 
@@ -14,7 +14,7 @@ import java.util.Random;
  * */
 public class RandomTetelRepository extends TetelRepository{
 
-    TetelLista tetelLista = TetelLista.createNewEmpty();
+    TetelListManager tetelListManager = TetelListManager.createNewEmpty();
     Tetel lastRandomTetel = null;
     Random rand = new Random();
 
@@ -23,24 +23,25 @@ public class RandomTetelRepository extends TetelRepository{
     }
 
     public void printRepo(){
-        if(tetelLista.getTetelList().isEmpty()){
+        if(tetelListManager.getTetelList().isEmpty()){
             System.out.println("the tetellist is empty.");
             return;
         }
-        for(Tetel s : tetelLista.getTetelList()){
+        for(Tetel s : tetelListManager.getTetelList()){
             System.out.println(s);
         }
     }
 
     // retrieves the first tetel in the tetellist
     public Tetel getFirstItem(){
-        return tetelLista.getTetelList().get(0);
+        return tetelListManager.getTetelList().get(0);
     }
 
     /*
        retrieve Tetel via lastRandomTetel set by nextRandom
     * */
     public Tetel readNextRandomTetel() throws Exception {
+        /* eloolvasas itt h ne kelljen htmlcontrollerbe initNextRandomTetel()-t  hivni */
         return lastRandomTetel;
     }
 
@@ -51,8 +52,8 @@ public class RandomTetelRepository extends TetelRepository{
     public void initNextRandomTetel() throws Exception {
 
         rand = new Random();
-        if(!tetelLista.isEmpty()){
-            lastRandomTetel = tetelLista.getTetelList().get(rand.nextInt(tetelLista.getTetelList().size()));
+        if(!tetelListManager.isEmpty()){
+            lastRandomTetel = tetelListManager.getTetelList().get(rand.nextInt(tetelListManager.getTetelList().size()));
         }
         else throw new Exception(" ures a tetellista ! ");
 

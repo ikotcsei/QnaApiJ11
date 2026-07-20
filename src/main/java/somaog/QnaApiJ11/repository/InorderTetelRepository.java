@@ -1,6 +1,6 @@
 package somaog.QnaApiJ11.repository;
 
-import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
+import somaog.QnaApiJ11.XMLInputHandlers.TetelListManager;
 
 /*
     class for managing tetels inorder - normal - mode
@@ -8,7 +8,7 @@ import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
 public class InorderTetelRepository extends TetelRepository{
 
     //ezt abstract classba
-    TetelLista tetelLista = TetelLista.createNewEmpty();
+    TetelListManager tetelListaManager = TetelListManager.createNewEmpty();
 
     @Override
     void initTetelList() throws Exception {

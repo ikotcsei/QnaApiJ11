@@ -51,7 +51,7 @@ public class TetelParserHandler extends DefaultHandler {
 
 
     //list of tetel
-    private TetelLista tetelek;
+    private TetelListManager tetelListManager;
 
     //tmp storage building more line long tags
     //egymasba nem fuzheto tagek eseten eleg answerrowbuilder
@@ -73,7 +73,7 @@ public class TetelParserHandler extends DefaultHandler {
     @Override
     public void startDocument() throws SAXException {
 
-        tetelek = new TetelLista();
+        tetelListManager = new TetelListManager();
         answerRowBuilder = new StringBuilder();
 
     }
@@ -85,10 +85,10 @@ public class TetelParserHandler extends DefaultHandler {
     public void startElement(String uri, String lName, String qName, Attributes attr) throws SAXException {
         switch (qName) {
             case QUESTIONLIST:
-                tetelek.setTetelList(new ArrayList<>());
+                tetelListManager.setTetelList(new ArrayList<>());
                 break;
             case TETEL:
-                tetelek.addTetel(new Tetel());
+                tetelListManager.addTetel(new Tetel());
                 break;
             case QUESTION:
                 answerRowBuilder = new StringBuilder();
@@ -125,26 +125,26 @@ public class TetelParserHandler extends DefaultHandler {
             case LINKS:
                 linkbuilder.setUrl(answerRowBuilder.toString());
                 linkbuilder.setName(answerRowBuilder.toString());
-                tetelek.getLastInserted().addLink(linkbuilder);
+                tetelListManager.getLastInserted().addLink(linkbuilder);
                 break;
             case IMAGES:
-                tetelek.getLastInserted().addImage(answerRowBuilder.toString());
+                tetelListManager.getLastInserted().addImage(answerRowBuilder.toString());
                 break;
             case LN:
-                tetelek.getLastInserted().getLastLink().setName(answerRowBuilder.toString());
+                tetelListManager.getLastInserted().getLastLink().setName(answerRowBuilder.toString());
                 break;
 
         }
     }
 
     private Tetel latestArticle() {
-        List<Tetel> articleList = tetelek.getTetelList();
+        List<Tetel> articleList = tetelListManager.getTetelList();
         int latestArticleIndex = articleList.size() - 1;
         return articleList.get(latestArticleIndex);
     }
 
-    public TetelLista getTetelek() {
-        return tetelek;
+    public TetelListManager getTetelListManager() {
+        return tetelListManager;
     }
 
 

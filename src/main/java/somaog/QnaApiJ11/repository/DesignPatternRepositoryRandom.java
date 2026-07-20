@@ -3,7 +3,7 @@ package somaog.QnaApiJ11.repository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import somaog.QnaApiJ11.XMLInputHandlers.InitXMLFilesToMemory;
-import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
+import somaog.QnaApiJ11.XMLInputHandlers.TetelListManager;
 
 
 /*  class for the xml files in mem
@@ -30,7 +30,7 @@ public class DesignPatternRepositoryRandom extends RandomTetelRepository {
         //ez a 2 utasitas egyutt kell fusson init resz, mehet super konstruktorba ?
         //vhogy ezt kene garantalni
 
-        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll(this.inputfile));
+        tetelListManager = TetelListManager.createNew(InitXMLFilesToMemory.getAll(this.inputfile));
         initTetelList();
 
 //        System.out.println(tetelLista.toString());

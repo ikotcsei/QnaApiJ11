@@ -7,8 +7,6 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class InitXMLFilesToMemory {
@@ -24,7 +22,7 @@ public class InitXMLFilesToMemory {
         Scanner sc = new Scanner(System.in);
 
 
-        TetelLista result = tetelHandler.getTetelek();
+        TetelListManager result = tetelHandler.getTetelListManager();
 
 
         //reads all files specified in getAll if input is "", else reads only input file
@@ -77,7 +75,7 @@ public class InitXMLFilesToMemory {
 
         boolean quit = false;
         Scanner sc = new Scanner(System.in);
-        TetelLista result;
+        TetelListManager result;
 
 
         try{
@@ -88,7 +86,7 @@ public class InitXMLFilesToMemory {
 
                 //itt a classpath a target/classes ben talalja meg a fileokat
                 saxParser.parse("classpath:"+s, tetelHandler);
-                result = tetelHandler.getTetelek();
+                result = tetelHandler.getTetelListManager();
                 allTetel.addAll(result.getTetelList());
             }
 

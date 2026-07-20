@@ -3,7 +3,7 @@ package somaog.QnaApiJ11.repository;
 import org.springframework.context.annotation.Configuration;
 import org.xml.sax.SAXException;
 import somaog.QnaApiJ11.XMLInputHandlers.InitXMLFilesToMemory;
-import somaog.QnaApiJ11.XMLInputHandlers.TetelLista;
+import somaog.QnaApiJ11.XMLInputHandlers.TetelListManager;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ public class SysDesignRepositoryRandom extends RandomTetelRepository {
 
     public SysDesignRepositoryRandom() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
-        tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("sysdesign.xml"));
+        tetelListManager = TetelListManager.createNew(InitXMLFilesToMemory.getAll("sysdesign.xml"));
         initNextRandomTetel();
     }
 }
