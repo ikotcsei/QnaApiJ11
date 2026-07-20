@@ -6,7 +6,7 @@ public class StringToHtmlConverter {
      * Function to convert text, string to HTML format,
      * keeps the original formatting of the text.
 
-     * @param  string  an absolute URL giving the base location of the image
+     * @param  string  an absolute URL giving the base location of the text
      * @return  the converted string that can be viewed as html
      */
     public static String stringToHTMLString(String string) {
