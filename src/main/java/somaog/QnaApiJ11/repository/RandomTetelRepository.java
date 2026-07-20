@@ -33,14 +33,14 @@ public class RandomTetelRepository extends TetelRepository{
     }
 
     // retrieves the first tetel in the tetellist
-    public Tetel getFirst(){
+    public Tetel getFirstItem(){
         return tetelLista.getTetelList().get(0);
     }
 
     /*
        retrieve Tetel via lastRandomTetel set by nextRandom
     * */
-    public Tetel getRandom() throws Exception {
+    public Tetel readNextRandomTetel() throws Exception {
         return lastRandomTetel;
     }
 
@@ -48,7 +48,7 @@ public class RandomTetelRepository extends TetelRepository{
     *    sets the lastRandomTetel field to a random Tetel from the tetellist, sets lastRandomTetel field
     *    so random number can be read from lastRandomTetel more times
     */
-    public void nextRandom() throws Exception {
+    public void initNextRandomTetel() throws Exception {
 
         rand = new Random();
         if(!tetelLista.isEmpty()){
@@ -59,4 +59,11 @@ public class RandomTetelRepository extends TetelRepository{
     }
 
 
+/*  initalizes random tetellist
+    sets the lastRandomTetel field so it is readable, prereads
+* */
+    @Override
+    void initTetelList() throws Exception {
+        initNextRandomTetel();
+    }
 }

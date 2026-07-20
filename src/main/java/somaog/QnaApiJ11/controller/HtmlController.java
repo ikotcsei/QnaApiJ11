@@ -51,12 +51,12 @@ public class HtmlController {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
-        designPatternRepository.nextRandom();
+        designPatternRepository.initNextRandomTetel();
 
-        System.out.println(CustomTetelMapper.doTheMapping(designPatternRepository.getRandom()));
+        System.out.println(CustomTetelMapper.doTheMapping(designPatternRepository.readNextRandomTetel()));
 
         return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(designPatternRepository.getRandom())
+                CustomTetelMapper.doTheMapping(designPatternRepository.readNextRandomTetel())
         );
 
 
@@ -70,9 +70,9 @@ public class HtmlController {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
-        sysDesignRepository.nextRandom();
+        sysDesignRepository.initNextRandomTetel();
         return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(sysDesignRepository.getRandom())
+                CustomTetelMapper.doTheMapping(sysDesignRepository.readNextRandomTetel())
         );
 
 
@@ -85,9 +85,9 @@ public class HtmlController {
 //          https://www.baeldung.com/spring-boot-json
 //     es az objektet service-n keresztul olvassa ki, kell tetelservice
         //elvileg jackson2 library automappel vhogy springboot-ban
-        basicAlgosRepository.nextRandom();
+        basicAlgosRepository.initNextRandomTetel();
         return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(basicAlgosRepository.getRandom())
+                CustomTetelMapper.doTheMapping(basicAlgosRepository.readNextRandomTetel())
         );
 
 
@@ -112,9 +112,9 @@ public class HtmlController {
         // ha enabled akkor ne random legyen
         // elore setup randomOrder, ill normalOrder repok es azokbol next
 
-        javaBasicRepository.nextRandom();
+        javaBasicRepository.initNextRandomTetel();
         return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(javaBasicRepository.getRandom())
+                CustomTetelMapper.doTheMapping(javaBasicRepository.readNextRandomTetel())
         );
 
 
@@ -141,7 +141,7 @@ public class HtmlController {
     public String getFirstDesignPattern() throws Exception {
 
         //ne repot kelljen meghivni hanem service-t
-        designPatternRepository.nextRandom();
+        designPatternRepository.initNextRandomTetel();
 
         //    <img src="localhost:8080/most.jpg" alt="Italian Trulli">
         // <image>localhost:8080/most.jpg</image>
@@ -156,16 +156,16 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                designPatternRepository.getRandom().questionInHtmlString() +
+                designPatternRepository.readNextRandomTetel().questionInHtmlString() +
                 "</div>" +
 
 
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
-                             designPatternRepository.getRandom().answerInHtmlString() +
+                             designPatternRepository.readNextRandomTetel().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
-                "<a href=" + designPatternRepository.getRandom().getLastLink() +">link text</a>"+
+                "<a href=" + designPatternRepository.readNextRandomTetel().getLastLink() +">link text</a>"+
                 "</div>" +
 
                 //ezt is kell blokkolni, tovabba csak akkor kirajzolni ha nem null
@@ -188,7 +188,7 @@ public class HtmlController {
     public String getFirstBasicAlgos() throws Exception {
 
         //ne repot kelljen meghivni hanem service-t
-        basicAlgosRepository.nextRandom();
+        basicAlgosRepository.initNextRandomTetel();
 
 
         //ez meg majd thymeleaf + javascript
@@ -199,7 +199,7 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                basicAlgosRepository.getRandom().questionInHtmlString() +
+                basicAlgosRepository.readNextRandomTetel().questionInHtmlString() +
                 "</div>" +
 
 
@@ -208,7 +208,7 @@ public class HtmlController {
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
 
-                basicAlgosRepository.getRandom().answerInHtmlString() +
+                basicAlgosRepository.readNextRandomTetel().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
 //                "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+

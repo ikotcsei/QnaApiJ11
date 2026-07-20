@@ -31,7 +31,8 @@ public class DesignPatternRepositoryRandom extends RandomTetelRepository {
         //vhogy ezt kene garantalni
 
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll(this.inputfile));
-        nextRandom();
+        initTetelList();
+
 //        System.out.println(tetelLista.toString());
 
  //     uncomment this for test print the json form to the console

@@ -15,6 +15,7 @@ public class BasicAlgosRepositoryRandom extends RandomTetelRepository {
     public BasicAlgosRepositoryRandom() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("basicalgos.xml"));
-        nextRandom();
+        initTetelList();
+
     }
 }

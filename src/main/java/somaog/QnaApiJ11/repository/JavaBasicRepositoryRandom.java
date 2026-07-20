@@ -15,6 +15,6 @@ public class JavaBasicRepositoryRandom extends RandomTetelRepository {
     public JavaBasicRepositoryRandom() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("javabasic.xml"));
-        nextRandom();
+        initNextRandomTetel();
     }
 }

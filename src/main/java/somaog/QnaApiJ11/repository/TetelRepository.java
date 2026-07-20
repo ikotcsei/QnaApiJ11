@@ -1,6 +1,6 @@
 package somaog.QnaApiJ11.repository;
 
-public class TetelRepository {
+public abstract class TetelRepository {
 
     /*
     * init
@@ -8,4 +8,8 @@ public class TetelRepository {
     * retrievenext
     * reinit?
     * */
+/*
+    initalizes the tetel list
+* */
+    abstract void initTetelList() throws Exception;
 }

@@ -15,6 +15,6 @@ public class SysDesignRepositoryRandom extends RandomTetelRepository {
     public SysDesignRepositoryRandom() throws ParserConfigurationException, SAXException, FileNotFoundException,Exception {
         //itt fel kell tolteni TetelLIst.createNew(tetelList)
         tetelLista = TetelLista.createNew(InitXMLFilesToMemory.getAll("sysdesign.xml"));
-        nextRandom();
+        initNextRandomTetel();
     }
 }
