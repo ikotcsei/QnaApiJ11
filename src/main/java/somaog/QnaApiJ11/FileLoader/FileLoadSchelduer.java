@@ -77,7 +77,7 @@ public class FileLoadSchelduer implements Runnable {
         System.out.println("Modified: " + file);
         // Your custom logic here
 
-//                block variable
+//                lock variable or wait for lock
 //                        read file to mem
 //                release var
 //                        close file
