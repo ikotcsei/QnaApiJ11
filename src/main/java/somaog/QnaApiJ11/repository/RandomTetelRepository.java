@@ -14,12 +14,12 @@ import java.util.Random;
  * */
 public class RandomTetelRepository extends TetelRepository{
 
-    TetelListManager tetelListManager = TetelListManager.createNewEmpty();
     Tetel lastRandomTetel = null;
     Random rand = new Random();
 
 
     public RandomTetelRepository() {
+        tetelListManager = TetelListManager.createNewEmpty();
     }
 
     public void printRepo(){
@@ -40,9 +40,10 @@ public class RandomTetelRepository extends TetelRepository{
     /*
        retrieve Tetel via lastRandomTetel set by nextRandom
     * */
-    public Tetel readNextRandomTetel() throws Exception {
-        /* eloolvasas itt h ne kelljen htmlcontrollerbe initNextRandomTetel()-t  hivni */
-        return lastRandomTetel;
+    public Tetel readNext() throws Exception {
+        Tetel tmp = lastRandomTetel;
+        initNextRandomTetel();
+        return tmp;
     }
 
     /**

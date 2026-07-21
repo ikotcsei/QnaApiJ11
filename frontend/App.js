@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             { path : '/alllinks', element: <Alllinks />},
             { path : '/start', element: <Start />},
             { path : '/designpatterns', element: <DesignPatterns />,
-                loader : async () => {
+                loader : async ({ request }) => {
                     // if nonrandom marked fetch a
                      //        else fetch b
                     //
@@ -44,7 +44,8 @@ const router = createBrowserRouter([
                          return res.json();
                        }
                     */
-                    const response = await fetch(currentServerURL + 'jsontest');
+                    const enabled = new URL(request.url).searchParams.get("enabled");
+                    const response = await fetch(currentServerURL + `jsontest?enabled=${enabled}`);
 
                     if (!response.ok){
                         console.log("error in the response.");
@@ -59,8 +60,9 @@ const router = createBrowserRouter([
                 },
             },
             { path : '/sysdesign', element: <SysDesign />,
-                loader : async () => {
-                    const response = await fetch(currentServerURL + 'sysdesign');
+                loader : async ({ request }) => {
+                    const enabled = new URL(request.url).searchParams.get("enabled");
+                    const response = await fetch(currentServerURL + `sysdesign?enabled=${enabled}`);
 
                     if (!response.ok){
                         console.log("error in the response.");
@@ -75,8 +77,9 @@ const router = createBrowserRouter([
                 },
             },
             { path : '/basicalgos', element: <BasicAlgos />,
-                loader : async () => {
-                    const response = await fetch(currentServerURL + 'basicalgos');
+                loader : async ({ request }) => {
+                    const enabled = new URL(request.url).searchParams.get("enabled");
+                    const response = await fetch(currentServerURL + `basicalgos?enabled=${enabled}`);
 
                     if (!response.ok){
                         console.log("error in the response.");

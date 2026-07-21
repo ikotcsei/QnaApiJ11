@@ -11,6 +11,7 @@ import somaog.QnaApiJ11.repository.BasicAlgosRepositoryRandom;
 import somaog.QnaApiJ11.repository.DesignPatternRepositoryRandom;
 import somaog.QnaApiJ11.repository.JavaBasicRepositoryRandom;
 import somaog.QnaApiJ11.repository.SysDesignRepositoryRandom;
+import somaog.QnaApiJ11.service.TetelService;
 import somaog.QnaApiJ11.utility.Car;
 import somaog.QnaApiJ11.utility.CustomTetelMapper;
 
@@ -19,6 +20,9 @@ import java.io.IOException;
 
 @Controller  // to return HTML, no restcontroller and responsebody annotations.
 public class HtmlController {
+
+    @Autowired
+    TetelService tetelService;
 
     @Autowired
     DesignPatternRepositoryRandom designPatternRepository;
@@ -47,17 +51,25 @@ public class HtmlController {
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/jsontest", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> produceDesignPattern() throws Exception {
-//          https://www.baeldung.com/spring-boot-json
-//     es az objektet service-n keresztul olvassa ki, kell tetelservicea
-        //elvileg jackson2 library automappel vhogy springboot-ban
-        designPatternRepository.initNextRandomTetel();
+    public ResponseEntity<String> produceDesignPattern(@RequestParam boolean enabled) throws Exception {
 
-        System.out.println(CustomTetelMapper.doTheMapping(designPatternRepository.readNextRandomTetel()));
 
-        return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(designPatternRepository.readNextRandomTetel())
-        );
+        System.out.println("enabled:" + enabled);
+
+        if( enabled ){
+            System.out.println("enabled hit, inorder.");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readSysDesignTetelInOrder())
+            );
+
+        }else{
+            System.out.println("not enabled hit, random");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readSysDesignTetelRandom())
+            );
+
+        }
+
 
 
     }
@@ -66,14 +78,24 @@ public class HtmlController {
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/sysdesign", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> produceSysDesign() throws Exception {
-//          https://www.baeldung.com/spring-boot-json
-//     es az objektet service-n keresztul olvassa ki, kell tetelservice
-        //elvileg jackson2 library automappel vhogy springboot-ban
-        sysDesignRepository.initNextRandomTetel();
-        return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(sysDesignRepository.readNextRandomTetel())
-        );
+    public ResponseEntity<String> produceSysDesign(@RequestParam boolean enabled) throws Exception {
+
+        System.out.println("enabled:" + enabled);
+
+        if( enabled ){
+            System.out.println("enabled hit, inorder.");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readSysDesignTetelInOrder())
+            );
+
+        }else{
+            System.out.println("not enabled hit, random");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readSysDesignTetelRandom())
+            );
+
+        }
+
 
 
     }
@@ -81,14 +103,22 @@ public class HtmlController {
     //json convert egyelore igy mukodik de ronda
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/basicalgos", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> produceBasicAlgos() throws Exception {
-//          https://www.baeldung.com/spring-boot-json
-//     es az objektet service-n keresztul olvassa ki, kell tetelservice
-        //elvileg jackson2 library automappel vhogy springboot-ban
-        basicAlgosRepository.initNextRandomTetel();
-        return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(basicAlgosRepository.readNextRandomTetel())
-        );
+    public ResponseEntity<String> produceBasicAlgos(@RequestParam boolean enabled) throws Exception {
+        System.out.println("enabled:" + enabled);
+
+        if( enabled ){
+            System.out.println("enabled hit, inorder.");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readBasicAlgosTetelInOrder())
+            );
+
+        }else{
+            System.out.println("not enabled hit, random");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readBasicAlgosTetelRandom())
+            );
+
+        }
 
 
     }
@@ -97,25 +127,22 @@ public class HtmlController {
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:8081", "http://ezittegybukfenc.de", "http://192.168.0.62", "http://192.168.0.153:8081"})
     @GetMapping(value = "/basicjava", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> produceJavaBasic(@RequestParam boolean enabled) throws Exception {
-//          https://www.baeldung.com/spring-boot-json
-//     es az objektet service-n keresztul olvassa ki, kell tetelservice
-        //elvileg jackson2 library automappel vhogy springboot-ban
 
-        /* adding non random tetel retrieval
-        *@GetMapping("/basicjava")
-            public ResponseEntity<String> produceJavaBasic(@RequestParam Int rndOrNot) {
-                ...
-                * if 1 = ... javaBasicRepository.nextNonRandom();
-            }
-        * */
         System.out.println("enabled:" + enabled);
-        // ha enabled akkor ne random legyen
-        // elore setup randomOrder, ill normalOrder repok es azokbol next
 
-        javaBasicRepository.initNextRandomTetel();
-        return ResponseEntity.ok().body(
-                CustomTetelMapper.doTheMapping(javaBasicRepository.readNextRandomTetel())
-        );
+        if( enabled ){
+            System.out.println("enabled hit, inorder.");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readJavaBasicTetelInOrder())
+            );
+
+        }else{
+            System.out.println("not enabled hit, random");
+            return ResponseEntity.ok().body(
+                    CustomTetelMapper.doTheMapping(tetelService.readJavaBasicTetelRandom())
+            );
+
+        }
 
 
     }
@@ -156,16 +183,16 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                designPatternRepository.readNextRandomTetel().questionInHtmlString() +
+                designPatternRepository.readNext().questionInHtmlString() +
                 "</div>" +
 
 
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
-                             designPatternRepository.readNextRandomTetel().answerInHtmlString() +
+                             designPatternRepository.readNext().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
-                "<a href=" + designPatternRepository.readNextRandomTetel().getLastLink() +">link text</a>"+
+                "<a href=" + designPatternRepository.readNext().getLastLink() +">link text</a>"+
                 "</div>" +
 
                 //ezt is kell blokkolni, tovabba csak akkor kirajzolni ha nem null
@@ -199,7 +226,7 @@ public class HtmlController {
                 "<body>\n" +
 
                 "<div id=\"noId\" >"+
-                basicAlgosRepository.readNextRandomTetel().questionInHtmlString() +
+                basicAlgosRepository.readNext().questionInHtmlString() +
                 "</div>" +
 
 
@@ -208,7 +235,7 @@ public class HtmlController {
                 "<button class=\"button2\" onclick=\"displayText()\">Abrakadabra</button>"+
                 " <div id=\"textField\" style=\"display: none;\">"+
 
-                basicAlgosRepository.readNextRandomTetel().answerInHtmlString() +
+                basicAlgosRepository.readNext().answerInHtmlString() +
 
                 //ezt akkor kene megjeleniteni ha nem null a linkeke szama
 //                "<a href=" + basicAlgosRepository.getRandom().getLastLink()+">link text</a>"+

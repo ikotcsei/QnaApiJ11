@@ -24,14 +24,14 @@ function MainNavigation() {
                     ☰ {/* Hamburger icon */}
                 </div>
                 <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-                    <li><Link to="/designpatterns" onClick={() => setIsOpen(false)}>Design Patterns</Link></li>
-                    <li><Link to="/basicalgos" onClick={() => setIsOpen(false)}>Basic Algos</Link></li>
-                    <li><Link to="/sysdesign" onClick={() => setIsOpen(false)}>System Design</Link></li>
+                    <li><Link to={`/designpatterns?enabled=${enabled}`} onClick={() => setIsOpen(false)}>Design Patterns</Link></li>
+                    <li><Link to={`/basicalgos?enabled=${enabled}`} onClick={() => setIsOpen(false)}>Basic Algos</Link></li>
+                    <li><Link to={`/sysdesign?enabled=${enabled}`} onClick={() => setIsOpen(false)}>System Design</Link></li>
                     <li><Link to={`/javabasic?enabled=${enabled}`} onClick={() => setIsOpen(false)}>Java Basics</Link></li>
                 </ul>
 
                 <button onClick={() => setEnabled(!enabled)}>
-                        {enabled ? "ON" : "OFF"}
+                        {enabled ? "Inorder" : "Random"}
                 </button>
 
             </nav>
