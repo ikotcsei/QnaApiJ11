@@ -76,11 +76,9 @@ public class FileLoadSchelduer implements Runnable {
     private void onFileModified(Path file) {
         System.out.println("Modified: " + file);
         // Your custom logic here
+// sztem mutual exclusion -al kell, syncronizedok a TetelListManager fv-ek
+        //read file on change, create new tetelList , overwrite the stored one in service - ezt kell syncelni hogy ne legyen read
 
-//                lock variable or wait for lock
-//                        read file to mem
-//                release var
-//                        close file
     }
 
     public void stop() {
