@@ -43,11 +43,13 @@ public class TetelListManager {
 
     }
 
+    //sync
     public static TetelListManager createNewEmpty() {
 
         return new TetelListManager();
     }
 
+    //sync
     public static TetelListManager createNew(List<Tetel> tetelList) {
 
         return new TetelListManager(tetelList);

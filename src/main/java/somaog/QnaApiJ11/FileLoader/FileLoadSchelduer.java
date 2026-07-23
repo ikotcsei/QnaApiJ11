@@ -85,7 +85,11 @@ public class FileLoadSchelduer implements Runnable {
     }
 
     private void onFileModified(Path file) {
-        System.out.println("Modified: " + file);
+        System.out.println("Modified: " + file + " need to reload.");
+        //TetelListManager t = new  ....
+        // update the  specific  repository with the new data from the modified file
+
+
         // Your custom logic here
 // sztem mutual exclusion -al kell, syncronizedok a TetelListManager fv-ek
         //read file on change, create new tetelList , overwrite the stored one in service - ezt kell syncelni hogy ne legyen read

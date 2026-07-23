@@ -28,5 +28,10 @@ public class JavaBasicRepositoryInOrder extends InOrderTetelRepository {
             }
             return it.next();
         }
+
+        //after update file, tetelmanager, the iterator will  be reset
+        public  void refreshIterator(){
+            it = tetelListManager.getTetelList().iterator();
+        }
     }
 
