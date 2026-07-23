@@ -2,7 +2,7 @@
     <tetel>
         <question>
             quicksort - muveletigeny(best,worst,avg), mem. hasznalat
-            mikor hol, javaban hogy implementalva
+            mikor hol, javaban hogy implementalvaa
         </question>
         <answer>
             time complex : n * logn

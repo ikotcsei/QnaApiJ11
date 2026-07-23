@@ -1,12 +1,19 @@
 package somaog.QnaApiJ11.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
+import somaog.QnaApiJ11.FileLoader.FileLoadSchelduer;
 import somaog.QnaApiJ11.XMLInputHandlers.Tetel;
 import somaog.QnaApiJ11.repository.*;
 
+import java.io.IOException;
+
 @Service
 public class TetelService {
+
+    @Autowired
+    FileLoadSchelduer fileLoadSchelduer =  new FileLoadSchelduer();
 
     @Autowired
     DesignPatternRepositoryInOrder designPatternRepositoryInOrder;
@@ -31,6 +38,10 @@ public class TetelService {
 
     @Autowired
     SysDesignRepositoryRandom sysDesignRepositoryRandom;
+
+    public TetelService() throws IOException {
+        fileLoadSchelduer.run();
+    }
 
     public Tetel readDesPattRnd() throws Exception {
         return designPatternRepositoryRandom.readNext();

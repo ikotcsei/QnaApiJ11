@@ -14,17 +14,28 @@ package somaog.QnaApiJ11.FileLoader;
 */
 
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.nio.file.*;
 import static java.nio.file.StandardWatchEventKinds.*;
 
+
+@Configuration
 public class FileLoadSchelduer implements Runnable {
 
-    private final Path directory;
+    /* app.xml.path=/opt/myapp/basicalgos.xml  add application to  propertis the war linux dir
+        inject it  :
+        @Value("${app.xml.path}")
+        private String xmlPath;
+    * */
+    private final Path directory = Paths.get("src/main/resources");
     private volatile boolean running = true;
 
-    public FileLoadSchelduer(String directoryPath) {
-        this.directory = Paths.get(directoryPath);
+
+    public FileLoadSchelduer() {
+
     }
 
     @Override
